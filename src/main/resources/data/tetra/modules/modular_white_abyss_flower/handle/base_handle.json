@@ -1,0 +1,53 @@
+{
+    "slots": [ "modular_white_abyss_flower/handle" ],
+    "type": "tetra:basic_major_module",
+    "renderLayer": "lower",
+    "improvements": [
+        "tetra:sword/shared_hilt/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+            "key": "base_handle/",
+            "attributes": {
+                "generic.attack_speed": -1.1,
+                "forge:reach_distance": 1,
+                "forge:attack_range": 1
+            },
+            "aspects": {
+                "block_breaker": 1,
+                "breakable": 2
+            },
+            "durability": 20,
+            "integrity": 1,
+            "extract": {
+                "primaryAttributes": {
+                    "forge:reach_distance": 0.05,
+                    "forge:attack_range": 0.05
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.12
+                },
+                "tertiaryAttributes": {
+                    "forge:reach_distance": 0.1,
+                    "forge:attack_range": 0.1
+                },
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 0.3,
+                "integrity": 1,
+                "magicCapacity": 1,
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_blazing_sun/base_handle"
+                    }
+                ]
+            }
+        }
+    ]
+}

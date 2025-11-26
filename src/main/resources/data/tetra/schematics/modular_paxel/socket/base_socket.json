@@ -1,0 +1,30 @@
+{
+    "slots": [ "modular_paxel/socket" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:socket/socket_nether_star" ],
+            "requiredTools": {
+                "hammer_dig": "stone"
+            },
+            "moduleKey": "modular_paxel/socket/base_socket",
+            "moduleVariant": "base_socket/socket_nether_star"
+        },
+        {
+            "materials": [ "tetra:socket/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_paxel/socket/base_socket",
+            "moduleVariant": "base_socket/"
+        }
+    ]
+}

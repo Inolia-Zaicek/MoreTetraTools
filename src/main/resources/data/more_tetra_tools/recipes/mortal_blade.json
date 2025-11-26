@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "group": "more_tetra_tools_mortal_blade",
+    "ingredient": {
+        "item": "more_tetra_tools:prototype_weapon"
+    },
+    "result": "more_tetra_tools:mortal_blade"
+}

@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:amiya_staff" ]
+        },
+        "item": "more_tetra_tools:modular_amiya_staff",
+        "modules": {
+          "staff/a": [ "modular_amiya_staff/core/incantation_medic_core", "incantation_medic_core/iron"],
+          "staff/b": [ "modular_amiya_staff/head_crystal/base_head_crystal", "base_head_crystal/iron"],
+          "staff/c": [ "modular_amiya_staff/handle_crystal/base_handle_crystal", "base_handle_crystal/iron"],
+          "staff/d": [ "modular_amiya_staff/guard_crystal/base_guard_crystal", "base_guard_crystal/iron"]
+        },
+        "improvements": {}
+    }
+]

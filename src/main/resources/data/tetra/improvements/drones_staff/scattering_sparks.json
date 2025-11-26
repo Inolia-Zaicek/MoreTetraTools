@@ -1,0 +1,82 @@
+[
+    {
+        "key": "scattering_sparks",
+        "level": 1,
+        "integrity": -1,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 2
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 2,
+        "integrity": -2,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 3
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 3,
+        "integrity": -3,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 4
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 4,
+        "integrity": -4,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 5
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 5,
+        "integrity": -5,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 6
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 6,
+        "integrity": -6,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 7
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 7,
+        "integrity": -7,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 9
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 8,
+        "integrity": -8,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 11
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 9,
+        "integrity": -9,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 13
+        }
+    },
+    {
+        "key": "scattering_sparks",
+        "level": 10,
+        "integrity": -10,
+        "effects": {
+            "more_tetra_tools:scattering_sparks": 15
+        }
+    }
+]

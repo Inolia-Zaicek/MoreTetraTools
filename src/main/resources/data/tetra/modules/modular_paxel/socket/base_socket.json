@@ -1,0 +1,52 @@
+{
+    "slots": [ "modular_paxel/socket" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/socket_nether_star" ],
+            "key": "base_socket/",
+            "tools": {
+                "axe_dig": 1,
+                "shovel_dig": 1,
+                "pickaxe_dig": 1,
+                "hammer_dig": 1,
+                "pry": 1,
+                "cut": 1
+            },
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_paxel/base_socket",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        },
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_paxel/base_socket",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

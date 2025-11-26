@@ -1,0 +1,38 @@
+{
+    "slots": [ "modular_mnemonos_grapheus/pen_core" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_pen_core/",
+            "effects": {
+                "more_tetra_tools:weave": 5
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "secondaryEffects": {
+                    "counterweight": 2
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:weave": 1
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

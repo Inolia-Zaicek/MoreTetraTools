@@ -1,0 +1,64 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/zero"
+    ],
+    "type": "tetra:basic_module",
+    "tweakKey": "tetra:bow/extended_rest",
+    "variants": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
+            "key": "extended_rest/",
+            "effects": {
+                "multishot": [ 0, 6 ]
+            },
+            "integrity": -1,
+            "durability": 10,
+            "extract": {
+                "primaryEffects": {
+                    "multishot": 0.6,
+                    "more_tetra_tools:verse_zero_vow_infinite": 0.5
+                },
+                "tertiaryEffects": {
+                    "multishot": [ 0, -0.5 ],
+                    "more_tetra_tools:verse_zero_vow_infinite": 0.5
+                },
+                "durability": 0.2,
+                "glyph": {
+                    "textureX": 128,
+                    "textureY": 112
+                }
+            }
+        },
+        {
+            "materials": [ "tetra:rod/stick" ],
+            "key": "extended_rest/",
+            "effects": {
+                "multishot": [ 2, 5 ],
+                "more_tetra_tools:verse_zero_vow_infinite": 2
+            },
+            "integrity": -1,
+            "durability": 10,
+            "extract": {
+                "durability": 0.2,
+                "glyph": {
+                    "textureX": 128,
+                    "textureY": 112
+                }
+            }
+        },
+        {
+            "key": "extended_rest/bolt",
+            "effects": {
+                "multishot": [ 4, 10 ],
+                "more_tetra_tools:verse_zero_vow_infinite": 4
+            },
+            "durability": 10,
+            "integrity": -1,
+            "glyph": {
+                "tint": "bolt_glyph",
+                "textureX": 128,
+                "textureY": 112
+            }
+        }
+    ]
+}

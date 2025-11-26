@@ -1,0 +1,45 @@
+{
+  "slots": [ "modular_paxel/claw" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:double/claw/",
+    "tetra:double/shared_head/",
+    "tetra:double/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_claw/",
+      "attributes": {
+        "generic.attack_damage": -0.37,
+        "generic.attack_speed": -0.12
+      },
+      "aspects": {
+        "block_breaker": 1,
+        "breakable": 2
+      },
+      "effects": {
+        "denailing": 1
+      },
+      "durability": -10,
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.12
+        },
+        "tools": {
+          "pry": [ 1, 0.8333 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 64,
+          "textureY": 32
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_claw"}]
+      }
+    }
+  ]
+}

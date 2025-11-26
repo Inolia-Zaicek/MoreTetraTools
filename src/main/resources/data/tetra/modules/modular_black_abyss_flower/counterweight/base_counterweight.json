@@ -1,0 +1,35 @@
+{
+    "slots": [ "modular_black_abyss_flower/counterweight" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_counterweight/",
+            "attributes": {
+                "generic.attack_speed": 0.2
+            },
+            "effects": {
+                "more_tetra_tools:the_six_divine_key_of_decompose": [1,1]
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "secondaryEffects": {
+                    "counterweight": 2
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:the_six_divine_key_of_decompose": [2.5,0]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                }
+            }
+        }
+    ]
+}

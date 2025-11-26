@@ -1,0 +1,18 @@
+{
+    "slots": [ "modular_white_abyss_flower/socket" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            }
+        }
+    ]
+}

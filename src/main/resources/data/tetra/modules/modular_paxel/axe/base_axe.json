@@ -1,0 +1,51 @@
+{
+  "slots": [ "modular_paxel/axe" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:double/axe/",
+    "tetra:double/shared_head/",
+    "tetra:double/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_axe/",
+      "attributes": {
+        "generic.attack_speed": -0.2,
+        "generic.attack_damage": 0.44
+      },
+      "effects": {
+        "shieldbreaker": 1
+      },
+      "aspects": {
+        "block_breaker": 2,
+        "edged_weapon": 1,
+        "breakable": 2
+      },
+      "durability": -10,
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.08
+        },
+        "secondaryAttributes": {
+          "generic.attack_damage": 0.03
+        },
+        "tools": {
+          "axe_dig": [ 1, 1 ],
+          "axe_strip": [ 1, 1 ],
+          "axe_scrape": [ 1, 1 ],
+          "axe_wax_off": [ 1, 1 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 144
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_axe"}]
+      }
+    }
+  ]
+}

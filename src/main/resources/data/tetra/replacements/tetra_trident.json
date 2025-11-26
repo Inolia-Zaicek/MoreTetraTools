@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:tetra_trident" ]
+        },
+        "item": "more_tetra_tools:modular_trident",
+        "modules": {
+          "staff/a": [ "modular_trident/primary_blade/base_primary_blade", "base_primary_blade/iron"],
+          "staff/b": [ "modular_trident/secondary_blade/base_secondary_blade", "base_secondary_blade/iron"],
+          "staff/c": [ "modular_trident/tertiary_blade/base_tertiary_blade", "base_tertiary_blade/iron"],
+          "staff/d": [ "modular_trident/handle/base_handle", "base_handle/iron"]
+        },
+        "improvements": {}
+    }
+]

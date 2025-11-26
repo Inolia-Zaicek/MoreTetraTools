@@ -1,0 +1,49 @@
+{
+    "slots": [
+        "modular_drones_staff/body",
+        "modular_drones_staff/handle",
+        "modular_drones_staff/guard"
+    ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+    "materialSlotCount": 0,
+    "rarity": "hone",
+    "displayType": "improvement",
+    "hone":true,
+    "glyph": {
+        "textureLocation": "tetra:textures/gui/wizard_glyphs.png",
+        "textureX": 0,
+        "textureY": 80
+    },
+    "requirement": {
+        "type": "tetra:and",
+        "requirements": [
+          {
+            "type": "tetra:not",
+            "requirement": {
+              "type": "tetra:improvement",
+              "improvement": "modular_amiya_staff_mana_regen"
+            }
+          },
+            {
+                "type": "tetra:not",
+                "requirement": {
+                    "type": "tetra:improvement",
+                    "improvement": "modular_amiya_staff_mana_regen"
+                }
+            }
+        ]
+    },
+    "outcomes": [
+        {
+            "experienceCost": 1,
+            "improvements": {
+                "modular_amiya_staff_mana_regen": 1
+            }
+        }
+    ]
+}

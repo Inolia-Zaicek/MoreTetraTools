@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:laevatain" ]
+        },
+        "item": "more_tetra_tools:modular_laevatain",
+        "modules": {
+          "tool/a": [ "modular_laevatain/blade/base_blade", "base_blade/iron"],
+          "tool/b": [ "modular_laevatain/handle/base_handle", "base_handle/iron"],
+          "tool/c": [ "modular_laevatain/guard/base_guard", "base_guard/iron"],
+          "tool/d": [ "modular_laevatain/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

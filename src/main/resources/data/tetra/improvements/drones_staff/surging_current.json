@@ -1,0 +1,82 @@
+[
+    {
+        "key": "surging_current",
+        "level": 1,
+        "integrity": -1,
+        "effects": {
+            "more_tetra_tools:surging_current": 3
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 2,
+        "integrity": -2,
+        "effects": {
+            "more_tetra_tools:surging_current": 4
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 3,
+        "integrity": -3,
+        "effects": {
+            "more_tetra_tools:surging_current": 5
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 4,
+        "integrity": -4,
+        "effects": {
+            "more_tetra_tools:surging_current": 6
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 5,
+        "integrity": -5,
+        "effects": {
+            "more_tetra_tools:surging_current": 7
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 6,
+        "integrity": -6,
+        "effects": {
+            "more_tetra_tools:surging_current": 8
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 7,
+        "integrity": -7,
+        "effects": {
+            "more_tetra_tools:surging_current": 9
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 8,
+        "integrity": -8,
+        "effects": {
+            "more_tetra_tools:surging_current": 12
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 9,
+        "integrity": -9,
+        "effects": {
+            "more_tetra_tools:surging_current": 14
+        }
+    },
+    {
+        "key": "surging_current",
+        "level": 10,
+        "integrity": -10,
+        "effects": {
+            "more_tetra_tools:surging_current": 16
+        }
+    }
+]

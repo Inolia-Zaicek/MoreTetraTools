@@ -1,0 +1,47 @@
+{
+  "slots": [ "modular_paxel/handle" ],
+  "type": "tetra:basic_major_module",
+  "renderLayer": "lower",
+  "improvements": [
+    "tetra:double/basic_handle/",
+    "tetra:double/shared_handle/",
+    "tetra:double/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+      "key": "base_handle/",
+      "effects": {
+        "more_tetra_tools:tool": 1
+      },
+      "tags": [
+        "forge:wrenches",
+        "forge:tools",
+        "forge:tools/wrench"
+      ],
+      "attributes": {
+        "generic.attack_speed": -0.35
+      },
+      "aspects": {
+        "block_breaker": 1,
+        "breakable": 2
+      },
+      "durability": 7,
+      "integrity": 1,
+      "extract": {
+        "secondaryAttributes": {
+          "generic.attack_speed": -0.1
+        },
+        "durability": 0.3,
+        "integrity": 3,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 16
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_handle"}]
+      }
+    }
+  ]
+}

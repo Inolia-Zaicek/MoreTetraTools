@@ -1,0 +1,520 @@
+{
+    "verison": 1.0,
+    "attributemap": {
+        "modular_amiya_staff/core": {
+            "modular_amiya_staff/core/core_caster_core": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:wand"
+                    }
+                }
+            },
+            "modular_amiya_staff/core/incantation_medic_core": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:wand"
+                    }
+                }
+            }
+        },
+        "modular_banaddur_the_magic_greatsword/blade": {
+            "modular_banaddur_the_magic_greatsword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_blazing_sun/blade": {
+            "modular_blazing_sun/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:lance"
+                    }
+                }
+            }
+        },
+        "modular_black_abyss_flower/blade": {
+            "modular_black_abyss_flower/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:lance"
+                    }
+                }
+            }
+        },
+        "modular_black_worldbearing_greatblade/blade": {
+            "modular_black_worldbearing_greatblade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_blemishine_sword/blade": {
+            "modular_blemishine_sword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_butterfly_flurry/blade": {
+            "modular_butterfly_flurry/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:scythe"
+                    }
+                }
+            }
+        },
+        "modular_blood_sacrifice_blade/blade": {
+            "modular_blood_sacrifice_blade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_coral_sorrow/blade": {
+            "modular_coral_sorrow/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_decapitator/blade": {
+            "modular_decapitator/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        },
+        "modular_deicider_katana/blade": {
+            "modular_deicider_katana/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_domain_of_incandescence/guard": {
+            "modular_domain_of_incandescence/guard/base_guard": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_drones_staff/core": {
+            "modular_drones_staff/core/drones_core": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:wand"
+                    }
+                }
+            }
+        },
+        "modular_final_worldbearing_greatblade/guard": {
+            "modular_final_worldbearing_greatblade/guard/base_guard": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_firefly_sword/blade": {
+            "modular_firefly_sword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_flame_katana/blade": {
+            "modular_flame_katana/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        },
+        "modular_freeze_greatblade/blade": {
+            "modular_freeze_greatblade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_guardian_of_the_stars/blade": {
+            "modular_guardian_of_the_stars/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_iron_rider/blade": {
+            "modular_iron_rider/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_jia_qiu_battlestaff/head": {
+            "modular_jia_qiu_battlestaff/head/base_head": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:battlestaff"
+                    }
+                }
+            }
+        },
+        "modular_judgment_of_shamash/blade": {
+            "modular_judgment_of_shamash/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_kaminari_katana/blade": {
+            "modular_kaminari_katana/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_la_pluma_scythe/blade": {
+            "modular_la_pluma_scythe/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:scythe"
+                    }
+                }
+            }
+        },
+        "modular_laevatain/blade": {
+            "modular_laevatain/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_low_tide/blade": {
+            "modular_low_tide/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:scythe"
+                    }
+                }
+            }
+        },
+        "modular_lysis_mython/blade": {
+            "modular_low_tide/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.1,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_mnemonos_grapheus/nib": {
+            "modular_mnemonos_grapheus/nib/base_nib": {
+                "config": {
+                    "scaleY": 1.1,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_mortal_blade/blade": {
+            "modular_mortal_blade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_mtt_chainsword/saw": {
+            "modular_mortal_blade/saw/sharp_saw": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_ocean_s_vengence/blade": {
+            "modular_ocean_s_vengence/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:anchor"
+                    }
+                }
+            }
+        },
+        "modular_paxel/blade": {
+            "modular_paxel/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:axe"
+                    }
+                }
+            }
+        },
+        "modular_pinus_sylvestris/blade": {
+            "modular_pinus_sylvestris/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:rapier"
+                    }
+                }
+            }
+        },
+        "modular_red_wolf_dagger/blade": {
+            "modular_red_wolf_dagger/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.1,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:dagger"
+                    }
+                }
+            }
+        },
+        "modular_return_to_ash_katana/blade": {
+            "modular_return_to_ash_katana/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_ripples_of_the_past/stave": {
+            "modular_ripples_of_the_past/stave/base_stave": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:bow_two_handed_heavy"
+                    }
+                }
+            }
+        },
+        "modular_sentinels_blade_of_naught/blade": {
+            "modular_sentinels_blade_of_naught/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        },
+        "modular_setsugetsu_katana/blade": {
+            "modular_setsugetsu_katana/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_seven_thunders_of_retribution_narukami/blade": {
+            "modular_seven_thunders_of_retribution_narukami/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        },
+        "modular_tenka_ashina/blade": {
+            "modular_tenka_ashina/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_tidal_greatblade/blade": {
+            "modular_tidal_greatblade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_traveller_stick/handle": {
+            "modular_traveller_stick/handle/base_handle": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:staff"
+                    }
+                }
+            }
+        },
+        "modular_trident/primary_blade": {
+            "modular_trident/primary_blade/base_primary_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:trident"
+                    }
+                }
+            }
+        },
+        "modular_udumbara/blade": {
+            "modular_udumbara/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_white_abyss_flower/blade": {
+            "modular_white_abyss_flower/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:lance"
+                    }
+                }
+            }
+        },
+        "modular_white_worldbearing_greatblade/blade": {
+            "modular_white_worldbearing_greatblade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
+        "modular_ying_xiao/blade": {
+            "modular_ying_xiao/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        }
+    }
+}

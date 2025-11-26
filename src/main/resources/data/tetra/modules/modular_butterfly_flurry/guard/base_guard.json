@@ -1,0 +1,45 @@
+{
+    "slots": [ "modular_butterfly_flurry/guard" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard/",
+            "attributes": {
+                "generic.armor": 1,
+                "generic.attack_speed": -0.1
+            },
+            "effects": {
+                "more_tetra_tools:resurgence": [10,5]
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.armor": 0.6
+                },
+                "tertiaryAttributes": {
+                    "generic.armor": 0.3
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.06
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:resurgence": [25,1]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

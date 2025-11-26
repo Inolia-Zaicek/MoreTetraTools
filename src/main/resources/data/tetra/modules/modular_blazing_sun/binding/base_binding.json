@@ -1,0 +1,38 @@
+{
+    "slots": [ "modular_blazing_sun/binding" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_binding/",
+            "attributes": {
+                "generic.attack_damage": 0.45
+            },
+            "effects": {
+                "more_tetra_tools:blazing_sun_s_obeisance": 20
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.15
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:blazing_sun_s_obeisance": 4
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_blazing_sun/base_binding"
+                    }
+                ]
+            }
+        }
+    ]
+}

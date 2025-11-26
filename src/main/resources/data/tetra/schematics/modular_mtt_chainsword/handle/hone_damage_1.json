@@ -1,0 +1,28 @@
+{
+    "slots": [ "modular_mtt_chainsword/handle" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "requirement": {
+        "type": "tetra:not",
+        "requirement": {
+            "type": "tetra:improvement",
+            "improvement": "hilt_hone/damage"
+        }
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:gold"
+            },
+            "improvements": {
+                "hilt_hone/damage": 1
+            }
+        }
+    ]
+}

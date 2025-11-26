@@ -1,0 +1,37 @@
+{
+    "type": "tetra:basic_major_module",
+    "slots": [ "modular_amiya_staff/core" ],
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "incantation_medic_core/",
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": 100,
+            "integrity": 0,
+            "effects": {
+                "more_tetra_tools:iron_spell_casting": 1,
+                "more_tetra_tools:incantation_medic": 4
+            },
+            "extract": {
+                "primaryEffects": {
+                    "more_tetra_tools:incantation_medic": 3
+                },
+                "durability": 0.6,
+                "integrity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            },
+            "availableTextures": [""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/module/modular_amiya_staff/incantation_medic_core"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:mortal_blade" ]
+        },
+        "item": "more_tetra_tools:modular_mortal_blade",
+        "modules": {
+          "staff/a": [ "modular_mortal_blade/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_mortal_blade/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_mortal_blade/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_mortal_blade/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

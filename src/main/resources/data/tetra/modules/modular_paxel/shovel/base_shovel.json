@@ -1,0 +1,46 @@
+{
+  "slots": [ "modular_paxel/shovel" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:single/shovel/",
+    "tetra:single/shared_head/",
+    "tetra:single/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_shovel/",
+      "attributes": {
+        "generic.attack_damage": -0.19,
+        "generic.attack_speed": -0.225
+      },
+      "tools": {
+        "shovel_flatten": 1,
+        "dowse": 1
+      },
+      "aspects": {
+        "block_breaker": 2,
+        "breakable": 2
+      },
+      "durability": -20,
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.125
+        },
+        "tools": {
+          "shovel_dig": [ 1, 1 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 176,
+          "textureY": 32
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_shovel"}]
+      }
+    }
+  ]
+}

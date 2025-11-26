@@ -1,0 +1,35 @@
+{
+    "slots": [ "modular_lysis_mython/thread" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": [ "tetra:fibre/", "tetra:skin/", "tetra:fabric/" ],
+            "key": "base_thread/",
+            "effects": {
+                "more_tetra_tools:disassemble": 1
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "tertiaryEffects": {
+                    "counterweight": 1,
+                    "more_tetra_tools:disassemble": 1
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

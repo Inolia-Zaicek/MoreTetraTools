@@ -1,0 +1,70 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/zero"
+    ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
+            "key": "sights/",
+            "effects": {
+                "zoom": 4,
+                "focus": [ 0, 0.33 ]
+            },
+            "integrity": -1,
+            "durability": 10,
+            "extract": {
+                "primaryEffects": {
+                    "zoom": 2.15,
+                    "focus": [ 0, -0.006 ],
+                    "more_tetra_tools:verse_zero_vow_infinite": 0.5
+                },
+                "tertiaryEffects": {
+                    "zoom": -0.3,
+                    "focus": [ 0, 0.053 ],
+                    "more_tetra_tools:verse_zero_vow_infinite": 0.5
+                },
+                "durability": 0.2,
+                "glyph": {
+                    "textureX": 120,
+                    "textureY": 112
+                }
+            }
+        },
+        {
+            "materials": [ "tetra:rod/stick" ],
+            "key": "sights/",
+            "effects": {
+                "zoom": 9,
+                "focus": [ 0, 0.55 ],
+                "more_tetra_tools:verse_zero_vow_infinite": 4
+            },
+            "integrity": -1,
+            "durability": 10,
+            "extract": {
+                "durability": 0.2,
+                "glyph": {
+                    "textureX": 120,
+                    "textureY": 112
+                }
+            }
+        },
+        {
+            "key": "sights/echo_shard",
+            "integrity": -2,
+            "durability": 35,
+            "effects": {
+                "zoom": 9,
+                "focus": [ 0, 0.75 ],
+                "more_tetra_tools:verse_zero_vow_infinite": 4,
+                "focusEcho": 1,
+                "unstable": 30
+            },
+            "glyph": {
+                "textureX": 120,
+                "textureY": 112,
+                "tint": "28dce8"
+            }
+        }
+    ]
+}

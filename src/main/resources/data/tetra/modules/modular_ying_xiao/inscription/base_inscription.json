@@ -1,0 +1,38 @@
+{
+    "slots": [ "modular_ying_xiao/inscription" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_inscription/",
+            "attributes": {
+                "generic.attack_speed": 0.2
+            },
+            "effects": {
+                "more_tetra_tools:ying_xiao_fleeting_night": 51
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.05
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:ying_xiao_fleeting_night": 7
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

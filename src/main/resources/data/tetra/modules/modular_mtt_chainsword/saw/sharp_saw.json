@@ -1,0 +1,63 @@
+{
+    "slots": [ "modular_mtt_chainsword/saw" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:double/axe/",
+        "tetra:double/shared_head/",
+        "tetra:double/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "sharp_saw/",
+            "aspects": {
+                "block_breaker": 2,
+                "edged_weapon": 1,
+                "breakable": 2
+            },
+            "durability": 100,
+            "integrity": 0,
+            "extract": {
+                "tools": {
+                    "axe_dig": [ 1, 1 ],
+                    "axe_strip": [ 1, 1 ],
+                    "axe_scrape": [ 1, 1 ],
+                    "axe_wax_off": [ 1, 1 ]
+                },
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.3
+                },
+                "secondaryAttributes": {
+                    "generic.attack_damage": 0.15
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:saw_severing": 2
+                },
+                "secondaryEffects": {
+                    "more_tetra_tools:saw_severing": -1
+                },
+                "durability": 0.5,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_mtt_chainsword/sharp_saw"
+                    }
+                ]
+            },
+            "availableTextures": [""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/module/modular_mtt_chainsword/base",
+                    "renderLayer": "lower"
+                }
+            ]
+        }
+    ]
+}

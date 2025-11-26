@@ -1,0 +1,47 @@
+{
+  "slots": [ "modular_paxel/blade" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:sword/short_blade/",
+    "tetra:sword/shared_blade/",
+    "tetra:sword/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_blade/",
+      "attributes": {
+        "generic.attack_speed": -0.12,
+        "generic.attack_damage": -0.06
+      },
+      "aspects": {
+        "edged_weapon": 2,
+        "breakable": 2
+      },
+      "durability": -20,
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.12
+        },
+        "secondaryAttributes": {
+          "generic.attack_speed": -0.01
+        },
+        "secondaryEffects": {
+          "jab": -8
+        },
+        "tools": {
+          "cut": [ 0.7, 1 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 32
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_blade"}]
+      }
+    }
+  ]
+}

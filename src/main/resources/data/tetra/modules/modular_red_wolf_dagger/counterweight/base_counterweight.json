@@ -1,0 +1,37 @@
+{
+    "slots": [ "modular_red_wolf_dagger/counterweight" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_counterweight/",
+            "effects": {
+                "more_tetra_tools:execution_mode": 50
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "secondaryEffects": {
+                    "counterweight": 2
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:execution_mode": 20
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_red_wolf_dagger/base_counterweight"
+                    }
+                ]
+            }
+        }
+    ]
+}

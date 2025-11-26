@@ -1,0 +1,16 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:domain_of_incandescence" ]
+        },
+        "item": "more_tetra_tools:modular_domain_of_incandescence",
+        "modules": {
+          "tool/a": [ "modular_domain_of_incandescence/guard/base_guard", "base_guard/iron"],
+          "tool/b": [ "modular_domain_of_incandescence/flame/flame_material", "flame_material/iron"],
+          "tool/c": [ "modular_domain_of_incandescence/void/void_material", "void_material/iron"],
+          "tool/d": [ "modular_domain_of_incandescence/sentience/sentience_material", "sentience_material/iron"],
+          "tool/e": [ "modular_domain_of_incandescence/reason/reason_material", "reason_material/iron"]
+        },
+        "improvements": {}
+    }
+]

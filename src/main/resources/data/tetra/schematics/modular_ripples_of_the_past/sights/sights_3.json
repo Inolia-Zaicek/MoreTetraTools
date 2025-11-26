@@ -1,0 +1,39 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/infinite"
+    ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "textureX": 120,
+        "textureY": 112
+    },
+    "translation": {
+        "primaryEffects": {
+            "zoom": 3,
+            "focus": -1
+        },
+        "tertiaryEffects": {
+            "focus": 3,
+            "zoom": -1
+        },
+        "durability": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/", "tetra:rod/stick" ],
+            "moduleKey": "modular_ripples_of_the_past/infinite/sights",
+            "moduleVariant": "sights/"
+        },
+        {
+            "material": {
+                "items": [ "minecraft:echo_shard" ]
+            },
+            "requiredTools": {
+                "hammer_dig": "minecraft:diamond"
+            },
+            "moduleKey": "modular_ripples_of_the_past/infinite/sights",
+            "moduleVariant": "sights/echo_shard"
+        }
+    ]
+}

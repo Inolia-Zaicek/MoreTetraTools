@@ -1,0 +1,55 @@
+{
+    "slots": [ "modular_tenka_ashina/blade" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_blade/",
+            "attributes": {
+                "generic.attack_speed": -1.5
+            },
+            "effects": {
+                "sweeping": 1.75
+            },
+            "tools": {
+                "cut": [ 1, 2 ]
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": -20,
+            "tags": [ "forge:swords" ],
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.6
+                },
+                "durability": 1,
+                "integrity": -0.5,
+                "magicCapacity": 2,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            },
+            "availableTextures": [ ""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/tenka_ashina",
+                    "renderLayer": "lower"
+                }
+            ]
+        }
+    ]
+}

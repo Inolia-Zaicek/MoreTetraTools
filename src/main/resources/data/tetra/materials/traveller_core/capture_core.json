@@ -1,0 +1,25 @@
+{
+    "key": "capture_core",
+    "category": "traveller_core",
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "durability": 0,
+    "integrityCost": 0,
+    "integrityGain": 0,
+    "magicCapacity": 0,
+    "toolLevel": 0,
+    "toolEfficiency": 0,
+    "effects": {
+        "more_tetra_tools:capture": 1
+    },
+    "tints": {
+        "glyph": "diamond_glyph"
+    },
+    "textures": [
+        "capture_core"
+    ],
+    "material": {
+        "items": [ "minecraft:diamond" ]
+    }
+}

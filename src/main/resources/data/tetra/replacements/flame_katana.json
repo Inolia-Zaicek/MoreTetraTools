@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:flame_katana" ]
+        },
+        "item": "more_tetra_tools:modular_flame_katana",
+        "modules": {
+          "staff/a": [ "modular_flame_katana/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_flame_katana/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_flame_katana/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_flame_katana/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

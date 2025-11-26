@@ -1,0 +1,76 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/stave"
+    ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:bow/straight_stave/",
+        "tetra:bow/long_stave/",
+        "tetra:bow/shared_stave/",
+        "tetra:bow/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/", "tetra:rod/stick" ],
+            "key": "base_stave/",
+            "attributes": {
+                "tetra:draw_speed": 1.76,
+                "tetra:draw_strength": 1.2
+            },
+            "aspects": {
+                "bow": 2,
+                "breakable": 2
+            },
+            "effects": {
+                "more_tetra_tools:amphoreus_saga_of_heroes": 13,
+                "overbowed": 60,
+                "spread": [ 0, 99.9 ]
+            },
+            "durability": 171,
+            "extract": {
+                "primaryAttributes": {
+                    "tetra:draw_speed": 0.16,
+                    "tetra:draw_strength": 1.2
+                },
+                "tertiaryAttributes": {
+                    "tetra:draw_speed": -0.1,
+                    "tetra:draw_strength": 0.9
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:minuet_of_blooms_and_plumes": 6,
+                    "velocity": 5
+                },
+                "tertiaryEffects": {
+                    "more_tetra_tools:minuet_of_blooms_and_plumes": 6,
+                    "velocity": 4
+                },
+                "durability": 1.05,
+                "integrity": -0.5,
+                "magicCapacity": 2,
+                "glyph": {
+                    "textureX": 144,
+                    "textureY": 32
+                }
+            },
+            "availableTextures": [ "" ],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/ripples_of_the_past"
+                },
+                {
+                    "type": "draw_0",
+                    "location": "more_tetra_tools:item/ripples_of_the_past"
+                },
+                {
+                    "type": "draw_1",
+                    "location": "more_tetra_tools:item/ripples_of_the_past"
+                },
+                {
+                    "type": "draw_2",
+                    "location": "more_tetra_tools:item/ripples_of_the_past"
+                }
+            ]
+        }
+    ]
+}

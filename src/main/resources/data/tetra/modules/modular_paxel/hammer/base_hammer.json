@@ -1,0 +1,44 @@
+{
+  "slots": [ "modular_paxel/hammer" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:double/hammer/",
+    "tetra:double/shared_head/",
+    "tetra:double/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_hammer/",
+      "attributes": {
+        "generic.attack_speed": -0.13
+      },
+      "aspects": {
+        "block_breaker": 2,
+        "breakable": 2,
+        "blunt_weapon": 1
+      },
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.06
+        },
+        "secondaryAttributes": {
+          "generic.attack_damage": 0.12,
+          "generic.attack_speed": -0.01
+        },
+        "tools": {
+          "hammer_dig": [ 1, 1.8333 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 64
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_hammer"}]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:white_abyss_flower" ]
+        },
+        "item": "more_tetra_tools:modular_white_abyss_flower",
+        "modules": {
+          "staff/a": [ "modular_white_abyss_flower/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_white_abyss_flower/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_white_abyss_flower/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_white_abyss_flower/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

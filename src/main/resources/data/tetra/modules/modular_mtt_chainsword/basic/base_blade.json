@@ -1,0 +1,47 @@
+{
+    "slots": [ "modular_mtt_chainsword/basic" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_blade/",
+            "attributes": {
+                "generic.attack_speed": -1
+            },
+            "effects": {
+                "sweeping": 1
+            },
+            "tools": {
+                "cut": [ 1, 2 ]
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": 20,
+            "tags": [ "forge:swords" ],
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.75
+                },
+                "durability": 0.9,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_mtt_chainsword/base_blade"
+                    }
+                ]
+            }
+        }
+    ]
+}

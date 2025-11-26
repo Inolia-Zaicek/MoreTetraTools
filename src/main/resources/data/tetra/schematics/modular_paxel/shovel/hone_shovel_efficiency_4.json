@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_paxel/shovel" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 32
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "head_hone/shovel_efficiency",
+        "level": 3
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:gold"
+            },
+            "improvements": {
+                "head_hone/shovel_efficiency": 4
+            }
+        }
+    ]
+}

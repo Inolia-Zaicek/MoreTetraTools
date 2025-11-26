@@ -1,0 +1,48 @@
+{
+    "slots": [ "modular_jia_qiu_battlestaff/handle" ],
+    "type": "tetra:basic_major_module",
+    "renderLayer": "lower",
+    "improvements": [
+        "tetra:sword/shared_hilt/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+            "key": "base_handle/",
+            "attributes": {
+                "generic.attack_speed": -1.2,
+                "forge:reach_distance": 0.3,
+                "forge:attack_range": 0.3
+            },
+            "aspects": {
+                "block_breaker": 1,
+                "breakable": 2
+            },
+            "extract": {
+                "primaryAttributes": {
+                    "forge:reach_distance": 0.05,
+                    "forge:attack_range": 0.05
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.25
+                },
+                "tertiaryAttributes": {
+                    "forge:reach_distance": 0.1,
+                    "forge:attack_range": 0.1
+                },
+                "secondaryEffects": {
+                    "throwable": [ 0, 0.1 ]
+                },
+                "durability": 0.25,
+                "integrity": 1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            }
+        }
+    ]
+}

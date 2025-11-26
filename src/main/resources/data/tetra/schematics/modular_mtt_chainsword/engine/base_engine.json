@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_mtt_chainsword/engine" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 4,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:engine/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_mtt_chainsword/engine/base_engine",
+            "moduleVariant": "base_engine/"
+        }
+    ]
+}

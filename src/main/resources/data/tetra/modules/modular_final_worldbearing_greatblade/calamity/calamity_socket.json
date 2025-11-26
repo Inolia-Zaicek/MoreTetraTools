@@ -1,0 +1,25 @@
+{
+    "slots": [ "modular_final_worldbearing_greatblade/calamity" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "calamity_socket/",
+            "attributes": {
+                "generic.attack_damage": 1.25,
+                "generic.attack_speed": -0.4
+            },
+            "effects": {
+                "more_tetra_tools:calamity_soulscorch_edict": 50
+            },
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            }
+        }
+    ]
+}

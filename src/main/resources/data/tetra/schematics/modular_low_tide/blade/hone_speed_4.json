@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_low_tide/blade" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "blade_hone/speed",
+        "level": 3
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:stone"
+            },
+            "improvements": {
+                "blade_hone/speed": 4
+            }
+        }
+    ]
+}

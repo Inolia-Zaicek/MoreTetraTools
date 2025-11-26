@@ -1,0 +1,82 @@
+[
+    {
+        "key": "crystalline_shine",
+        "level": 1,
+        "integrity": -2,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 10
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 2,
+        "integrity": -2,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 15
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 3,
+        "integrity": -4,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 20
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 4,
+        "integrity": -4,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 30
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 5,
+        "integrity": -6,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 40
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 6,
+        "integrity": -6,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 50
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 7,
+        "integrity": -8,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 60
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 8,
+        "integrity": -8,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 70
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 9,
+        "integrity": -9,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 85
+        }
+    },
+    {
+        "key": "crystalline_shine",
+        "level": 10,
+        "integrity": -10,
+        "effects": {
+            "more_tetra_tools:crystalline_shine": 100
+        }
+    }
+]

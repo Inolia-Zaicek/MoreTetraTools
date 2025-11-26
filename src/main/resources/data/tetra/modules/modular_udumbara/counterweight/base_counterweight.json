@@ -1,0 +1,37 @@
+{
+    "slots": [ "modular_udumbara/counterweight" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_counterweight/",
+            "effects": {
+                "more_tetra_tools:moon_on_glacial_river": 30
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "secondaryEffects": {
+                    "counterweight": 2
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:moon_on_glacial_river": 10
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

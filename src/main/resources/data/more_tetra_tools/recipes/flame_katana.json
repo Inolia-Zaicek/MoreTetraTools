@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "group": "more_tetra_tools_flame_katana",
+    "ingredient": {
+        "item": "more_tetra_tools:prototype_weapon"
+    },
+    "result": "more_tetra_tools:flame_katana"
+}

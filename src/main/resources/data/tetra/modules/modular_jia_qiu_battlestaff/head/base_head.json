@@ -1,0 +1,51 @@
+{
+    "slots": [ "modular_jia_qiu_battlestaff/head" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_head/",
+            "attributes": {
+                "generic.attack_speed": -0.25
+            },
+            "effects": {
+                "more_tetra_tools:thunderstrike": [5,2.5]
+            },
+            "aspects": {
+                "pointy_weapon": 1,
+                "breakable": 2
+            },
+            "durability": -20,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.75
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:thunderstrike": [5,1]
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.065,
+                    "generic.attack_damage": 0.075
+                },
+                "durability": 0.5,
+                "integrity": -0.5,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            },
+            "availableTextures": [""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/jia_qiu_battlestaff"
+                }
+            ]
+        }
+    ]
+}

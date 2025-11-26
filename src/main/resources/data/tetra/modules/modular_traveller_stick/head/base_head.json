@@ -1,0 +1,34 @@
+{
+    "slots": [ "modular_traveller_stick/head" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_head/",
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": -20,
+            "extract": {
+                "primaryAttributes": {
+                    "**generic.movement_speed": 0.1,
+                    "forge:step_height_addition": 0.2
+                },
+                "durability": 1,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_traveller_stick/base_head"
+                    }
+                ]
+            }
+        }
+    ]
+}

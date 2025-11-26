@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "tetra:thermal_cell"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "more_tetra_tools:thermal_engine",
+    "count": 1
+  }
+}

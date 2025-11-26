@@ -1,0 +1,32 @@
+{
+    "slots": [ "modular_domain_of_incandescence/flame" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "flame_socket/",
+            "attributes": {
+                "generic.attack_damage": 1.25,
+                "generic.attack_speed": -0.4
+            },
+            "effects": {
+                "more_tetra_tools:the_blade_supreme_rekindled": 125
+            },
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_domain_of_incandescence/flame",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

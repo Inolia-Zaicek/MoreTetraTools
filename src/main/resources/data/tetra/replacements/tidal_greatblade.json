@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:tidal_greatblade" ]
+        },
+        "item": "more_tetra_tools:modular_tidal_greatblade",
+        "modules": {
+          "staff/a": [ "modular_tidal_greatblade/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_tidal_greatblade/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_tidal_greatblade/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_tidal_greatblade/base/basic_base", "basic_base/iron"]
+        },
+        "improvements": {}
+    }
+]

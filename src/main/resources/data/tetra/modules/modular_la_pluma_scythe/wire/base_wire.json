@@ -1,0 +1,38 @@
+{
+    "slots": [ "modular_la_pluma_scythe/wire" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:metal/", "tetra:gem/" ],
+            "key": "base_wire/",
+            "attributes": {
+                "generic.attack_speed": 0.2
+            },
+            "effects": {
+                "more_tetra_tools:rapid_slashing": 51
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.05
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:rapid_slashing": 7
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_la_pluma_scythe/base_wire"
+                    }
+                ]
+            }
+        }
+    ]
+}

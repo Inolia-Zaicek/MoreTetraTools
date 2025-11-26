@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_traveller_stick/core" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:traveller_core/" ],
+            "key": "base_core/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": ["teleportation_core","waypoint_core","gohome_core","recall_core",
+                "capture_core"],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_traveller_stick/",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

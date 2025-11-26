@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:mnemonos_grapheus" ]
+        },
+        "item": "more_tetra_tools:modular_mnemonos_grapheus",
+        "modules": {
+          "tool/a": [ "modular_mnemonos_grapheus/nib/base_nib", "base_nib/iron"],
+          "tool/b": [ "modular_mnemonos_grapheus/pen_body/base_pen_body", "base_pen_body/iron"],
+          "tool/c": [ "modular_mnemonos_grapheus/feather/base_feather", "base_feather/string"],
+          "tool/d": [ "modular_mnemonos_grapheus/pen_core/base_pen_core", "base_pen_core/iron"]
+        },
+        "improvements": {}
+    }
+]

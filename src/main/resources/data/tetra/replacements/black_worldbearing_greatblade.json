@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:black_worldbearing_greatblade" ]
+        },
+        "item": "more_tetra_tools:modular_black_worldbearing_greatblade",
+        "modules": {
+          "staff/a": [ "modular_black_worldbearing_greatblade/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_black_worldbearing_greatblade/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_black_worldbearing_greatblade/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_black_worldbearing_greatblade/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

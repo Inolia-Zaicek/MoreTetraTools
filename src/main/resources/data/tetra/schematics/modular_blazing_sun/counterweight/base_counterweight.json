@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_blazing_sun/counterweight" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_blazing_sun/counterweight/base_counterweight",
+            "moduleVariant": "base_counterweight/"
+        }
+    ]
+}

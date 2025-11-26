@@ -1,0 +1,41 @@
+{
+    "slots": [ "modular_final_worldbearing_greatblade/foundation" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "foundation_material/",
+            "attributes": {
+                "generic.attack_speed": -0.4
+            },
+            "effects": {
+                "more_tetra_tools:foundation_stardeath_verdict": 75
+            },
+            "extract": {
+                "primaryEffects": {
+                    "more_tetra_tools:foundation_stardeath_verdict": 25,
+                    "sweeping": 0.1
+                },
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.15
+                },
+                "secondaryAttributes": {
+                    "generic.attack_damage": 0.1,
+                    "generic.attack_speed": -0.03
+                },
+                "durability": 0.3,
+                "integrity": 0.75,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_lysis_mython/thread" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:fibre/", "tetra:skin/", "tetra:fabric/" ],
+            "countFactor": 2,
+            "moduleKey": "modular_lysis_mython/thread/base_thread",
+            "moduleVariant": "base_thread/"
+        }
+    ]
+}

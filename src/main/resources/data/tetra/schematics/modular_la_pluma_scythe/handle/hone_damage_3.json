@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_la_pluma_scythe/handle" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 32,
+        "textureY": 240
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "hilt_hone/damage",
+        "level": 2
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:stone"
+            },
+            "improvements": {
+                "hilt_hone/damage": 3
+            }
+        }
+    ]
+}

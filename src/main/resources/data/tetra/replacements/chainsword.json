@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:chainsword" ]
+        },
+        "item": "more_tetra_tools:modular_mtt_chainsword",
+        "modules": {
+          "staff/a": [ "modular_mtt_chainsword/saw/sharp_saw", "sharp_saw/iron"],
+          "staff/b": [ "modular_mtt_chainsword/basic/base_blade", "base_blade/iron"],
+          "staff/c": [ "modular_mtt_chainsword/handle/base_handle", "base_handle/iron"],
+          "staff/d": [ "modular_mtt_chainsword/engine/base_engine", "base_engine/redstone_engine"]
+        },
+        "improvements": {}
+    }
+]

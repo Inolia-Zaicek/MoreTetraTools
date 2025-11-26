@@ -1,0 +1,30 @@
+{
+    "key": "blaze_engine",
+    "category": "engine",
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "durability": 0,
+    "integrityCost": 0,
+    "integrityGain": 0,
+    "magicCapacity": 0,
+    "toolLevel": 0,
+    "toolEfficiency": 0,
+    "effects": {
+        "more_tetra_tools:chainsword": 3.5,
+        "more_tetra_tools:saw_severing": 3
+    },
+    "tints": {
+        "glyph": "fff32d",
+        "texture": "fff32d"
+    },
+    "textures": [
+        ""
+    ],
+    "material": {
+        "items": [ "more_tetra_tools:blaze_engine" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:wood"
+    }
+}

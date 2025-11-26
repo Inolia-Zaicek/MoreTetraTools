@@ -1,0 +1,41 @@
+{
+  "slots": [ "modular_paxel/pickaxe" ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:double/pickaxe/",
+    "tetra:double/shared_head/",
+    "tetra:double/shared/",
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+      "key": "base_pickaxe/",
+      "attributes": {
+        "generic.attack_damage": -0.25,
+        "generic.attack_speed": -0.15
+      },
+      "aspects": {
+        "block_breaker": 2,
+        "breakable": 2
+      },
+      "durability": -10,
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.12
+        },
+        "tools": {
+          "pickaxe_dig": [ 1, 0.91 ]
+        },
+        "durability": 0.5,
+        "integrity": -0.5,
+        "magicCapacity": 1,
+        "glyph": {
+          "textureX": 176
+        },
+        "availableTextures": [ ""],
+        "models": [{"location": "more_tetra_tools:item/module/modular_paxel/base_pickaxe"}]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "slots": [ "modular_low_tide/head" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_head/",
+            "attributes": {
+                "generic.attack_damage": 0.75
+            },
+            "effects": {
+                "more_tetra_tools:grievous_wounds": 11
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.3
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:grievous_wounds": 8
+                },
+                "secondaryEffects": {
+                    "more_tetra_tools:grievous_wounds": 4
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_low_tide/base_head"
+                    }
+                ]
+            }
+        }
+    ]
+}

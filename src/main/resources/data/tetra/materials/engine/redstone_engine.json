@@ -1,0 +1,30 @@
+{
+    "key": "redstone_engine",
+    "category": "engine",
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "durability": 0,
+    "integrityCost": 0,
+    "integrityGain": 0,
+    "magicCapacity": 0,
+    "toolLevel": 0,
+    "toolEfficiency": 0,
+    "effects": {
+        "more_tetra_tools:chainsword": 7,
+        "more_tetra_tools:saw_severing": 1
+    },
+    "tints": {
+        "glyph": "FF0000",
+        "texture": "FF0000"
+    },
+    "textures": [
+        ""
+    ],
+    "material": {
+        "items": [ "more_tetra_tools:redstone_engine" ]
+    },
+    "requiredTools": {
+        "hammer_dig": "minecraft:wood"
+    }
+}

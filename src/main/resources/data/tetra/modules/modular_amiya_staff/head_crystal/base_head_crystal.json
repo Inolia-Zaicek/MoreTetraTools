@@ -1,0 +1,43 @@
+{
+    "type": "tetra:basic_major_module",
+    "slots": [ "modular_amiya_staff/head_crystal" ],
+    "improvements": [
+        "tetra:amiya_staff/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_head_crystal/",
+            "attributes": {
+                "generic.attack_speed": -1.5
+            },
+            "aspects": {
+                "breakable": 2,
+                "mtt_only_spell": 1
+            },
+            "durability": 50,
+            "extract": {
+                "primaryAttributes": {
+                    "**irons_spellbooks:spell_power": 0.005,
+                    "**irons_spellbooks:summon_damage": 0.01,
+                    "ars_nouveau:ars_nouveau.perk.spell_damage": 1
+                },
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 1,
+                "integrity": -0.75,
+                "magicCapacity": 2,
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_amiya_staff/head_crystal",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

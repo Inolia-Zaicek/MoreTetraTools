@@ -1,0 +1,53 @@
+{
+    "slots": [
+        "modular_drones_staff/body",
+        "modular_drones_staff/handle",
+        "modular_drones_staff/guard"
+    ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "alshanex_familiars"
+    }
+  ],
+    "materialSlotCount": 0,
+    "rarity": "hone",
+    "displayType": "improvement",
+    "hone":true,
+    "glyph": {
+        "textureLocation": "tetra:textures/gui/wizard_glyphs.png",
+        "textureX": 0,
+        "textureY": 64
+    },
+    "requirement": {
+        "type": "tetra:and",
+        "requirements": [
+          {
+            "type": "tetra:aspect",
+            "aspect": "mtt_only_spell",
+            "level": {
+              "max": 2
+            }
+          },
+            {
+                "type": "tetra:locked",
+                "key": "tetra:single/more_mod_tetra_iron_spell_sound_staff"
+            },
+            {
+                "type": "tetra:not",
+                "requirement": {
+                    "type": "tetra:improvement",
+                    "improvement": "modular_amiya_staff_sound_spell_power"
+                }
+            }
+        ]
+    },
+    "outcomes": [
+        {
+            "experienceCost": 5,
+            "improvements": {
+                "modular_amiya_staff_sound_spell_power": 1
+            }
+        }
+    ]
+}

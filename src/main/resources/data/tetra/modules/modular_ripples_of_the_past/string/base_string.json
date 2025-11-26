@@ -1,0 +1,59 @@
+{
+    "slots": [ "modular_ripples_of_the_past/string" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:bow/basic_string/",
+        "tetra:bow/shared_string/",
+        "tetra:bow/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": [ "tetra:fibre/", "tetra:skin/" ],
+            "key": "base_string/",
+            "integrity": 1,
+            "durability": 70,
+            "attributes": {
+                "tetra:draw_speed": -0.05
+            },
+            "aspects": {
+                "bow": 2,
+                "breakable": 2
+            },
+            "extract": {
+                "secondaryAttributes": {
+                    "tetra:draw_speed": 0.07
+                },
+                "tertiaryEffects": {
+                    "more_tetra_tools:bloom_elysium_of_beyond": 1,
+                    "more_tetra_tools:this_ode_to_all_lives": 1
+                },
+                "durability": 0.5,
+                "integrity": 2,
+                "magicCapacity": 2,
+                "glyph": {
+                    "textureX": 112,
+                    "textureY": 32
+                },
+                "availableTextures": [ "" ],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    },
+                    {
+                        "type": "draw_0",
+                        "location": "more_tetra_tools:item/module/none"
+                    },
+                    {
+                        "type": "draw_1",
+                        "location": "more_tetra_tools:item/module/none"
+                    },
+                    {
+                        "type": "draw_2",
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

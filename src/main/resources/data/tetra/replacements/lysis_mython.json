@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:lysis_mython" ]
+        },
+        "item": "more_tetra_tools:modular_lysis_mython",
+        "modules": {
+          "staff/a": [ "modular_lysis_mython/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_lysis_mython/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_lysis_mython/thread/base_thread", "base_thread/string"],
+          "staff/d": [ "modular_lysis_mython/head/base_head", "base_head/iron"]
+        },
+        "improvements": {}
+    }
+]

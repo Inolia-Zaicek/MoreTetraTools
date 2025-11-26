@@ -1,0 +1,16 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:final_worldbearing_greatblade" ]
+        },
+        "item": "more_tetra_tools:modular_final_worldbearing_greatblade",
+        "modules": {
+          "tool/a": [ "modular_final_worldbearing_greatblade/guard/base_guard", "base_guard/iron"],
+          "tool/b": [ "modular_final_worldbearing_greatblade/fate/fate_material", "fate_material/iron"],
+          "tool/c": [ "modular_final_worldbearing_greatblade/creation/creation_material", "creation_material/iron"],
+          "tool/d": [ "modular_final_worldbearing_greatblade/calamity/calamity_material", "calamity_material/iron"],
+          "tool/e": [ "modular_final_worldbearing_greatblade/foundation/foundation_material", "foundation_material/iron"]
+        },
+        "improvements": {}
+    }
+]

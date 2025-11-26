@@ -1,0 +1,48 @@
+{
+    "slots": [ "modular_final_worldbearing_greatblade/guard" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard/",
+            "attributes": {
+                "generic.attack_damage": 1.5,
+                "generic.attack_speed": -0.85
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "effects": {
+                "sweeping": 1.5
+            },
+            "tools": {
+                "cut": [ 1, 3 ]
+            },
+            "durability": 64,
+            "extract": {
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.035
+                },
+                "durability": 0.5,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            },
+            "availableTextures": [ ""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/final_worldbearing_greatblade"
+                }
+            ]
+        }
+    ]
+}

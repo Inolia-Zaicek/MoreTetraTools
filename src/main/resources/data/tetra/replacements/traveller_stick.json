@@ -1,0 +1,13 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:traveller_stick" ]
+        },
+        "item": "more_tetra_tools:modular_traveller_stick",
+        "modules": {
+          "staff/a": [ "modular_traveller_stick/head/base_head", "base_head/iron"],
+          "staff/b": [ "modular_traveller_stick/handle/base_handle", "base_handle/iron"]
+        },
+        "improvements": {}
+    }
+]

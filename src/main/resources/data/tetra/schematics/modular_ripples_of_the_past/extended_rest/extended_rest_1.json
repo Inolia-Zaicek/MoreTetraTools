@@ -1,0 +1,34 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/zero"
+    ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "textureX": 128,
+        "textureY": 112
+    },
+    "translation": {
+        "primaryEffects": {
+            "multishot": 3
+        },
+        "tertiaryEffects": {
+            "multishot": [ 0, -3 ]
+        },
+        "durability": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/", "tetra:rod/stick" ],
+            "moduleKey": "modular_ripples_of_the_past/zero/extended_rest",
+            "moduleVariant": "extended_rest/"
+        },
+        {
+            "material": {
+                "items": [ "tetra:forged_bolt" ]
+            },
+            "moduleKey": "modular_ripples_of_the_past/zero/extended_rest",
+            "moduleVariant": "extended_rest/bolt"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+[
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 1,
+        "integrity": -1,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.01
+        },
+        "conditions": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "irons_spellbooks"
+            }
+        ]
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 2,
+        "integrity": -2,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.02
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 3,
+        "integrity": -3,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.03
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 4,
+        "integrity": -4,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.04
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 5,
+        "integrity": -5,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.05
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 6,
+        "integrity": -6,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.06
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 7,
+        "integrity": -7,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.07
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 8,
+        "integrity": -8,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.08
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 9,
+        "integrity": -9,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.09
+        }
+    },
+    {
+        "key": "modular_amiya_staff_evocation_spell_power",
+        "level": 10,
+        "integrity": -10,
+        "aspects": {
+            "mtt_only_spell": 10
+        },
+        "attributes": {
+            "**irons_spellbooks:evocation_spell_power": 0.1
+        }
+    }
+]

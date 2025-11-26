@@ -1,0 +1,42 @@
+{
+    "slots": [ "modular_tidal_greatblade/guard" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard/",
+            "integrity": -1,
+            "attributes": {
+                "generic.armor": 1,
+                "generic.attack_speed": -0.05
+            },
+            "effects": {
+                "more_tetra_tools:tidal_elegy_armor": 2.2
+            },
+            "durability": 100,
+            "extract": {
+                "primaryEffects": {
+                    "more_tetra_tools:tidal_elegy_armor": 1.5
+                },
+                "primaryAttributes": {
+                    "generic.armor": 0.5
+                },
+                "tertiaryAttributes": {
+                    "generic.armor": 0.2
+                },
+                "durability": 0.3,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "integrity": 0.5,
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_tidal_greatblade/base_guard"
+                    }
+                ]
+            }
+        }
+    ]
+}

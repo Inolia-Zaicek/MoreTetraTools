@@ -1,0 +1,33 @@
+{
+    "slots": [
+        "modular_drones_staff/body",
+        "modular_drones_staff/handle",
+        "modular_drones_staff/guard"
+    ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+    "rarity": "hone",
+    "displayType": "improvement",
+    "hone":true,
+    "glyph": {
+        "textureLocation": "tetra:textures/gui/wizard_glyphs.png",
+        "textureX": 0,
+        "textureY": 96
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "modular_amiya_staff_max_mana",
+        "level":2
+    },
+    "outcomes": [
+        {
+            "improvements": {
+                "modular_amiya_staff_max_mana": 3
+            }
+        }
+    ]
+}

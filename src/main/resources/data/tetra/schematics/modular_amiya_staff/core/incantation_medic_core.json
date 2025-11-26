@@ -1,0 +1,25 @@
+{
+    "slots": [ "modular_amiya_staff/core" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "attributes": {
+        "generic.attack_damage": 4
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 2,
+            "moduleKey": "modular_amiya_staff/core/incantation_medic_core",
+            "moduleVariant": "incantation_medic_core/"
+        }
+    ]
+}

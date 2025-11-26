@@ -1,0 +1,11 @@
+{
+ "values":[
+  "more_tetra_tools:truedamage",
+  "more_tetra_tools:dotdamage",
+  "more_tetra_tools:tick_fire_damage",
+  "more_tetra_tools:tick_freeze_damage",
+  "more_tetra_tools:tick_lightning_damage",
+  "more_tetra_tools:tick_poison_damage",
+  "more_tetra_tools:tick_wither_damage"
+ ]
+}

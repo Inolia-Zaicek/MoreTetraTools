@@ -1,0 +1,30 @@
+{
+    "slots": [ "modular_paxel/axe" ],
+    "materialSlotCount": 1,
+    "glyph": {
+        "textureX": 144
+    },
+    "displayType": "major",
+    "translation": {
+        "primaryAttributes": {
+            "generic.attack_damage": 2
+        },
+        "secondaryAttributes": {
+            "generic.attack_damage": 1
+        },
+        "tools": {
+            "axe_dig": [ 3, 3 ]
+        },
+        "durability": 2,
+        "integrity": -3,
+        "magicCapacity": 3
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 2,
+            "moduleKey": "modular_paxel/axe/base_axe",
+            "moduleVariant": "base_axe/"
+        }
+    ]
+}

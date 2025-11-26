@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "group": "more_tetra_tools_la_pluma_scythe",
+    "ingredient": {
+        "item": "more_tetra_tools:prototype_weapon"
+    },
+    "result": "more_tetra_tools:la_pluma_scythe"
+}

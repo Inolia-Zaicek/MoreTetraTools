@@ -1,0 +1,38 @@
+{
+    "slots": [ "modular_la_pluma_scythe/drive" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_drive/",
+            "attributes": {
+                "generic.attack_damage": 0.25
+            },
+            "effects": {
+                "more_tetra_tools:reap": 20
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.05
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:reap": 4
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_la_pluma_scythe/base_drive"
+                    }
+                ]
+            }
+        }
+    ]
+}

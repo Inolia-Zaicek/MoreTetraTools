@@ -1,0 +1,39 @@
+{
+    "slots": [ "modular_low_tide/end" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_end/",
+            "attributes": {
+                "generic.attack_speed": 0.7
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:beheading": 10
+                },
+                "secondaryEffects": {
+                    "more_tetra_tools:beheading": 10
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_low_tide/base_end"
+                    }
+                ]
+            }
+        }
+    ]
+}

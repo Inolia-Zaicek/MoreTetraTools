@@ -1,0 +1,22 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/thirteen"
+    ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "tint": "bolt_glyph",
+        "textureX": 80,
+        "textureY": 112
+    },
+    "outcomes": [
+        {
+            "material": {
+                "items": [ "tetra:forged_bolt" ],
+                "count": 2
+            },
+            "moduleKey": "modular_ripples_of_the_past/thirteen/adjustable_strength",
+            "moduleVariant": "adjustable_strength/bolt"
+        }
+    ]
+}

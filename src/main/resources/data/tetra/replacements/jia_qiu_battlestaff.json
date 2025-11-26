@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:jia_qiu_battlestaff" ]
+        },
+        "item": "more_tetra_tools:modular_jia_qiu_battlestaff",
+        "modules": {
+          "staff/a": [ "modular_jia_qiu_battlestaff/head/base_head", "base_head/iron"],
+          "staff/b": [ "modular_jia_qiu_battlestaff/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_jia_qiu_battlestaff/end/base_end", "base_end/iron"],
+          "staff/d": [ "modular_jia_qiu_battlestaff/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

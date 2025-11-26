@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:ying_xiao" ]
+        },
+        "item": "more_tetra_tools:modular_ying_xiao",
+        "modules": {
+          "staff/a": [ "modular_ying_xiao/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_ying_xiao/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_ying_xiao/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_ying_xiao/inscription/base_inscription", "base_inscription/iron"]
+        },
+        "improvements": {}
+    }
+]

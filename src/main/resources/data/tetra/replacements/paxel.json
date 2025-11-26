@@ -1,0 +1,18 @@
+[
+  {
+    "predicate": {
+      "items": [ "more_tetra_tools:paxel" ]
+    },
+    "item": "more_tetra_tools:modular_paxel",
+    "modules": {
+      "tool/a": [ "modular_paxel/pickaxe/base_pickaxe", "base_pickaxe/iron"],
+      "tool/b": [ "modular_paxel/handle/base_handle", "base_handle/iron"],
+      "tool/c": [ "modular_paxel/axe/base_axe", "base_axe/iron"],
+      "tool/d": [ "modular_paxel/claw/base_claw", "base_claw/iron"],
+      "tool/e": [ "modular_paxel/shovel/base_shovel", "base_shovel/iron"],
+      "tool/f": [ "modular_paxel/hammer/base_hammer", "base_hammer/iron"],
+      "tool/g": [ "modular_paxel/blade/base_blade", "base_blade/iron"]
+    },
+    "improvements": {}
+  }
+]

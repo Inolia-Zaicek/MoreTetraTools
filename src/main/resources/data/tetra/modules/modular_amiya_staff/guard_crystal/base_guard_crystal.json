@@ -1,0 +1,42 @@
+{
+    "slots": [ "modular_amiya_staff/guard_crystal" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:amiya_staff/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard_crystal/",
+            "attributes": {
+                "**irons_spellbooks:spell_resist": 0.01
+            },
+            "aspects": {
+                "breakable": 2,
+                "mtt_only_spell": 1
+            },
+            "durability": 100,
+            "durabilityMultiplier": 1.1,
+            "extract": {
+                "primaryAttributes": {
+                    "**irons_spellbooks:spell_resist": 0.01,
+                    "ars_nouveau:ars_nouveau.perk.mana_regen": 1
+                },
+                "durability": 0.25,
+                "integrity": 0.5,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_amiya_staff/guard_crystal",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

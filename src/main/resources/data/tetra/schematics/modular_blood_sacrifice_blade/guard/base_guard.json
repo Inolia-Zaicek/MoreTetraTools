@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_blood_sacrifice_blade/guard" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_blood_sacrifice_blade/guard/base_guard",
+            "moduleVariant": "base_guard/"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_la_pluma_scythe/drive" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_la_pluma_scythe/drive/base_drive",
+            "moduleVariant": "base_drive/"
+        }
+    ]
+}

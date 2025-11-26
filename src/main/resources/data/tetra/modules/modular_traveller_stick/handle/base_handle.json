@@ -1,0 +1,39 @@
+{
+    "slots": [ "modular_traveller_stick/handle" ],
+    "type": "tetra:basic_major_module",
+    "renderLayer": "lower",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+            "key": "base_handle/",
+            "attributes": {
+                "**generic.movement_speed": 0.1
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": 60,
+            "integrity": 1,
+            "extract": {
+                "primaryAttributes": {
+                    "**generic.movement_speed": 0.05
+                },
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 0.3,
+                "integrity": 1,
+                "magicCapacity": 1,
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_traveller_stick/base_handle"
+                    }
+                ]
+            }
+        }
+    ]
+}

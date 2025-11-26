@@ -1,0 +1,41 @@
+{
+    "slots": [ "modular_mnemonos_grapheus/feather" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/","tetra:fibre/", "tetra:skin/", "tetra:fabric/"  ],
+            "key": "base_feather/",
+            "effects": {
+                "more_tetra_tools:delete": 1.5
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.01
+                },
+                "secondaryEffects": {
+                    "counterweight": 1.5
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:delete": 0.5
+                },
+                "tertiaryEffects": {
+                    "counterweight": 0.5,
+                    "more_tetra_tools:delete": 0.3
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

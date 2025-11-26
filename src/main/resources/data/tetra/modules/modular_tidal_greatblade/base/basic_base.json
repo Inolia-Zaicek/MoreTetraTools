@@ -1,0 +1,42 @@
+{
+    "slots": [ "modular_tidal_greatblade/base" ],
+    "type": "tetra:basic_major_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "basic_base/",
+            "integrity": -1,
+            "attributes": {
+                "generic.max_health": 4,
+                "generic.attack_speed": -0.05
+            },
+            "effects": {
+                "more_tetra_tools:tidal_elegy_health": 2.2
+            },
+            "durability": 100,
+            "extract": {
+                "primaryEffects": {
+                    "more_tetra_tools:tidal_elegy_health": 1.5
+                },
+                "primaryAttributes": {
+                    "generic.max_health": 0.75
+                },
+                "tertiaryAttributes": {
+                    "generic.max_health": 0.3
+                },
+                "durability": 0.3,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "integrity": 0.5,
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_tidal_greatblade/basic_base"
+                    }
+                ]
+            }
+        }
+    ]
+}

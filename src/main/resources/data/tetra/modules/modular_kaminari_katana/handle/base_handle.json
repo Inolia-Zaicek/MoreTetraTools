@@ -1,0 +1,43 @@
+{
+    "slots": [ "modular_kaminari_katana/handle" ],
+    "type": "tetra:basic_major_module",
+    "renderLayer": "lower",
+    "improvements": [
+        "tetra:sword/shared_hilt/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+            "key": "base_handle/",
+            "attributes": {
+                "generic.attack_speed": -0.35
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": 60,
+            "integrity": 1,
+            "extract": {
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.075
+                },
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 0.3,
+                "integrity": 1,
+                "magicCapacity": 1,
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}

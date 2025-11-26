@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "group": "more_tetra_tools_seven_thunders_of_retribution_narukami",
+    "ingredient": {
+        "item": "more_tetra_tools:prototype_weapon"
+    },
+    "result": "more_tetra_tools:seven_thunders_of_retribution_narukami"
+}

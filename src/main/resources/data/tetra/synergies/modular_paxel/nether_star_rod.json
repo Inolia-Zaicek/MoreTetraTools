@@ -1,0 +1,15 @@
+[
+    {
+        "modules": ["modular_paxel/axe/base_axe"],
+        "moduleVariants": ["base_handle/nether_star_rod"],
+        "visibilityKey": "base_handle/nether_star_rod",
+        "tools": {
+            "axe_dig": 1,
+            "shovel_dig": 1,
+            "pickaxe_dig": 1,
+            "hammer_dig": 1,
+            "pry": 1,
+            "cut": 1
+        }
+    }
+]

@@ -1,0 +1,97 @@
+package com.inolia_zaicek.more_tetra_tools.Register;
+
+import com.inolia_zaicek.more_tetra_tools.Register.Effect.*;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+import static com.inolia_zaicek.more_tetra_tools.MoreTetraTools.MODID;
+
+
+public class MTTEffectsRegister {
+    public static final DeferredRegister<MobEffect> INOEFFECT = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS,MODID);
+    public static final RegistryObject<MobEffect> IntoTheGroove = INOEFFECT.register("into_the_groove", IntoTheGrooveBuff::new);
+    public static final RegistryObject<MobEffect> YingXiaoShadowless = INOEFFECT.register("ying_xiao_shadowless", YingXiaoShadowlessBuff::new);
+    public static final RegistryObject<MobEffect> GrievousWounds = INOEFFECT.register("grievous_wounds", GrievousWoundsBuff::new);
+    public static final RegistryObject<MobEffect> EmberBrand = INOEFFECT.register("ember_brand", EmberBrandBuff::new);
+    public static final RegistryObject<MobEffect> HerrscherOfFlamescion = INOEFFECT.register("herrscher_of_flamescion", HerrscherOfFlamescionBuff::new);
+    public static final RegistryObject<MobEffect> TidalElegyAttack = INOEFFECT.register("tidal_elegy_attack", TidalElegyAttackBuff::new);
+    public static final RegistryObject<MobEffect> TidalElegyArmor = INOEFFECT.register("tidal_elegy_armor", TidalElegyArmorBuff::new);
+    public static final RegistryObject<MobEffect> TidalElegyHealth = INOEFFECT.register("tidal_elegy_health", TidalElegyHealthBuff::new);
+    public static final RegistryObject<MobEffect> DivineAvatar = INOEFFECT.register("divine_avatar", DivineAvatarBuff::new);
+    public static final RegistryObject<MobEffect> BlazingSunSObeisance = INOEFFECT.register("blazing_sun_s_obeisance", BlazingSunSObeisanceBuff::new);
+    public static final RegistryObject<MobEffect> LongShatteredVessel = INOEFFECT.register("long_shattered_vessel", LongShatteredVesselBuff::new);
+    public static final RegistryObject<MobEffect> SilentSorrow = INOEFFECT.register("silent_sorrow", SilentSorrowBuff::new);
+    public static final RegistryObject<MobEffect> HeWhoBearsTheWorldMustBurn = INOEFFECT.register("he_who_bears_the_world_must_burn", HeWhoBearsTheWorldMustBurnBuff::new);
+    public static final RegistryObject<MobEffect> Soulscorch = INOEFFECT.register("soulscorch", SoulscorchBuff::new);
+    public static final RegistryObject<MobEffect> FireAndSteel = INOEFFECT.register("fire_and_steel", FireAndSteelBuff::new);
+    public static final RegistryObject<MobEffect> ExecutionMode1 = INOEFFECT.register("execution_mode_1", ExecutionModeBuff::new);
+    public static final RegistryObject<MobEffect> ExecutionMode2 = INOEFFECT.register("execution_mode_2", ExecutionModeBuff::new);
+    public static final RegistryObject<MobEffect> ExecutionMode3 = INOEFFECT.register("execution_mode_3", ExecutionModeBuff::new);
+    public static final RegistryObject<MobEffect> ExecutionMode4 = INOEFFECT.register("execution_mode_4", ExecutionModeBuff::new);
+    public static final RegistryObject<MobEffect> AstralSwordAfternoon = INOEFFECT.register("astral_sword_afternoon", AstralSwordAfternoonBuff::new);
+    public static final RegistryObject<MobEffect> AstralSwordDawn = INOEFFECT.register("astral_sword_dawn", AstralSwordDawnBuff::new);
+    public static final RegistryObject<MobEffect> AstralSwordDusk = INOEFFECT.register("astral_sword_dusk", AstralSwordDuskBuff::new);
+    public static final RegistryObject<MobEffect> AstralSwordMorning = INOEFFECT.register("astral_sword_morning", AstralSwordMorningBuff::new);
+    public static final RegistryObject<MobEffect> AstralSwordNight = INOEFFECT.register("astral_sword_night", AstralSwordNightBuff::new);
+    public static final RegistryObject<MobEffect> CelestialGlobe = INOEFFECT.register("celestial_globe", CelestialGlobeBuff::new);
+    public static final RegistryObject<MobEffect> Flameheart = INOEFFECT.register("flameheart", FlameheartBuff::new);
+    public static final RegistryObject<MobEffect> VanguardSwordsmanship = INOEFFECT.register("vanguard_swordsmanship", VanguardSwordsmanshipBuff::new);
+    public static final RegistryObject<MobEffect> IronDefense = INOEFFECT.register("iron_defense", IronDefenseBuff::new);
+    public static final RegistryObject<MobEffect> CopperSeal = INOEFFECT.register("copper_seal", CopperSealBuff::new);
+    public static final RegistryObject<MobEffect> WaxingMoon = INOEFFECT.register("waxing_moon", WaxingMoonBuff::new);
+    public static final RegistryObject<MobEffect> HalfMoon = INOEFFECT.register("half_moon", HalfMoonBuff::new);
+    public static final RegistryObject<MobEffect> Unrevive = INOEFFECT.register("unrevive", UnreviveBuff::new);
+    public static final RegistryObject<MobEffect> DivineDragonPower = INOEFFECT.register("divine_dragon_power", DivineDragonPowerBuff::new);
+    public static final RegistryObject<MobEffect> FreezeTime = INOEFFECT.register("freeze_time", FreezeTimeBuff::new);
+    public static final RegistryObject<MobEffect> DeityHunter = INOEFFECT.register("deity_hunter", DeityHunterBuff::new);
+    public static final RegistryObject<MobEffect> ReadyToTransfer = INOEFFECT.register("ready_to_transfer", ReadyToTransferBuff::new);
+    public static final RegistryObject<MobEffect> JinkaShakushin = INOEFFECT.register("jinka_shakushin", JinkaShakushinBuff::new);
+    public static final RegistryObject<MobEffect> Twilight = INOEFFECT.register("twilight", TwilightBuff::new);
+    public static final RegistryObject<MobEffect> RemnantAsh = INOEFFECT.register("remnant_ash", RemnantAshBuff::new);
+    public static final RegistryObject<MobEffect> CrescentTransmigration = INOEFFECT.register("crescent_transmigration", CrescentTransmigrationBuff::new);
+    public static final RegistryObject<MobEffect> Numbness = INOEFFECT.register("numbness", NumbnessBuff::new);
+    public static final RegistryObject<MobEffect> Narukami = INOEFFECT.register("narukami", NarukamiBuff::new);
+    public static final RegistryObject<MobEffect> ScatteringSparks = INOEFFECT.register("scattering_sparks", ScatteringSparksBuff::new);
+    public static final RegistryObject<MobEffect> SurgingCurrent = INOEFFECT.register("surging_current", SurgingCurrentBuff::new);
+    public static final RegistryObject<MobEffect> CrystallineShine = INOEFFECT.register("crystalline_shine", CrystallineShineBuff::new);
+    public static final RegistryObject<MobEffect> Blowout = INOEFFECT.register("blowout", BlowoutBuff::new);
+    public static final RegistryObject<MobEffect> DarkErosion = INOEFFECT.register("dark_erosion", DarkErosionBuff::new);
+    public static final RegistryObject<MobEffect> MindDelete = INOEFFECT.register("mind_delete", MindDeleteBuff::new);
+    public static final RegistryObject<MobEffect> MemoryWeaving = INOEFFECT.register("memory_weaving", MemoryWeavingBuff::new);
+    public static final RegistryObject<MobEffect> ToughnessReduction = INOEFFECT.register("toughness_reduction", ToughnessReductionBuff::new);
+    public static final RegistryObject<MobEffect> ToughnessBreak = INOEFFECT.register("toughness_break", ToughnessBreakBuff::new);
+    public static final RegistryObject<MobEffect> Recollection = INOEFFECT.register("recollection", RecollectionBuff::new);
+    public static final RegistryObject<MobEffect> ElysiumOfBeyond = INOEFFECT.register("elysium_of_beyond", ElysiumOfBeyondBuff::new);
+    public static final RegistryObject<MobEffect> RipplesOfPastReverie = INOEFFECT.register("ripples_of_past_reverie", RipplesOfPastReverieBuff::new);
+    public static final RegistryObject<MobEffect> TheOdeOfAmphoreus = INOEFFECT.register("the_ode_of_amphoreus", TheOdeOfAmphoreusBuff::new);
+    public static final RegistryObject<MobEffect> Fusasesugetsu = INOEFFECT.register("fusasesugetsu", FusasesugetsuBuff::new);
+    public static final RegistryObject<MobEffect> SetsugetsuKa = INOEFFECT.register("setsugetsu_ka", SetsugetsuKaBuff::new);
+    public static final RegistryObject<MobEffect> Kamui = INOEFFECT.register("kamui", KamuiBuff::new);
+    public static final RegistryObject<MobEffect> SlashedDream = INOEFFECT.register("slashed_dream", SlashedDream::new);
+    public static final RegistryObject<MobEffect> Resurgence = INOEFFECT.register("resurgence", ResurgenceBuff::new);
+    public static final RegistryObject<MobEffect> DeathriteOfWane = INOEFFECT.register("deathrite_of_wane", DeathriteOfWaneBuff::new);
+    public static final RegistryObject<MobEffect> DeathriteOfImpede = INOEFFECT.register("deathrite_of_impede", DeathriteOfImpedeBuff::new);
+    public static final RegistryObject<MobEffect> DeathriteOfHalt = INOEFFECT.register("deathrite_of_halt", DeathriteOfHaltBuff::new);
+    //毁伤
+    public static final RegistryObject<MobEffect> Scourge = INOEFFECT.register("scourge", ScourgeBuff::new);
+    public static final RegistryObject<MobEffect> Scourge1 = INOEFFECT.register("scourge_1", ScourgeBuff::new);
+    public static final RegistryObject<MobEffect> Scourge2 = INOEFFECT.register("scourge_2", ScourgeBuff::new);
+    public static final RegistryObject<MobEffect> Scourge3 = INOEFFECT.register("scourge_3", ScourgeBuff::new);
+    public static final RegistryObject<MobEffect> Scourge4 = INOEFFECT.register("scourge_4", ScourgeBuff::new);
+    //火种
+    public static final RegistryObject<MobEffect> Coreflame = INOEFFECT.register("coreflame", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame1 = INOEFFECT.register("coreflame_1", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame2 = INOEFFECT.register("coreflame_2", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame3 = INOEFFECT.register("coreflame_3", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame4 = INOEFFECT.register("coreflame_4", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame5 = INOEFFECT.register("coreflame_5", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame6 = INOEFFECT.register("coreflame_6", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame7 = INOEFFECT.register("coreflame_7", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame8 = INOEFFECT.register("coreflame_8", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame9 = INOEFFECT.register("coreflame_9", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame10 = INOEFFECT.register("coreflame_10", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame11 = INOEFFECT.register("coreflame_11", CoreflameBuff::new);
+    public static final RegistryObject<MobEffect> Coreflame12 = INOEFFECT.register("coreflame_12", CoreflameBuff::new);
+}

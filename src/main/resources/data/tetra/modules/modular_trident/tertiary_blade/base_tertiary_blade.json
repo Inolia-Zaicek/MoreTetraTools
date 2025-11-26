@@ -1,0 +1,39 @@
+{
+    "slots": [ "modular_trident/tertiary_blade" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_tertiary_blade/",
+            "attributes": {
+                "generic.attack_speed": -0.32
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "pointy_weapon": 2,
+                "throwable": 2,
+                "breakable": 2
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.4
+                },
+                "durability": 0.4,
+                "integrity": -0.6,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 192,
+                    "textureY": 32
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_trident/tertiary_blade"
+                    }
+                ]
+            }
+        }
+    ]
+}

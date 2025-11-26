@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:drones_staff" ]
+        },
+        "item": "more_tetra_tools:modular_drones_staff",
+        "modules": {
+          "staff/a": [ "modular_drones_staff/core/drones_core", "drones_core/iron"],
+          "staff/b": [ "modular_drones_staff/body/base_body", "base_body/iron"],
+          "staff/c": [ "modular_drones_staff/handle/base_handle", "base_handle/iron"],
+          "staff/d": [ "modular_drones_staff/guard/base_guard", "base_guard/iron"]
+        },
+        "improvements": {}
+    }
+]

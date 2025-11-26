@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_blemishine_sword/handle" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 32,
+        "textureY": 240
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "hilt_hone/damage",
+        "level": 4
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:stone"
+            },
+            "improvements": {
+                "hilt_hone/damage": 5
+            }
+        }
+    ]
+}

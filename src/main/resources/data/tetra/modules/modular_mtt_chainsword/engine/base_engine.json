@@ -1,0 +1,32 @@
+{
+    "slots": [ "modular_mtt_chainsword/engine" ],
+    "type": "tetra:basic_major_module",
+    "improvements": ["tetra:shared/"],
+    "variants": [
+        {
+            "materials": ["tetra:engine/" ],
+            "key": "base_engine/",
+            "attributes": {
+                "generic.attack_speed": -1.5
+            },
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": 50,
+            "extract": {
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 1,
+                "integrity": -0.75,
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_mtt_chainsword/base_engine"
+                    }
+                ]
+            }
+        }
+    ]
+}

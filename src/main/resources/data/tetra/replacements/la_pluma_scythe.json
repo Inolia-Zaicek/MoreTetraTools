@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:la_pluma_scythe" ]
+        },
+        "item": "more_tetra_tools:modular_la_pluma_scythe",
+        "modules": {
+          "staff/a": [ "modular_la_pluma_scythe/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_la_pluma_scythe/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_la_pluma_scythe/wire/base_wire", "base_wire/iron"],
+          "staff/d": [ "modular_la_pluma_scythe/drive/base_drive", "base_drive/iron"]
+        },
+        "improvements": {}
+    }
+]

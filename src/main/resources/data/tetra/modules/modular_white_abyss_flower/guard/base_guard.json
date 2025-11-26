@@ -1,0 +1,32 @@
+{
+    "slots": [ "modular_white_abyss_flower/guard" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard/",
+            "attributes": {
+                "generic.attack_damage": 0.45
+            },
+            "effects": {
+                "more_tetra_tools:the_six_divine_key_of_creation": [0.5,1]
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.15
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:the_six_divine_key_of_creation": [0,0.5]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/zero"
+    ],
+    "materialSlotCount": 1,
+    "displayType": "minor",
+    "glyph": {
+        "textureX": 112,
+        "textureY": 112
+    },
+    "translation": {
+        "tertiaryEffects": {
+            "velocity": 3
+        },
+        "durability": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:wood/", "tetra:stone/", "tetra:metal/", "tetra:gem/", "tetra:bone/" ],
+            "moduleKey": "modular_ripples_of_the_past/zero/stabilizer",
+            "moduleVariant": "stabilizer/"
+        },
+        {
+            "material": {
+                "items": [ "tetra:planar_stabilizer" ],
+                "count": 2
+            },
+            "requiredTools": {
+                "hammer_dig": "minecraft:diamond"
+            },
+            "moduleKey": "modular_ripples_of_the_past/zero/stabilizer",
+            "moduleVariant": "stabilizer/linear"
+        }
+    ]
+}

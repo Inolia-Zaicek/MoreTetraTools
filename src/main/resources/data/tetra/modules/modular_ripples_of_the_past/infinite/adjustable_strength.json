@@ -1,0 +1,22 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/infinite"
+    ],
+    "type": "tetra:basic_module",
+    "tweakKey": "tetra:bow/adjustable_strength",
+    "variants": [
+        {
+            "effects": {
+                "more_tetra_tools:verse_zero_vow_infinite": 5
+            },
+            "key": "adjustable_strength/bolt",
+            "durability": 50,
+            "integrity": -1,
+            "glyph": {
+                "tint": "bolt_glyph",
+                "textureX": 80,
+                "textureY": 112
+            }
+        }
+    ]
+}

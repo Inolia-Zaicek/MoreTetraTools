@@ -1,0 +1,25 @@
+{
+    "key": "gohome_core",
+    "category": "traveller_core",
+    "primary": 0,
+    "secondary": 0,
+    "tertiary": 0,
+    "durability": 0,
+    "integrityCost": 0,
+    "integrityGain": 0,
+    "magicCapacity": 0,
+    "toolLevel": 0,
+    "toolEfficiency": 0,
+    "effects": {
+        "more_tetra_tools:gohome": 1
+    },
+    "tints": {
+        "glyph": "F50000"
+    },
+    "textures": [
+        "gohome_core"
+    ],
+    "material": {
+        "tag": "minecraft:wool"
+    }
+}

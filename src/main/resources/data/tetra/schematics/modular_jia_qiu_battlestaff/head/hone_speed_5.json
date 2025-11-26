@@ -1,0 +1,26 @@
+{
+    "slots": [ "modular_jia_qiu_battlestaff/head" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "requirement": {
+        "type": "tetra:improvement",
+        "improvement": "head_hone/speed",
+        "level": 4
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:stone"
+            },
+            "improvements": {
+                "head_hone/speed": 5
+            }
+        }
+    ]
+}

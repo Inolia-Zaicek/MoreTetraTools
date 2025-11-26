@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:firefly_sword" ]
+        },
+        "item": "more_tetra_tools:modular_firefly_sword",
+        "modules": {
+          "staff/a": [ "modular_firefly_sword/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_firefly_sword/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_firefly_sword/guard/base_guard", "base_guard/iron"],
+          "staff/d": [ "modular_firefly_sword/counterweight/base_counterweight", "base_counterweight/iron"]
+        },
+        "improvements": {}
+    }
+]

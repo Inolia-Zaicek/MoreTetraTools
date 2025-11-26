@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_la_pluma_scythe/socket" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_la_pluma_scythe/socket/base_socket",
+            "moduleVariant": "base_socket/"
+        }
+    ]
+}

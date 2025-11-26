@@ -1,0 +1,53 @@
+{
+    "slots": [ "modular_low_tide/handle" ],
+    "type": "tetra:basic_major_module",
+    "renderLayer": "lower",
+    "improvements": [
+        "tetra:sword/shared_hilt/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/",  "tetra:rod/" ],
+            "key": "base_handle/",
+            "attributes": {
+                "generic.attack_speed": -1.1,
+                "forge:reach_distance": 0.5,
+                "forge:attack_range": 0.5
+            },
+            "aspects": {
+                "block_breaker": 1,
+                "breakable": 2
+            },
+            "durability": 20,
+            "integrity": 1,
+            "extract": {
+                "primaryAttributes": {
+                    "forge:reach_distance": 0.03,
+                    "forge:attack_range": 0.03
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.25
+                },
+                "tertiaryAttributes": {
+                    "forge:reach_distance": 0.075,
+                    "forge:attack_range": 0.075
+                },
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "durability": 0.3,
+                "integrity": 1,
+                "magicCapacity": 1,
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_low_tide/base_handle"
+                    }
+                ]
+            }
+        }
+    ]
+}

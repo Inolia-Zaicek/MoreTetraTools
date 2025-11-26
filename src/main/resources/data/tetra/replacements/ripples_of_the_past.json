@@ -1,0 +1,13 @@
+[
+    {
+      "predicate": {
+        "items": [ "more_tetra_tools:ripples_of_the_past" ]
+        },
+        "item": "more_tetra_tools:modular_ripples_of_the_past",
+        "modules": {
+          "staff/a": [ "modular_ripples_of_the_past/stave/base_stave", "base_stave/iron"],
+          "staff/b": [ "modular_ripples_of_the_past/string/base_string", "base_string/string"]
+        },
+        "improvements": {}
+    }
+]

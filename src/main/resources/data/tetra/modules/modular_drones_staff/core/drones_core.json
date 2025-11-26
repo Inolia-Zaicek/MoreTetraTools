@@ -1,0 +1,52 @@
+{
+    "type": "tetra:basic_major_module",
+    "slots": [ "modular_drones_staff/core" ],
+    "improvements": [
+        "tetra:drones_staff/",
+        "tetra:amiya_staff/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "drones_core/",
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": 100,
+            "integrity": 0,
+            "effects": {
+                "more_tetra_tools:iron_spell_casting": 1,
+                "more_tetra_tools:beacon_s_wrath": [10,10]
+            },
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_damage": 1
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:beacon_s_wrath": [0,30]
+                },
+                "secondaryEffects": {
+                    "more_tetra_tools:beacon_s_wrath": [2,0]
+                },
+                "durability": 0.6,
+                "integrity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_drones_staff/drones_core"
+                    }
+                ]
+            },
+            "availableTextures": [""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/module/modular_drones_staff/base"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+[
+    {
+            "predicate": {
+            "items": [ "more_tetra_tools:low_tide" ]
+        },
+        "item": "more_tetra_tools:modular_low_tide",
+        "modules": {
+          "staff/a": [ "modular_low_tide/blade/base_blade", "base_blade/iron"],
+          "staff/b": [ "modular_low_tide/handle/base_handle", "base_handle/iron"],
+          "staff/c": [ "modular_low_tide/head/base_head", "base_head/iron"],
+          "staff/d": [ "modular_low_tide/end/base_end", "base_end/iron"]
+        },
+        "improvements": {}
+    }
+]

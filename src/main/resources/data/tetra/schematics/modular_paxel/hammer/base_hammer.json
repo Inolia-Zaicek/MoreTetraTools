@@ -1,0 +1,91 @@
+{
+    "slots": [ "modular_paxel/hammer" ],
+    "materialSlotCount": 1,
+    "glyph": {
+        "textureX": 64
+    },
+    "displayType": "major",
+    "applicableMaterials": [
+        "#wood",
+        "#stone",
+        "!copper",
+        "!iron",
+        "!blackstone",
+        "!obsidian",
+        "!netherite"
+    ],
+    "translation": {
+        "primaryAttributes": {
+            "generic.attack_damage": 2
+        },
+        "secondaryAttributes": {
+            "generic.attack_damage": 3,
+            "generic.attack_speed": -1
+        },
+        "tools": {
+            "hammer_dig": [
+                0,
+                2
+            ]
+        },
+        "durability": 2,
+        "integrity": -3,
+        "magicCapacity": 3
+    },
+    "outcomes": [
+        {
+            "materials": [
+                "tetra:wood/",
+                "tetra:stone/stone",
+                "tetra:stone/diorite",
+                "tetra:stone/andesite",
+                "tetra:stone/granite"
+            ],
+            "toolFactor": 0,
+            "moduleKey": "modular_paxel/hammer/base_hammer",
+            "moduleVariant": "base_hammer/"
+        },
+        {
+            "materials": [
+                "tetra:metal/iron",
+                "tetra:metal/copper"
+            ],
+            "countFactor": 4,
+            "moduleKey": "modular_paxel/hammer/base_hammer",
+            "moduleVariant": "base_hammer/"
+        },
+        {
+            "materials": [
+                "tetra:stone/blackstone"
+            ],
+            "moduleKey": "modular_paxel/hammer/base_hammer",
+            "moduleVariant": "base_hammer/"
+        },
+        {
+            "material": {
+                "tag": "forge:obsidian"
+            },
+            "requiredTools": {
+                "hammer_dig": "minecraft:netherite"
+            },
+            "moduleKey": "modular_paxel/hammer/base_hammer",
+            "moduleVariant": "base_hammer/obsidian",
+            "improvements": {
+                "arrested": 0
+            }
+        },
+        {
+            "material": {
+                "items": [
+                    "minecraft:netherite_ingot"
+                ],
+                "count": 4
+            },
+            "requiredTools": {
+                "hammer_dig": "tetra:maxed_forge_hammer"
+            },
+            "moduleKey": "modular_paxel/hammer/base_hammer",
+            "moduleVariant": "base_hammer/netherite"
+        }
+    ]
+}

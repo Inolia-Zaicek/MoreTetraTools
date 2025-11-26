@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_traveller_stick/core" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": [ "tetra:traveller_core/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_traveller_stick/core/base_core",
+            "moduleVariant": "base_core/"
+        }
+    ]
+}

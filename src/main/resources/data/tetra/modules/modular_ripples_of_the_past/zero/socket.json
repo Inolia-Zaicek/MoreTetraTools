@@ -1,0 +1,23 @@
+{
+    "slots": [
+        "modular_ripples_of_the_past/zero"
+    ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "effects": {
+                "more_tetra_tools:verse_zero_vow_infinite": 3
+            },
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "BED",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_sword"
+    },
+    "B": {
+      "item": "minecraft:iron_axe"
+    },
+    "C": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "D": {
+      "item": "minecraft:iron_shovel"
+    },
+    "E": {
+      "item": "minecraft:bow"
+    }
+  },
+  "result": {
+    "item": "more_tetra_tools:prototype_weapon",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "slots": [ "modular_paxel/pickaxe" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176
+    },
+    "requirement": {
+        "type": "tetra:not",
+        "requirement": {
+            "type": "tetra:improvement",
+            "improvement": "head_hone/pickaxe_efficiency"
+        }
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:gold"
+            },
+            "improvements": {
+                "head_hone/pickaxe_efficiency": 1
+            }
+        }
+    ]
+}

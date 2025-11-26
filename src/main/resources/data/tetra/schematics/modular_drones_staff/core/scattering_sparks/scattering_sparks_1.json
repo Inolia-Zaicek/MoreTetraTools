@@ -1,0 +1,37 @@
+{
+    "slots": [ "modular_drones_staff/core" ],
+    "materialSlotCount": 0,
+    "displayType": "improvement",
+    "glyph": {
+        "textureLocation": "tetra:textures/gui/wizard_glyphs.png",
+        "textureX": 0,
+        "textureY": 0
+    },
+    "requirement": {
+        "type": "tetra:and",
+        "requirements": [
+          {
+            "type": "tetra:not",
+            "requirement": {
+              "type": "tetra:improvement",
+              "improvement": "scattering_sparks"
+            }
+          },
+            {
+                "type": "tetra:not",
+                "requirement": {
+                    "type": "tetra:improvement",
+                    "improvement": "scattering_sparks"
+                }
+            }
+        ]
+    },
+    "outcomes": [
+        {
+            "experienceCost": 1,
+            "improvements": {
+                "scattering_sparks": 1
+            }
+        }
+    ]
+}

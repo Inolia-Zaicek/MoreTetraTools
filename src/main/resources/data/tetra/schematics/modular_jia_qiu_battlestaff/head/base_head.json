@@ -1,0 +1,22 @@
+{
+    "slots": [ "modular_jia_qiu_battlestaff/head" ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "countFactor": 1,
+            "moduleKey": "modular_jia_qiu_battlestaff/head/base_head",
+            "moduleVariant": "base_head/"
+        }
+    ]
+}

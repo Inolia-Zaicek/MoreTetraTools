@@ -1,0 +1,45 @@
+{
+    "slots": [ "modular_ying_xiao/guard" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_guard/",
+            "attributes": {
+                "generic.armor": 1,
+                "generic.attack_speed": -0.085
+            },
+            "effects": {
+                "more_tetra_tools:ying_xiao_shadowless": 150
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.armor": 0.75
+                },
+                "tertiaryAttributes": {
+                    "generic.armor": 0.3
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.035
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:ying_xiao_shadowless": 4
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/none"
+                    }
+                ]
+            }
+        }
+    ]
+}
