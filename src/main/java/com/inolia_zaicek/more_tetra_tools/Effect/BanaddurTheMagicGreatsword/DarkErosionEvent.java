@@ -4,11 +4,14 @@ import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -44,16 +47,9 @@ public class DarkErosionEvent {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
         //挨打增伤
-        if (event.getEntity() instanceof Player player) {
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectEfficiency(mainHandItem, dark_whispers_domination_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectEfficiency(offhandItem, dark_whispers_domination_Effect);
-            }
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, dark_whispers_domination_Effect));
             if (effectLevel > 0&&player.hasEffect(MTTEffectsRegister.DarkErosion.get())) {
                 int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier() + 1;
                 event.setAmount(event.getAmount()*(1+buffLevel*effectLevel/100) );
@@ -66,7 +62,8 @@ public class DarkErosionEvent {
         MobEffectInstance expiredInstance = event.getEffectInstance();
         if (expiredInstance != null) {
             MobEffect expiredEffect = expiredInstance.getEffect();
-            if (event.getEntity() instanceof Player player && expiredEffect == MTTEffectsRegister.DarkErosion.get()) {
+            if (event.getEntity()!=null&& expiredEffect == MTTEffectsRegister.DarkErosion.get()) {
+                LivingEntity player=event.getEntity();
                 //buff等级
                 int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier();
                 //负面

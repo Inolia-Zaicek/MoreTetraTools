@@ -12,7 +12,7 @@
             "durability": -20,
             "extract": {
                 "primaryAttributes": {
-                    "**generic.movement_speed": 0.1,
+                    "**generic.movement_speed": 0.025,
                     "forge:step_height_addition": 0.2
                 },
                 "durability": 1,

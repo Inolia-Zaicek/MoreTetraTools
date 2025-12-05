@@ -17,6 +17,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -82,41 +83,41 @@ public class DronesStaff {
         if(mainHandItem.getItem() instanceof IModularItem item){
             thirdLevel += item.getEffectLevel(mainHandItem, crystalline_shine_Effect);
         }
-        if (offhandItem.getItem() instanceof IModularItem item) {
-            thirdLevel += item.getEffectLevel(offhandItem, crystalline_shine_Effect);
-        }
         if(thirdLevel>0&&player.hasEffect(MTTEffectsRegister.CrystallineShine.get())){
             var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKMAMAGE, player);
             float atkDamage = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
             float atkSpeed = (float) player.getAttributeValue(Attributes.ATTACK_SPEED);
-            int attackTick = Math.max(1, (int) (40 - atkSpeed));
+            //0.05s*3/2=0.075
+            int attackTick = Math.max(1, (int) (40 - atkSpeed*3/2));
             if(player.level().getGameTime() % (attackTick) == 0){
                 //造成范围伤害
                 var mobList = MTTUtil.mobList(11, player);
                 float number = thirdLevel / 100;
+                Mob nearestMob = null;
+                double nearestDist = Double.MAX_VALUE;
                 for (Mob mobs : mobList) {
                     if (mobs != null) {
-                        mobs.invulnerableTime = 0;
-                        mobs.hurt(DamageType, atkDamage * number);
-                        mobs.invulnerableTime = 0;
+                        double dist = mobs.distanceTo(player);
+                        if (dist < nearestDist) {
+                            nearestDist = dist;
+                            nearestMob = mobs;
+                        }
                     }
                 }
-                player.level().playSound(
-                        null, // 玩家参数为 null 表示音效来自世界，不绑定到特定玩家
-                        player.getX(),
-                        player.getY(),
-                        player.getZ(),
-                        SoundEvents.EXPERIENCE_ORB_PICKUP, //音效
-                        SoundSource.PLAYERS, // 音效来源类别，这里是玩家动作
-                        0.6F, // 音量 (1.0f 是标准音量)
-                        1.0F
-                );
+                if (nearestMob != null) {
+                    // 攻击找到的实体
+                    nearestMob.invulnerableTime = 0;
+                    float damageMultiplier = thirdLevel / 100f;
+                    nearestMob.hurt(DamageType, atkDamage * damageMultiplier);
+                    nearestMob.invulnerableTime = 0;
+                    player.level().playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS,0.6F, 1.0F);
+                }
             }
         }
     }
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             ItemStack mainHandItem = player.getMainHandItem();
             ItemStack offhandItem = player.getOffhandItem();
             var mob = event.getEntity();
@@ -172,7 +173,10 @@ public class DronesStaff {
                         if (mobs != null) {
                             //获取伤害类型
                             mobs.invulnerableTime = 0;
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                             //有2技能buff
                             if(mobs.hasEffect(MTTEffectsRegister.SurgingCurrent.get())) {
                                 int buffTime = mobs.getEffect(MTTEffectsRegister.SurgingCurrent.get()).getDuration();
@@ -181,7 +185,10 @@ public class DronesStaff {
                             }else{
                                 mobs.hurt(DamageType, damage * number);
                             }
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                         }
                     }
 
@@ -209,7 +216,7 @@ public class DronesStaff {
                 }
             }
         }
-        else if (event.getSource().getDirectEntity() instanceof Player player) {
+        else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
             ItemStack mainHandItem = player.getMainHandItem();
             ItemStack offhandItem = player.getOffhandItem();
             var mob = event.getEntity();
@@ -265,7 +272,10 @@ public class DronesStaff {
                         if (mobs != null) {
                             //获取伤害类型
                             mobs.invulnerableTime = 0;
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                             //有2技能buff
                             if(mobs.hasEffect(MTTEffectsRegister.SurgingCurrent.get())) {
                                 int buffTime = mobs.getEffect(MTTEffectsRegister.SurgingCurrent.get()).getDuration();
@@ -274,7 +284,10 @@ public class DronesStaff {
                             }else{
                                 mobs.hurt(DamageType, damage * number);
                             }
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                         }
                     }
 

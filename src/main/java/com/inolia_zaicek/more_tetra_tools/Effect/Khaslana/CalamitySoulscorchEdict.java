@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -82,7 +83,9 @@ public class CalamitySoulscorchEdict {
                     float number = effectLevel/100;
                     //连击
                     for (int i = 0; i < buffLevel; i++) {
-                        if (livingEntity instanceof Player player) {mob.setLastHurtByPlayer(player);}
+                    if(livingEntity instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                         mob.invulnerableTime = 0;
                         mob.hurt(DamageType, atk * number);
                     }

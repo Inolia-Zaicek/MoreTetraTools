@@ -3,11 +3,13 @@ package com.inolia_zaicek.more_tetra_tools.Effect;
 import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -40,7 +42,7 @@ public class FireflySword {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
         //近战攻击
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
             ItemStack mainHandItem = player.getMainHandItem();
@@ -51,7 +53,8 @@ public class FireflySword {
                 effectLevelBuffLevel += item.getEffectLevel(mainHandItem, fyrefly_type_iv_Effect);
                 effectLevelDamage += item.getEffectEfficiency(mainHandItem, fyrefly_type_iv_Effect);
             }
-            if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())&&player.getAttackStrengthScale(0.5f) > 0.9f ) {
+            if(player instanceof Player player1&&player1.getAttackStrengthScale(0.5f) <= 0.9f)return;
+            if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
                 if (effectLevelBuffLevel > 0&&effectLevelDamage>0) {
                     //击破
                     if(mob.hasEffect(MTTEffectsRegister.ToughnessBreak.get())){
@@ -100,21 +103,9 @@ public class FireflySword {
         }
         //挨打
 
-        if (event.getSource().getEntity() instanceof Player player) {
-            var mob = event.getEntity();
-            var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevelHp = 0;
-            float effectLevelNumber = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevelHp += item.getEffectLevel(mainHandItem, fyrefly_type_iv_Effect);
-                effectLevelNumber += item.getEffectEfficiency(mainHandItem, fyrefly_type_iv_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevelHp += item.getEffectLevel(offhandItem, fyrefly_type_iv_Effect);
-                effectLevelNumber += item.getEffectEfficiency(offhandItem, fyrefly_type_iv_Effect);
-            }
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
+            float effectLevelHp = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, fyrefly_type_iv_Effect));
+            float effectLevelNumber = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, fyrefly_type_iv_Effect));
             if (effectLevelHp > 0&&effectLevelNumber>0) {
                 //生命值比例
                 float dhp = (player.getHealth())/(player.getMaxHealth());

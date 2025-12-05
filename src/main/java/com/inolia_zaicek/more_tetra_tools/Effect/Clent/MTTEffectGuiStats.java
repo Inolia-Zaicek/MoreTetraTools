@@ -369,6 +369,10 @@ public class MTTEffectGuiStats {
     public static final String yukimau_Name = MoreTetraTools.MODID + ".effect.yukimau.name";
     public static final String yukimau_Tooltip = MoreTetraTools.MODID + ".effect.yukimau.tooltip";
 
+    public static final ItemEffect mix_dragon_breath_Effect = ItemEffect.get(MoreTetraTools.MODID + ":mix_dragon_breath");
+    public static final String mix_dragon_breath_Name = MoreTetraTools.MODID + ".effect.mix_dragon_breath.name";
+    public static final String mix_dragon_breath_Tooltip = MoreTetraTools.MODID + ".effect.mix_dragon_breath.tooltip";
+
     public static final ItemEffect kami_ori_Effect = ItemEffect.get(MoreTetraTools.MODID + ":kami_ori");
     public static final String kami_ori_Name = MoreTetraTools.MODID + ".effect.kami_ori.name";
     public static final String kami_ori_Tooltip = MoreTetraTools.MODID + ".effect.kami_ori.tooltip";
@@ -416,6 +420,43 @@ public class MTTEffectGuiStats {
     public static final ItemEffect the_six_divine_key_of_creation_Effect = ItemEffect.get(MoreTetraTools.MODID + ":the_six_divine_key_of_creation");
     public static final String the_six_divine_key_of_creation_Name = MoreTetraTools.MODID + ".effect.the_six_divine_key_of_creation.name";
     public static final String the_six_divine_key_of_creation_Tooltip = MoreTetraTools.MODID + ".effect.the_six_divine_key_of_creation.tooltip";
+
+    public static final ItemEffect hikari_Effect = ItemEffect.get(MoreTetraTools.MODID + ":hikari");
+    public static final String hikari_Name = MoreTetraTools.MODID + ".effect.hikari.name";
+    public static final String hikari_Tooltip = MoreTetraTools.MODID + ".effect.hikari.tooltip";
+
+    public static final ItemEffect radiance_Effect = ItemEffect.get(MoreTetraTools.MODID + ":radiance");
+    public static final String radiance_Name = MoreTetraTools.MODID + ".effect.radiance.name";
+    public static final String radiance_Tooltip = MoreTetraTools.MODID + ".effect.radiance.tooltip";
+
+    public static final ItemEffect star_spawn_of_cthulhu_Effect = ItemEffect.get(MoreTetraTools.MODID + ":star_spawn_of_cthulhu");
+    public static final String star_spawn_of_cthulhu_Name = MoreTetraTools.MODID + ".effect.star_spawn_of_cthulhu.name";
+    public static final String star_spawn_of_cthulhu_Tooltip = MoreTetraTools.MODID + ".effect.star_spawn_of_cthulhu.tooltip";
+
+    public static final ItemEffect painful_scream_Effect = ItemEffect.get(MoreTetraTools.MODID + ":painful_scream");
+    public static final String painful_scream_Name = MoreTetraTools.MODID + ".effect.painful_scream.name";
+    public static final String painful_scream_Tooltip = MoreTetraTools.MODID + ".effect.painful_scream.tooltip";
+
+    public static final ItemEffect flares_of_the_blazing_sun_Effect = ItemEffect.get(MoreTetraTools.MODID + ":flares_of_the_blazing_sun");
+    public static final String flares_of_the_blazing_sun_Name = MoreTetraTools.MODID + ".effect.flares_of_the_blazing_sun.name";
+    public static final String flares_of_the_blazing_sun_Tooltip = MoreTetraTools.MODID + ".effect.flares_of_the_blazing_sun.tooltip";
+
+    public static final ItemEffect light_of_thie_vanish_dawn_Effect = ItemEffect.get(MoreTetraTools.MODID + ":light_of_thie_vanish_dawn");
+    public static final String light_of_thie_vanish_dawn_Name = MoreTetraTools.MODID + ".effect.light_of_thie_vanish_dawn.name";
+    public static final String light_of_thie_vanish_dawn_Tooltip = MoreTetraTools.MODID + ".effect.light_of_thie_vanish_dawn.tooltip";
+
+    public static final ItemEffect boost_Effect = ItemEffect.get(MoreTetraTools.MODID + ":boost");
+    public static final String boost_Name = MoreTetraTools.MODID + ".effect.boost.name";
+    public static final String boost_Tooltip = MoreTetraTools.MODID + ".effect.boost.tooltip";
+
+    public static final ItemEffect incinerat_burst_Effect = ItemEffect.get(MoreTetraTools.MODID + ":incinerat_burst");
+    public static final String incinerat_burst_Name = MoreTetraTools.MODID + ".effect.incinerat_burst.name";
+    public static final String incinerat_burst_Tooltip = MoreTetraTools.MODID + ".effect.incinerat_burst.tooltip";
+
+    public static final ItemEffect incinerat_break_Effect = ItemEffect.get(MoreTetraTools.MODID + ":incinerat_break");
+    public static final String incinerat_break_Name = MoreTetraTools.MODID + ".effect.incinerat_break.name";
+    public static final String incinerat_break_Tooltip = MoreTetraTools.MODID + ".effect.incinerat_break.tooltip";
+
     //横扫
     public static final ItemEffect sweepingLevel = ItemEffect.get("sweeping");
     //速度

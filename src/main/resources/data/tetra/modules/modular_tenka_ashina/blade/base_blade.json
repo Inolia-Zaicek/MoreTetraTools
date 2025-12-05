@@ -27,7 +27,7 @@
             "tags": [ "forge:swords" ],
             "extract": {
                 "primaryAttributes": {
-                    "generic.attack_damage": 0.6
+                    "generic.attack_damage": 0.8
                 },
                 "durability": 1,
                 "integrity": -0.5,

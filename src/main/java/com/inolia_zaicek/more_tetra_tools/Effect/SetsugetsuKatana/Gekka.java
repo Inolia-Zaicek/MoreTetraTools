@@ -6,6 +6,7 @@ import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,7 +25,7 @@ public class Gekka {
                 }
                 var mob = event.getEntity();
                 var map = mob.getActiveEffectsMap();
-                int effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, gekka_Effect);
+                int effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, gekka_Effect);
                 if (effectLevel > 0) {
                     if (mob.hasEffect(MTTEffectsRegister.SetsugetsuKa.get())) {
                         int buffLevel = mob.getEffect(MTTEffectsRegister.SetsugetsuKa.get()).getAmplifier();
@@ -43,7 +44,7 @@ public class Gekka {
                 }
                 var mob = event.getEntity();
                 var map = mob.getActiveEffectsMap();
-                int effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, gekka_Effect);
+                int effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, gekka_Effect);
                 if (effectLevel > 0) {
                     if (mob.hasEffect(MTTEffectsRegister.SetsugetsuKa.get())) {
                         int buffLevel = mob.getEffect(MTTEffectsRegister.SetsugetsuKa.get()).getAmplifier();

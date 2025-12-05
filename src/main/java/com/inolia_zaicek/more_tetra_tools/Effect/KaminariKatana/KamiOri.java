@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -43,9 +44,9 @@ public class KamiOri {
     public static void hurt(LivingHurtEvent event) {
         //攻击概率神威
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-            float number = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, kami_ori_Effect));
-            float chance = (MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kami_ori_Effect));
-            int time = (int) (20 * MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kami_ori_Effect));
+            float number = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, kami_ori_Effect));
+            float chance = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kami_ori_Effect));
+            int time = (int) (20 * MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kami_ori_Effect));
             Random random = new Random();
             if(isUltimateBossEntity(event.getEntity().getType())&&number > 0){
                 number=number*3;
@@ -64,9 +65,9 @@ public class KamiOri {
                 }
             }
         }else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-            float number = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, kami_ori_Effect));
-            float chance = (MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kami_ori_Effect));
-            int time = (int) (20 * MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kami_ori_Effect));
+            float number = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, kami_ori_Effect));
+            float chance = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kami_ori_Effect));
+            int time = (int) (20 * MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kami_ori_Effect));
             Random random = new Random();
             if(isUltimateBossEntity(event.getEntity().getType())&&number > 0){
                 number=number*3;

@@ -14,7 +14,7 @@ public class Horrible {
     public static void hurt(LivingHurtEvent event) {
 
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainHandEffectLevel(livingEntity, horrible_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, horrible_Effect);
             if(effectLevel>0){
                 var DamageType = MTTTickZero.source(livingEntity.level(), DamageTypes.MAGIC);
                 float finish = event.getAmount()*(1+effectLevel/100);
@@ -32,7 +32,7 @@ public class Horrible {
                 }
             }
         }else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainHandEffectLevel(livingEntity, horrible_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, horrible_Effect);
             if(effectLevel>0){
                 var DamageType = MTTTickZero.source(livingEntity.level(), DamageTypes.MAGIC);
                 float finish = event.getAmount()*(1+effectLevel/100);

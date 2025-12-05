@@ -8,8 +8,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,8 +25,8 @@ import static net.minecraft.tags.DamageTypeTags.WITCH_RESISTANT_TO;
 public class CelestialGlobe {
     private static final ResourceLocation celestial_globe_tick = new ResourceLocation(MoreTetraTools.MODID, "celestial_globe");
     @SubscribeEvent
-    public static void tick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
+    public static void tick(LivingEvent.LivingTickEvent event) {
+        LivingEntity player = event.getEntity();
         ItemStack mainHandItem = player.getMainHandItem();
         if (mainHandItem.getItem() instanceof IModularItem item) {
             float effectLevel = (float) item.getEffectLevel(player.getMainHandItem(), celestialGlobeEffect);
@@ -59,7 +61,7 @@ public class CelestialGlobe {
     //星剑2词条增伤
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
             ItemStack mainHandItem = player.getMainHandItem();
@@ -87,7 +89,7 @@ public class CelestialGlobe {
                     event.setAmount(finish);
                 }
             }
-        } else if (event.getSource().getDirectEntity() instanceof Player player) {
+        } else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
             ItemStack mainHandItem = player.getMainHandItem();

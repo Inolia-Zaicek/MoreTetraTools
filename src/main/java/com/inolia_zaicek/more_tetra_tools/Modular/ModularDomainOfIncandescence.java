@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -206,7 +207,8 @@ public class ModularDomainOfIncandescence extends ItemModularHandheld { // 声�
                             }else{
                                 mobs.hurt(DamageType, atk * number);
                             }
-                            mobs.setLastHurtByPlayer(player);
+                            
+                                            mobs.setLastHurtByPlayer(player);
                         }
                     }
                     //去除buff与冷却

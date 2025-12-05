@@ -45,8 +45,8 @@ public class BlackAbyssFlower {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
                 var mob = event.getEntity();
                 var map = mob.getActiveEffectsMap();
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, the_six_divine_key_of_decompose_Effect);
-                float effectEfficiency = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, the_six_divine_key_of_decompose_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, the_six_divine_key_of_decompose_Effect);
+                float effectEfficiency = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, the_six_divine_key_of_decompose_Effect);
                 if (effectLevel > 0||effectEfficiency>0) {
                         map.put(MTTEffectsRegister.GrievousWounds.get(),
                                 new MobEffectInstance(MTTEffectsRegister.GrievousWounds.get(), 200, (int) effectEfficiency));
@@ -88,7 +88,7 @@ public class BlackAbyssFlower {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, the_six_divine_key_of_decompose_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, the_six_divine_key_of_decompose_Effect);
             if (effectLevel > 0) {
                 Optional.of(event.getEntity())
                         .map(LivingEntity::getAttributes)

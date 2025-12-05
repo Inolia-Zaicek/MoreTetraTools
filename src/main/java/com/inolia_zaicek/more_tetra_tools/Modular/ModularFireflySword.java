@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -166,6 +167,7 @@ public class ModularFireflySword extends ItemModularHandheld { // 声明一个�
             int effectLevelBuffLevel = item.getEffectLevel(offHandStack, fyrefly_type_iv_Effect);
             float effectLevelDamage = item.getEffectEfficiency(offHandStack, fyrefly_type_iv_Effect);
             mob.invulnerableTime = 0;
+
             mob.setLastHurtByPlayer(player);
             //伤害
             float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);

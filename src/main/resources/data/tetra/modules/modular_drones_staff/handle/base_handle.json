@@ -13,7 +13,7 @@
             "durability": 10,
             "integrity": 1,
             "attributes": {
-                "generic.attack_speed": -0.35
+                "generic.attack_speed": -0.5
             },
             "aspects": {
                 "breakable": 2,
@@ -27,7 +27,7 @@
                 "secondaryAttributes": {
                     "**irons_spellbooks:mana_regen": 0.05,
                     "ars_nouveau:ars_nouveau.perk.mana_regen": 1,
-                    "generic.attack_speed": -0.1
+                    "generic.attack_speed": -0.2
                 },
                 "glyph": {
                     "textureX": 176,

@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -220,7 +221,7 @@ public class ModularChainsword extends ItemModularHandheld { // 声明一个名�
                         var DamageType = MTTTickZero.hasSource(living.level(), MTTTickZero.TICKAMAGE,living);
                         //击杀者是玩家【可能要改逻辑，先看看TickZero.TICKAMAGE
                         //DamageTypes.PLAYER_ATTACK
-                        if (living instanceof Player player) {
+                        if(living instanceof Player player) {
                             livingEntity.setLastHurtByPlayer(player);
                         }
                         //基础攻击力*伤害转化，保底1

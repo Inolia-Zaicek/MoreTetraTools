@@ -5,6 +5,7 @@ import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -40,16 +41,16 @@ public class DoomDay {
     public static void hurt(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity && event.getEntity()!=null) {
             var mob = event.getEntity();
-            float chance = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, doom_day_Effect);
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, doom_day_Effect);
+            float chance = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, doom_day_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, doom_day_Effect);
             Random random = new Random();
             if(effectLevel>0&&random.nextInt(100) <= chance&& MTTDamageSourceHelper.isMeleeAttack(event.getSource())){
                 event.setAmount(event.getAmount()+mob.getMaxHealth()*effectLevel/100);
             }
         }else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity && event.getEntity()!=null) {
             var mob = event.getEntity();
-            float chance = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, doom_day_Effect);
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, doom_day_Effect);
+            float chance = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, doom_day_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, doom_day_Effect);
             Random random = new Random();
             if(effectLevel>0&&random.nextInt(100) <= chance&& MTTDamageSourceHelper.isMeleeAttack(event.getSource())){
                 event.setAmount(event.getAmount()+mob.getMaxHealth()*effectLevel/100);

@@ -6,6 +6,7 @@ import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -85,7 +86,8 @@ public class DomainOfIncandescence {
                 }
             }
         }
-        if(event.getEntity() instanceof Player player){
+        if(event.getEntity()!=null){
+            LivingEntity player = event.getEntity();
             ItemStack mainHandItem = player.getMainHandItem();
             if (mainHandItem.getItem() instanceof IModularItem item) {
                 //遗世火鸟的燃羽

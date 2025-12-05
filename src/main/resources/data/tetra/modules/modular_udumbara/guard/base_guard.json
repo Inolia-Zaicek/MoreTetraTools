@@ -11,7 +11,7 @@
                 "generic.attack_speed": -0.1
             },
             "effects": {
-                "more_tetra_tools:crescent_transmigration": 5
+                "more_tetra_tools:crescent_transmigration": 15
             },
             "durability": 64,
             "extract": {
@@ -25,7 +25,7 @@
                     "generic.attack_speed": -0.06
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:freeze_blade": -0.5
+                    "more_tetra_tools:crescent_transmigration": -0.5
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

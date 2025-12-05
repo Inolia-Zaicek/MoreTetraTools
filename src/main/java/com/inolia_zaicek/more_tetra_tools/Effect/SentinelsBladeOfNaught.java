@@ -50,9 +50,9 @@ public class SentinelsBladeOfNaught {
     public static void hurt(LivingHurtEvent event) {
         if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())){
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, atop_rainleaf_hangs_oneness_Effect);
-                float effectDamage = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, slashed_dream_cries_in_red_Effect);
-                int effectNumber = (int) MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, slashed_dream_cries_in_red_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, atop_rainleaf_hangs_oneness_Effect);
+                float effectDamage = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, slashed_dream_cries_in_red_Effect);
+                int effectNumber = (int) MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, slashed_dream_cries_in_red_Effect);
                 if (effectLevel > 0) {
                     //不存在残梦状态
                     if (!livingEntity.hasEffect(MTTEffectsRegister.SlashedDream.get())) {
@@ -98,7 +98,7 @@ public class SentinelsBladeOfNaught {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, atop_rainleaf_hangs_oneness_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, atop_rainleaf_hangs_oneness_Effect);
             if (effectLevel > 0) {
                 Optional.of(event.getEntity())
                         .map(LivingEntity::getAttributes)

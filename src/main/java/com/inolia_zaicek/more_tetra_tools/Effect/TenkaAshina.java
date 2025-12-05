@@ -3,13 +3,16 @@ package com.inolia_zaicek.more_tetra_tools.Effect;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -28,20 +31,11 @@ public class TenkaAshina {
     private static final ResourceLocation tenka_ichiken_tick = new ResourceLocation(MoreTetraTools.MODID, "tenka_ichiken_edict");
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel=0;
-            float effectLevel2=0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, tenka_ichiken_Effect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, chokuhi_kyoshin_joseishu_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, tenka_ichiken_Effect);
-                effectLevel2 += item.getEffectLevel(offhandItem, chokuhi_kyoshin_joseishu_Effect);
-            }
+            int effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, tenka_ichiken_Effect));
+            int effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, chokuhi_kyoshin_joseishu_Effect));
             if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                 effectLevel=effectLevel*5;
             }
@@ -74,21 +68,11 @@ public class TenkaAshina {
             }
         }
         //挨打
-        if (event.getEntity() instanceof Player player) {
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
             var mob = event.getEntity();
-            var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel=0;
-            float effectLevel2=0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, tenka_ichiken_Effect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, chokuhi_kyoshin_joseishu_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, tenka_ichiken_Effect);
-                effectLevel2 += item.getEffectLevel(offhandItem, chokuhi_kyoshin_joseishu_Effect);
-            }
+            int effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, tenka_ichiken_Effect));
+            int effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, chokuhi_kyoshin_joseishu_Effect));
             if (effectLevel2 > 0 && player.hasEffect(MTTEffectsRegister.JinkaShakushin.get()) && event.getSource().is(IS_FIRE) ) {
                 //取消事件
                 event.setCanceled(true);
@@ -96,20 +80,11 @@ public class TenkaAshina {
         }
     }
     @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public static void tick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
+    public static void tick(LivingEvent.LivingTickEvent event) {
+        LivingEntity player = event.getEntity();
         ItemStack mainHandItem = player.getMainHandItem();
-        ItemStack offhandItem = player.getOffhandItem();
-        float effectLevel=0;
-        float effectLevel2=0;
-        if (mainHandItem.getItem() instanceof IModularItem item) {
-            effectLevel += item.getEffectLevel(mainHandItem, tenka_ichiken_Effect);
-            effectLevel2 += item.getEffectLevel(mainHandItem, chokuhi_kyoshin_joseishu_Effect);
-        }
-        if (offhandItem.getItem() instanceof IModularItem item) {
-            effectLevel += item.getEffectLevel(offhandItem, tenka_ichiken_Effect);
-            effectLevel2 += item.getEffectLevel(offhandItem, chokuhi_kyoshin_joseishu_Effect);
-        }
+        int effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, tenka_ichiken_Effect));
+        int effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, chokuhi_kyoshin_joseishu_Effect));
         if (effectLevel > 0) {
             //获取工具nbt数值
             CompoundTag persistentData = mainHandItem.getOrCreateTag();

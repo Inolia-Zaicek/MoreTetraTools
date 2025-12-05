@@ -1,5 +1,6 @@
 package com.inolia_zaicek.more_tetra_tools.Effect;
 
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtUtils;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.WitherSkeleton;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
@@ -48,21 +50,7 @@ public class Beheading {
         LivingEntity target = event.getEntity();
         Entity attackingEntity = event.getSource().getEntity();
         if (attackingEntity instanceof LivingEntity attacker) {
-                ItemStack mainHandItem = attacker.getMainHandItem();
-                ItemStack offhandItem = attacker.getOffhandItem();
-                int effectLevel = 0;
-                if (mainHandItem.getItem() instanceof IModularItem item) {
-                    float mainEffectLevel = item.getEffectLevel(mainHandItem, beheadingEffect);
-                    if (mainEffectLevel > 0) {
-                        effectLevel += (int) mainEffectLevel;
-                    }
-                }
-                if (offhandItem.getItem() instanceof IModularItem item) {
-                    float offEffectLevel = item.getEffectLevel(offhandItem, beheadingEffect);
-                    if (offEffectLevel > 0) {
-                        effectLevel += (int) offEffectLevel;
-                    }
-                }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(attacker, beheadingEffect));
                 if (effectLevel > 0) {
                     float chance = (float) effectLevel / 100;
                     ItemStack headDrop = ItemStack.EMPTY;

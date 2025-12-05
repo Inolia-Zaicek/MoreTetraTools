@@ -54,10 +54,10 @@ public class BloodSacrificeBlade {
     public static void hurt(LivingHurtEvent event) {
         if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel1 = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, blood_devourer_Effect);
-                float effectEfficiency1 = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, blood_devourer_Effect);
-                float effectLevel2 = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, blood_glare_Effect);
-                float effectEfficiency2 = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, blood_glare_Effect);
+                float effectLevel1 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, blood_devourer_Effect);
+                float effectEfficiency1 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, blood_devourer_Effect);
+                float effectLevel2 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, blood_glare_Effect);
+                float effectEfficiency2 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, blood_glare_Effect);
                 float hp = livingEntity.getHealth();
                 float mhp = livingEntity.getMaxHealth();
                 float dhp = hp/mhp;
@@ -85,7 +85,7 @@ public class BloodSacrificeBlade {
         //挨打
         if (event.getEntity()!=null) {
             LivingEntity livingEntity = event.getEntity();
-            float effectEfficiency2 = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, blood_glare_Effect);
+            float effectEfficiency2 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, blood_glare_Effect);
             float hp = livingEntity.getHealth();
             float mhp = livingEntity.getMaxHealth();
             //101%-已损失生命值比例，剩余1%就是101-1=100%%，满额

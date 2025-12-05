@@ -8,6 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -52,8 +53,8 @@ public class WhiteAbyssFlower {
                 if (livingEntity instanceof Player player && player.getAttackStrengthScale(0.5f) <= 0.9f) {
                     return;
                 }
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, the_six_divine_key_of_creation_Effect);
-                float effectEfficiency = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, the_six_divine_key_of_creation_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, the_six_divine_key_of_creation_Effect);
+                float effectEfficiency = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, the_six_divine_key_of_creation_Effect);
                 if (effectLevel > 0||effectEfficiency>0) {
                     float hp = livingEntity.getHealth();
                     float mhp = livingEntity.getMaxHealth();
@@ -72,8 +73,8 @@ public class WhiteAbyssFlower {
                 if (livingEntity instanceof Player player && player.getAttackStrengthScale(0.5f) <= 0.9f) {
                     return;
                 }
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, the_six_divine_key_of_creation_Effect);
-                float effectEfficiency = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, the_six_divine_key_of_creation_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, the_six_divine_key_of_creation_Effect);
+                float effectEfficiency = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, the_six_divine_key_of_creation_Effect);
                 if (effectLevel > 0||effectEfficiency>0) {
                     float hp = livingEntity.getHealth();
                     float mhp = livingEntity.getMaxHealth();

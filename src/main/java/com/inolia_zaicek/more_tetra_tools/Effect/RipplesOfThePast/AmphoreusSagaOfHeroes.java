@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,7 +25,7 @@ public class AmphoreusSagaOfHeroes {
         //翁法罗斯英雄纪
         if (livingEntity.hasEffect(MTTEffectsRegister.TheOdeOfAmphoreus.get())) {
             //烈阳
-            int khaslana = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, fateDivineVesselEffect);
+            int khaslana = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, fateDivineVesselEffect);
             //不因毁伤而落下
             if (khaslana > 0 && livingEntity.hasEffect(MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get())) {
                 livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get(), 20 * 7, 0));

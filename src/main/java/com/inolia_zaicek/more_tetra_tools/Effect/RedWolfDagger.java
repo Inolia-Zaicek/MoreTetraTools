@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
@@ -79,7 +80,7 @@ public class RedWolfDagger {
     //增伤
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             ItemStack mainHandItem = player.getMainHandItem();
             if (mainHandItem.getItem() instanceof IModularItem item) {
                 float effectLevel = (float) item.getEffectLevel(player.getMainHandItem(), ExecutionModeEffect);
@@ -110,7 +111,7 @@ public class RedWolfDagger {
     //受击斩杀
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onLivingDamage(LivingDamageEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             ItemStack mainHandItem = player.getMainHandItem();
             if (mainHandItem.getItem() instanceof IModularItem item) {
@@ -123,22 +124,34 @@ public class RedWolfDagger {
                             || player.hasEffect(MTTEffectsRegister.ExecutionMode3.get()) || player.hasEffect(MTTEffectsRegister.ExecutionMode4.get())) {
                         var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKAMAGE, player);
                         if(player.hasEffect(MTTEffectsRegister.ExecutionMode1.get()) && dhp<0.1f){
-                            mob.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                             mob.invulnerableTime = 0;
                             mob.hurt(DamageType,hp*effectLevel/100);
                         }
                         if(player.hasEffect(MTTEffectsRegister.ExecutionMode2.get()) && dhp<0.2f){
-                            mob.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                             mob.invulnerableTime = 0;
                             mob.hurt(DamageType,2*hp*effectLevel/100);
                         }
                         if(player.hasEffect(MTTEffectsRegister.ExecutionMode3.get()) && dhp<0.3f){
-                            mob.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                             mob.invulnerableTime = 0;
                             mob.hurt(DamageType,3*hp*effectLevel/100);
                         }
                         if(player.hasEffect(MTTEffectsRegister.ExecutionMode4.get()) && dhp<0.4f){
-                            mob.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                             mob.invulnerableTime = 0;
                             mob.hurt(DamageType,4*hp*effectLevel/100);
                         }

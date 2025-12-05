@@ -1,6 +1,8 @@
 package com.inolia_zaicek.more_tetra_tools.Modular; // 定义该类所属的包，表示它是“More Mod Tetra”模组中“Modular Curios”部分的一部分。
 
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTUtil;
@@ -23,12 +25,15 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -45,6 +50,7 @@ import se.mickelus.tetra.module.ItemModule;
 import se.mickelus.tetra.module.ItemUpgradeRegistry;
 import se.mickelus.tetra.module.SchematicRegistry;
 import se.mickelus.tetra.module.schematic.RepairSchematic;
+import se.mickelus.tetra.properties.AttributeHelper;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -162,8 +168,14 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(ItemStack itemStack) {
-        return super.getAttributeModifiers(itemStack);
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack itemStack) {
+        if (this.isBroken(itemStack)) {
+            return AttributeHelper.emptyMap;
+        } else if (slot == EquipmentSlot.MAINHAND) {
+            return this.getAttributeModifiersCached(itemStack);
+        } else {
+            return slot == EquipmentSlot.OFFHAND ? (Multimap)this.getAttributeModifiersCached(itemStack).entries().stream().filter((entry) -> !((Attribute)entry.getKey()).equals(Attributes.ATTACK_DAMAGE) && !((Attribute)entry.getKey()).equals(Attributes.ATTACK_DAMAGE)).collect(Multimaps.toMultimap(Map.Entry::getKey, Map.Entry::getValue, ArrayListMultimap::create)) : AttributeHelper.emptyMap;
+        }
     }
 
     private static final ResourceLocation X = new ResourceLocation(MoreTetraTools.MODID, "waypoint_x");
@@ -295,14 +307,14 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
     //物品右键使用
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand pUsedHand) {
-        if (!level.isClientSide() && pUsedHand == InteractionHand.MAIN_HAND) {
+        if (pUsedHand == InteractionHand.MAIN_HAND) {
             var mainHandItem = player.getMainHandItem();
             if (mainHandItem.getItem() instanceof IModularItem item) {
                 //获取词条等级
                 int waypointLevel = item.getEffectLevel(mainHandItem, waypointEffect);
                 int gohomeLevel = item.getEffectLevel(mainHandItem, gohomeEffect);
                 int recallLevel = item.getEffectLevel(mainHandItem, recallEffect);
-                if (waypointLevel > 0) {
+                if (!level.isClientSide() && waypointLevel > 0) {
                     //没有准备buff
                     if(!player.hasEffect(MTTEffectsRegister.ReadyToTransfer.get()) ) {
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.ReadyToTransfer.get(), 20 * 5, 0));
@@ -339,7 +351,7 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
                         }
                     }
                 }
-                if (gohomeLevel > 0) {
+                if (!level.isClientSide() && gohomeLevel > 0) {
                     //没有准备buff
                     if(!player.hasEffect(MTTEffectsRegister.ReadyToTransfer.get()) ) {
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.ReadyToTransfer.get(), 20 * 5, 0));
@@ -402,7 +414,7 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
                         }
                     }
                 }
-                if(recallLevel>0){
+                if(!level.isClientSide() && recallLevel>0){
                     var mobList = MTTUtil.mobList(51, player);
                     BlockPos playerOnPos = player.getOnPos();
                     double targetX = playerOnPos.getX() + 0.5;
@@ -416,14 +428,34 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
                     }
                     player.getCooldowns().addCooldown(this, 20 * 1);//设置冷却时间
                 }
+                int boostLevel = item.getEffectLevel(mainHandItem, boost_Effect);
+                if(boostLevel>0){
+                    int currentDamage = mainHandItem.getDamageValue();
+                    if(currentDamage<=mainHandItem.getMaxDamage()){
+                        if(level.isClientSide()){
+                        // 玩家当前观察的方向向量
+                        Vec3 lookVec = player.getLookAngle();
+                        // 玩家当前位置的移动速度向量
+                        Vec3 moveVec = player.getDeltaMovement();
+                        // 垂直向上的偏移量，用于增加一定的跳跃感
+                        Vec3 yBonus = new Vec3(0f, 0.5f, 0f);
+                        // 乘以2的正向
+                        player.setDeltaMovement(moveVec.add(lookVec.scale(2.0)).add(yBonus));
+                        }
+                        player.hasImpulse = true;
+                        // 清除玩家掉落距离（避免飞行中的伤害）
+                        player.fallDistance = 0;
+                        mainHandItem.setDamageValue(Math.min(mainHandItem.getMaxDamage(), currentDamage+1));
+                    }
+                }
             }
         }
-        else if (!level.isClientSide() && pUsedHand == InteractionHand.OFF_HAND) {
+        else if (pUsedHand == InteractionHand.OFF_HAND) {
             if (player.getOffhandItem().getItem() instanceof IModularItem item) {
                 //获取词条等级
                 int waypointLevel = item.getEffectLevel(player.getOffhandItem(), waypointEffect);
                 int gohomeLevel = item.getEffectLevel(player.getOffhandItem(), gohomeEffect);
-                if (waypointLevel > 0) {
+                if (!level.isClientSide() && waypointLevel > 0) {
                     //没有准备buff
                     if(!player.hasEffect(MTTEffectsRegister.ReadyToTransfer.get()) ) {
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.ReadyToTransfer.get(), 20 * 5, 0));
@@ -460,7 +492,7 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
                         }
                     }
                 }
-                if (gohomeLevel > 0) {
+                if (!level.isClientSide() && gohomeLevel > 0) {
                     //没有准备buff
                     if(!player.hasEffect(MTTEffectsRegister.ReadyToTransfer.get()) ) {
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.ReadyToTransfer.get(), 20 * 5, 0));
@@ -521,6 +553,26 @@ public class ModularTravellerStick extends ItemModularHandheld { // 声明一个
                                 player.getCooldowns().addCooldown(this, 20 * 1);//设置冷却时间
                             }
                         }
+                    }
+                }
+                int boostLevel = item.getEffectLevel(player.getOffhandItem(), boost_Effect);
+                if(boostLevel>0){
+                    int currentDamage = player.getOffhandItem().getDamageValue();
+                    if(currentDamage<=player.getOffhandItem().getMaxDamage()){
+                        if(level.isClientSide()) {
+                            // 玩家当前观察的方向向量
+                            Vec3 lookVec = player.getLookAngle();
+                            // 玩家当前位置的移动速度向量
+                            Vec3 moveVec = player.getDeltaMovement();
+                            // 垂直向上的偏移量，用于增加一定的跳跃感
+                            Vec3 yBonus = new Vec3(0f, 0.5f, 0f);
+                            // 乘以2的正向
+                            player.setDeltaMovement(moveVec.add(lookVec.scale(2.0)).add(yBonus));
+                        }
+                        player.hasImpulse = true;
+                        // 清除玩家掉落距离（避免飞行中的伤害）
+                        player.fallDistance = 0;
+                        player.getOffhandItem().setDamageValue(Math.min(player.getOffhandItem().getMaxDamage(), currentDamage+1));
                     }
                 }
             }

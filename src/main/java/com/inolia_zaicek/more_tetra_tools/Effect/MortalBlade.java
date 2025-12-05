@@ -3,12 +3,14 @@ package com.inolia_zaicek.more_tetra_tools.Effect;
 import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,21 +25,11 @@ import static com.inolia_zaicek.more_tetra_tools.Effect.Clent.MTTEffectGuiStats.
 public class MortalBlade {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, reviverKillerEffect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, divineDragonPowerEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, reviverKillerEffect);
-                effectLevel2 += item.getEffectLevel(offhandItem, divineDragonPowerEffect);
-            }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, reviverKillerEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, divineDragonPowerEffect));
             //有1词条或者樱龙
                 if (effectLevel > 0||player.hasEffect(MTTEffectsRegister.DivineDragonPower.get())) {
                     //不死斩诅咒
@@ -64,21 +56,11 @@ public class MortalBlade {
                     }
             }
         }
-        else if (event.getSource().getDirectEntity() instanceof Player player) {
+        else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, reviverKillerEffect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, divineDragonPowerEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, reviverKillerEffect);
-                effectLevel2 += item.getEffectLevel(offhandItem, divineDragonPowerEffect);
-            }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, reviverKillerEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, divineDragonPowerEffect));
             //有1词条或者樱龙
             if (effectLevel > 0||player.hasEffect(MTTEffectsRegister.DivineDragonPower.get())) {
                 //不死斩诅咒

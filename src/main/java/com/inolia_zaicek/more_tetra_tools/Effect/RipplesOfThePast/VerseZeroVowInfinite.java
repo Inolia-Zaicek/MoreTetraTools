@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,7 +26,7 @@ public class VerseZeroVowInfinite {
     @SubscribeEvent
     public static void tick(LivingEvent.LivingTickEvent event) {
         LivingEntity livingEntity = event.getEntity();
-        int effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, verse_zero_vow_infinite_Effect);
+        int effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, verse_zero_vow_infinite_Effect);
         if (effectLevel > 0) {
             //范围
             var mobList = MTTUtil.mobList(13, livingEntity);
@@ -50,7 +51,7 @@ public class VerseZeroVowInfinite {
                         int myEffectLevel = livingEntity.getEffect(MTTEffectsRegister.RipplesOfPastReverie.get()).getAmplifier();
                         int myEffectTime = livingEntity.getEffect(MTTEffectsRegister.RipplesOfPastReverie.get()).getDuration();
                         //为自己赋予更长时间的buff
-                        livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.RipplesOfPastReverie.get(), myEffectTime+20*otherRecollection, myEffectLevel));
+                        livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.RipplesOfPastReverie.get(), myEffectTime+5*otherRecollection, myEffectLevel));
                         //去除追忆
                         mobs.removeEffect(MTTEffectsRegister.Recollection.get());
                     }
@@ -63,7 +64,7 @@ public class VerseZeroVowInfinite {
                         int myEffectLevel = livingEntity.getEffect(MTTEffectsRegister.RipplesOfPastReverie.get()).getAmplifier();
                         int myEffectTime = livingEntity.getEffect(MTTEffectsRegister.RipplesOfPastReverie.get()).getDuration();
                         //为自己赋予更长时间的buff
-                        livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.RipplesOfPastReverie.get(), myEffectTime+20*otherRecollection, myEffectLevel));
+                        livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.RipplesOfPastReverie.get(), myEffectTime+5*otherRecollection, myEffectLevel));
                         //去除追忆
                         player.removeEffect(MTTEffectsRegister.Recollection.get());
                     }

@@ -1,7 +1,9 @@
 package com.inolia_zaicek.more_tetra_tools.Effect;
 
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTUtil;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,24 +16,9 @@ public class IncantationMedic {
 
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
-            if (event.getSource().getEntity() instanceof Player player) {
+            if (event.getSource().getEntity() instanceof LivingEntity player) {
                 var mob = event.getEntity();
-                var map = mob.getActiveEffectsMap();
-                ItemStack mainHandItem = player.getMainHandItem();
-                ItemStack offhandItem = player.getOffhandItem();
-                float effectLevel = 0;
-                if (mainHandItem.getItem() instanceof IModularItem item) {
-                    float mainEffectLevel = item.getEffectLevel(mainHandItem, incantationMedicEffect);
-                    if (mainEffectLevel > 0) {
-                        effectLevel += mainEffectLevel;
-                    }
-                }
-                if (offhandItem.getItem() instanceof IModularItem item) {
-                    float offEffectLevel = item.getEffectLevel(offhandItem, incantationMedicEffect);
-                    if (offEffectLevel > 0) {
-                        effectLevel += offEffectLevel;
-                    }
-                }
+                float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, incantationMedicEffect));
                 if (effectLevel > 0) {
                     if (event.getSource().is(WITCH_RESISTANT_TO)) {
                         float finish = event.getAmount() * (effectLevel / 100);
@@ -44,24 +31,9 @@ public class IncantationMedic {
                         }
                     }
                 }
-            } else if (event.getSource().getDirectEntity() instanceof Player player) {
+            } else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
                 var mob = event.getEntity();
-                var map = mob.getActiveEffectsMap();
-                ItemStack mainHandItem = player.getMainHandItem();
-                ItemStack offhandItem = player.getOffhandItem();
-                float effectLevel = 0;
-                if (mainHandItem.getItem() instanceof IModularItem item) {
-                    float mainEffectLevel = item.getEffectLevel(mainHandItem, incantationMedicEffect);
-                    if (mainEffectLevel > 0) {
-                        effectLevel += mainEffectLevel;
-                    }
-                }
-                if (offhandItem.getItem() instanceof IModularItem item) {
-                    float offEffectLevel = item.getEffectLevel(offhandItem, incantationMedicEffect);
-                    if (offEffectLevel > 0) {
-                        effectLevel += offEffectLevel;
-                    }
-                }
+                float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, incantationMedicEffect));
                 if (effectLevel > 0) {
                     if (event.getSource().is(WITCH_RESISTANT_TO)) {
                         float finish = event.getAmount() * (effectLevel / 100);

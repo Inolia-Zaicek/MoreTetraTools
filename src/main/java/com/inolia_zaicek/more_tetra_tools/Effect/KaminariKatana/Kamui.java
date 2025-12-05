@@ -47,13 +47,13 @@ public class Kamui {
     public static void hurt(LivingHurtEvent event) {
         //buff消失
         if (event.getSource().getEntity() instanceof LivingEntity livingEntity&&livingEntity.hasEffect(MTTEffectsRegister.Kamui.get())) {
-            int cooldownTime = (int) (20*MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kamui_Effect));
+            int cooldownTime = (int) (20*MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kamui_Effect));
             CompoundTag compoundTag = livingEntity.getPersistentData();
             compoundTag.putInt(KamuiNbt, cooldownTime);
                 livingEntity.removeEffect(MTTEffectsRegister.Kamui.get());
         }
         if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity&&livingEntity.hasEffect(MTTEffectsRegister.Kamui.get())) {
-            int cooldownTime = (int) (20*MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, kamui_Effect));
+            int cooldownTime = (int) (20*MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, kamui_Effect));
             CompoundTag compoundTag = livingEntity.getPersistentData();
             compoundTag.putInt(KamuiNbt, cooldownTime);
                 livingEntity.removeEffect(MTTEffectsRegister.Kamui.get());
@@ -61,7 +61,7 @@ public class Kamui {
         //减伤
         if (event.getEntity()!=null) {
             LivingEntity livingEntity = event.getEntity();
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, kamui_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, kamui_Effect);
             if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                 effectLevel=effectLevel*3;
             }
@@ -80,7 +80,7 @@ public class Kamui {
             if (currentTime > 0) {
                 compoundTag.putInt(KamuiNbt, currentTime - 1);
             }else{
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, kamui_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, kamui_Effect);
                 if(effectLevel>0) {
                     livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.Kamui.get(), 300, 0));
                 }

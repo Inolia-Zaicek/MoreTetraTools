@@ -34,8 +34,8 @@ public class DuskToDusk {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, dusk_to_dusk_Effect);
-                float hpLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, dusk_to_dusk_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, dusk_to_dusk_Effect);
+                float hpLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, dusk_to_dusk_Effect);
                 float dhp = event.getEntity().getHealth() / event.getEntity().getMaxHealth();
                 if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                     effectLevel=effectLevel*5;
@@ -48,8 +48,8 @@ public class DuskToDusk {
                     event.setAmount(baseDamage * (1 + effectLevel / 100));
                 }
             } else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, dusk_to_dusk_Effect);
-                float hpLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, dusk_to_dusk_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, dusk_to_dusk_Effect);
+                float hpLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, dusk_to_dusk_Effect);
                 float dhp = event.getEntity().getHealth() / event.getEntity().getMaxHealth();
                 if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                     effectLevel=effectLevel*5;

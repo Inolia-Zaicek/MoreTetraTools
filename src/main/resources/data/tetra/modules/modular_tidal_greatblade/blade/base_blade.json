@@ -28,10 +28,10 @@
             "durability": 64,
             "extract": {
                 "primaryAttributes": {
-                    "generic.attack_damage": 0.9
+                    "generic.attack_damage": 0.85
                 },
                 "secondaryAttributes": {
-                    "generic.attack_damage": 0.2,
+                    "generic.attack_damage": 0.12,
                     "generic.attack_speed": -0.12
                 },
                 "primaryEffects": {

@@ -11,7 +11,7 @@
                 "generic.attack_speed": -0.1
             },
             "effects": {
-                "more_tetra_tools:blood_devourer": [50,10]
+                "more_tetra_tools:blood_devourer": [31,6]
             },
             "durability": 64,
             "extract": {
@@ -25,7 +25,7 @@
                     "generic.attack_speed": -0.06
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:blood_devourer": [20,5]
+                    "more_tetra_tools:blood_devourer": [7,2]
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

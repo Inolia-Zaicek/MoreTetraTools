@@ -15,7 +15,7 @@
                 "availableTextures": [""],
                 "models": [
                     {
-                        "location": "more_tetra_tools:item/module/modular_blemishine_sword/base_guard",
+                        "location": "more_tetra_tools:item/module/modular_blemishine_sword/base_socket",
                         "renderLayer": "high"
                     }
                 ]

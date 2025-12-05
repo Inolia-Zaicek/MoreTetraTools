@@ -17,6 +17,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
@@ -172,11 +173,13 @@ public class ModularBanaddurTheMagicGreatsword extends ItemModularHandheld { // 
                             if ( !(mobs instanceof OwnableEntity ownableEntity && ownableEntity.getOwnerUUID() != null) ) {
                                 //获取伤害类型
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                                 var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKMAMAGE,player);
                                 mobs.hurt(DamageType, (buffLevel+1) * atk * effectLevel / 10);
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 var map = mobs.getActiveEffectsMap();
                                 map.put(MTTEffectsRegister.Blowout.get(),
                                         new MobEffectInstance(MTTEffectsRegister.Blowout.get(), 200, 1));
@@ -193,11 +196,13 @@ public class ModularBanaddurTheMagicGreatsword extends ItemModularHandheld { // 
                             if ( !(mobs instanceof OwnableEntity ownableEntity && ownableEntity.getOwnerUUID() != null) ) {
                                 //获取伤害类型
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                                 var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKMAMAGE,player);
                                 mobs.hurt(DamageType, atk * effectLevel / 10);
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 var map = mobs.getActiveEffectsMap();
                                 map.put(MTTEffectsRegister.Blowout.get(),
                                         new MobEffectInstance(MTTEffectsRegister.Blowout.get(), 200, 1));

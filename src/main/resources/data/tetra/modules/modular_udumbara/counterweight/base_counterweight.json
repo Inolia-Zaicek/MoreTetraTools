@@ -6,7 +6,7 @@
             "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
             "key": "base_counterweight/",
             "effects": {
-                "more_tetra_tools:moon_on_glacial_river": 30
+                "more_tetra_tools:moon_on_glacial_river": 20
             },
             "durability": 64,
             "extract": {
@@ -17,7 +17,7 @@
                     "counterweight": 2
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:moon_on_glacial_river": 10
+                    "more_tetra_tools:moon_on_glacial_river": 7
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

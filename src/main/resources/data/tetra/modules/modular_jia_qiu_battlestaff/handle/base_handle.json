@@ -32,9 +32,6 @@
                     "forge:reach_distance": 0.1,
                     "forge:attack_range": 0.1
                 },
-                "secondaryEffects": {
-                    "throwable": [ 0, 0.1 ]
-                },
                 "durability": 0.25,
                 "integrity": 1,
                 "magicCapacity": 1,

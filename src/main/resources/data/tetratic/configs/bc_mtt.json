@@ -32,6 +32,17 @@
                 }
             }
         },
+        "modular_behemoth_sword/blade": {
+            "modular_behemoth_sword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
         "modular_blazing_sun/blade": {
             "modular_blazing_sun/blade/base_blade": {
                 "config": {
@@ -197,6 +208,17 @@
                 }
             }
         },
+        "modular_incinerator/blade": {
+            "modular_incinerator/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
         "modular_guardian_of_the_stars/blade": {
             "modular_guardian_of_the_stars/blade/base_blade": {
                 "config": {
@@ -296,6 +318,17 @@
                 }
             }
         },
+        "modular_master_of_light/blade": {
+            "modular_master_of_light/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.1,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
         "modular_mnemonos_grapheus/nib": {
             "modular_mnemonos_grapheus/nib/base_nib": {
                 "config": {
@@ -319,7 +352,7 @@
             }
         },
         "modular_mtt_chainsword/saw": {
-            "modular_mortal_blade/saw/sharp_saw": {
+            "modular_mtt_chainsword/saw/sharp_saw": {
                 "config": {
                     "scaleY": 1.2,
                     "scaleZ": 1.1,
@@ -358,6 +391,17 @@
                     "scaleZ": 1.1,
                     "attributes": {
                         "parent": "bettercombat:rapier"
+                    }
+                }
+            }
+        },
+        "modular_radiance_sword/blade": {
+            "modular_radiance_sword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
                     }
                 }
             }
@@ -468,6 +512,17 @@
                     "scaleZ": 1.1,
                     "attributes": {
                         "parent": "bettercombat:trident"
+                    }
+                }
+            }
+        },
+        "modular_ultimate_dragon_sword/blade": {
+            "modular_ultimate_dragon_sword/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
                     }
                 }
             }

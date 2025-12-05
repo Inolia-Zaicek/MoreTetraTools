@@ -1,10 +1,12 @@
 package com.inolia_zaicek.more_tetra_tools.Effect;
 
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -19,19 +21,10 @@ public class Dodge {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
         //闪避统一计算（焰尾、老爷子
-        if (event.getEntity() instanceof Player player) {
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, flameheartEffect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, halfMoonEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, flameheartEffect);
-                effectLevel2 += item.getEffectLevel(offhandItem, halfMoonEffect);
-            }
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, flameheartEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, halfMoonEffect));
             if (effectLevel > 0||effectLevel2>0) {
                 Random random = new Random();
                 //闪避几率

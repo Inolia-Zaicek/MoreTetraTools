@@ -20,13 +20,13 @@
             },
             "extract": {
                 "primaryAttributes": {
-                    "generic.attack_damage": 1
+                    "generic.attack_damage": 0.8
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:beacon_s_wrath": [0,30]
+                    "more_tetra_tools:beacon_s_wrath": [0,15]
                 },
                 "secondaryEffects": {
-                    "more_tetra_tools:beacon_s_wrath": [2,0]
+                    "more_tetra_tools:beacon_s_wrath": [1.5,0]
                 },
                 "durability": 0.6,
                 "integrity": 1,

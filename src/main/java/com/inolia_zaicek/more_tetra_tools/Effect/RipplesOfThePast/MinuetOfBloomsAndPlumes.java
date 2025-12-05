@@ -12,6 +12,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -25,7 +26,7 @@ public class MinuetOfBloomsAndPlumes {
         //弹射物
         if (event.getSource().is(IS_PROJECTILE) && !event.getSource().is(MTTTickZero.TickFreezeDamage) ) {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, minuet_of_blooms_and_plumes_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, minuet_of_blooms_and_plumes_Effect);
                 if (effectLevel > 0) {
                     LivingEntity mob = event.getEntity();
                     float number = effectLevel / 100;
@@ -41,7 +42,7 @@ public class MinuetOfBloomsAndPlumes {
                 }
             }
             else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, minuet_of_blooms_and_plumes_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, minuet_of_blooms_and_plumes_Effect);
                 if (effectLevel > 0) {
                     LivingEntity mob = event.getEntity();
                     float number = effectLevel / 100;

@@ -17,7 +17,7 @@
                     "counterweight": 2
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:act_not_with_impropriety": 7
+                    "more_tetra_tools:act_not_with_impropriety": 8
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

@@ -12,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -51,8 +52,8 @@ public class Yukimau {
                     return;
                 }
                 var mob = event.getEntity();
-                int effectLevel1 = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, yukimau_Effect);
-                int effectLevel2 = (int) MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, yukimau_Effect);
+                int effectLevel1 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, yukimau_Effect);
+                int effectLevel2 = (int) MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, yukimau_Effect);
                 if (effectLevel1 > 0) {
                     float number = (float) effectLevel1 / 100;
                     float damage = event.getAmount();

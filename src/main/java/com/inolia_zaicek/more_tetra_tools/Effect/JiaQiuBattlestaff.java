@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -25,8 +26,8 @@ public class JiaQiuBattlestaff {
             }
             LivingEntity mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
-            float chance = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, act_not_with_impropriety_Effect));
-            float effectLevel = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, thunderstrike_Effect));
+            float chance = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, act_not_with_impropriety_Effect));
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, thunderstrike_Effect));
             Random random = new Random();
             //概率施加负面
             if(chance>0 && random.nextInt(100) <= chance) {
@@ -78,8 +79,8 @@ public class JiaQiuBattlestaff {
             }
             LivingEntity mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
-            float chance = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, act_not_with_impropriety_Effect));
-            float effectLevel = (MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, thunderstrike_Effect));
+            float chance = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, act_not_with_impropriety_Effect));
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, thunderstrike_Effect));
             Random random = new Random();
             //概率施加负面
             if(chance>0 && random.nextInt(100) <= chance) {
@@ -127,7 +128,7 @@ public class JiaQiuBattlestaff {
         //挨打
         if (event.getSource().getEntity() instanceof LivingEntity mob) {
             LivingEntity livingEntity = event.getEntity();
-            float effectLevel = (MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, thunderstrike_Effect));
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, thunderstrike_Effect));
             //增伤
             if(mob.hasEffect(MTTEffectsRegister.DeathriteOfImpede.get())) {
                 int buffLevel = mob.getEffect(MTTEffectsRegister.DeathriteOfImpede.get()).getAmplifier();
@@ -135,7 +136,7 @@ public class JiaQiuBattlestaff {
             }
         }else if (event.getSource().getDirectEntity() instanceof LivingEntity mob) {
             LivingEntity livingEntity = event.getEntity();
-            float effectLevel = (MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, thunderstrike_Effect));
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, thunderstrike_Effect));
             //增伤
             if(mob.hasEffect(MTTEffectsRegister.DeathriteOfImpede.get())) {
                 int buffLevel = mob.getEffect(MTTEffectsRegister.DeathriteOfImpede.get()).getAmplifier();

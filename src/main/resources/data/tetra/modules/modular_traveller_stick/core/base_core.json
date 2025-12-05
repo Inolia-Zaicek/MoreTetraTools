@@ -13,7 +13,8 @@
                     "textureY": 52
                 },
                 "availableTextures": ["teleportation_core","waypoint_core","gohome_core","recall_core",
-                "capture_core"],
+                "capture_core","boost_core"
+                ],
                 "models": [
                     {
                         "location": "more_tetra_tools:item/module/modular_traveller_stick/",

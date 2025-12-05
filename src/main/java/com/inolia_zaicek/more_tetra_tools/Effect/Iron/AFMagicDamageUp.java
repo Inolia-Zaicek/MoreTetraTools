@@ -3,6 +3,7 @@ package com.inolia_zaicek.more_tetra_tools.Effect.Iron;
 import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTUtil;
 import net.alshanex.alshanex_familiars.datagen.AFDamageTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -10,8 +11,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,48 +30,23 @@ public class AFMagicDamageUp {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
         if (ModList.get().isLoaded("irons_spellbooks")) {
-            if (event.getSource().getEntity() instanceof Player player) {
+            if (event.getSource().getEntity() instanceof LivingEntity player) {
                 var mob = event.getEntity();
                 var map = mob.getActiveEffectsMap();
                 ItemStack mainHandItem = player.getMainHandItem();
                 ItemStack offhandItem = player.getOffhandItem();
-                float effectLevel = 0;
-                float effectLevel2 = 0;
-                float baseLevel = 0;
-                float firstLevel = 0;
-                float baseLevel2 = 0;
-                float secondLevel = 0;
-                float thirdLevel = 0;
-                if (mainHandItem.getItem() instanceof IModularItem item) {
-                    effectLevel += item.getEffectLevel(mainHandItem, magicDamageUpEffect);
-                    effectLevel += item.getEffectLevel(mainHandItem, dark_greatsword_Effect);
-                if(player.hasEffect(MTTEffectsRegister.DarkErosion.get())) {
-                    int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier() + 1;
-                    effectLevel += buffLevel * item.getEffectLevel(mainHandItem, dark_whispers_domination_Effect);
-                }
-                    effectLevel2 += item.getEffectLevel(mainHandItem, incantationMedicEffect);
-                    //澄闪
-                    baseLevel += item.getEffectLevel(mainHandItem, beacon_s_wrath_Effect);
-                    baseLevel2 += item.getEffectEfficiency(mainHandItem, beacon_s_wrath_Effect);
-                    firstLevel += item.getEffectLevel(mainHandItem, scattering_sparks_Effect);
-                    secondLevel += item.getEffectLevel(mainHandItem, surging_current_Effect);
-                    thirdLevel += item.getEffectLevel(mainHandItem, crystalline_shine_Effect);
-                }
-                if (offhandItem.getItem() instanceof IModularItem item) {
-                    effectLevel += item.getEffectLevel(offhandItem, magicDamageUpEffect);
-                    effectLevel += item.getEffectLevel(offhandItem, dark_greatsword_Effect);
+
+                float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, magicDamageUpEffect));
+                float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, dark_greatsword_Effect));
                 if(player.hasEffect(MTTEffectsRegister.DarkErosion.get())) {
                     int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier()+1;
-                    effectLevel += buffLevel * item.getEffectLevel(offhandItem, dark_whispers_domination_Effect);
-                    }
-                    effectLevel2 += item.getEffectLevel(offhandItem, incantationMedicEffect);
-                    //澄闪
-                    baseLevel += item.getEffectLevel(offhandItem, beacon_s_wrath_Effect);
-                    baseLevel2 += item.getEffectEfficiency(offhandItem, beacon_s_wrath_Effect);
-                    firstLevel += item.getEffectLevel(offhandItem, scattering_sparks_Effect);
-                    secondLevel += item.getEffectLevel(offhandItem, surging_current_Effect);
-                    thirdLevel += item.getEffectLevel(offhandItem, crystalline_shine_Effect);
+                    effectLevel += buffLevel * (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, dark_whispers_domination_Effect));
                 }
+                float baseLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, beacon_s_wrath_Effect));
+                float baseLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(player, beacon_s_wrath_Effect));
+                float firstLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, scattering_sparks_Effect));
+                float secondLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, surging_current_Effect));
+                float thirdLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, crystalline_shine_Effect));
                 if (event.getSource().is(AFDamageTypes.SOUND_MAGIC)) {
                     if (effectLevel > 0) {
                         float finish = event.getAmount() * (1 + effectLevel / 100);
@@ -125,7 +103,10 @@ public class AFMagicDamageUp {
                                 if (mobs != null) {
                                     //获取伤害类型
                                     mobs.invulnerableTime = 0;
-                                    mobs.setLastHurtByPlayer(player);
+                                    
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                                     //有2技能buff
                                     if(mobs.hasEffect(MTTEffectsRegister.SurgingCurrent.get())) {
                                         int buffTime = mobs.getEffect(MTTEffectsRegister.SurgingCurrent.get()).getDuration();
@@ -134,7 +115,10 @@ public class AFMagicDamageUp {
                                     }else{
                                         mobs.hurt(DamageType, damage * number);
                                     }
-                                    mobs.setLastHurtByPlayer(player);
+
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                                 }
                             }
 
@@ -162,48 +146,22 @@ public class AFMagicDamageUp {
                         }
                     }
                 }
-            } else if (event.getSource().getDirectEntity() instanceof Player player) {
+            } else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
                 var mob = event.getEntity();
                 var map = mob.getActiveEffectsMap();
                 ItemStack mainHandItem = player.getMainHandItem();
                 ItemStack offhandItem = player.getOffhandItem();
-                float effectLevel = 0;
-                float effectLevel2 = 0;
-                float baseLevel = 0;
-                float firstLevel = 0;
-                float baseLevel2 = 0;
-                float secondLevel = 0;
-                float thirdLevel = 0;
-                if (mainHandItem.getItem() instanceof IModularItem item) {
-                    effectLevel += item.getEffectLevel(mainHandItem, magicDamageUpEffect);
-                    effectLevel += item.getEffectLevel(mainHandItem, dark_greatsword_Effect);
+                float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, magicDamageUpEffect));
+                float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, dark_greatsword_Effect));
                 if(player.hasEffect(MTTEffectsRegister.DarkErosion.get())) {
                     int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier()+1;
-                    effectLevel += buffLevel * item.getEffectLevel(mainHandItem, dark_whispers_domination_Effect);
-                    }
-                    effectLevel2 += item.getEffectLevel(mainHandItem, incantationMedicEffect);
-                    //澄闪
-                    baseLevel += item.getEffectLevel(mainHandItem, beacon_s_wrath_Effect);
-                    baseLevel2 += item.getEffectEfficiency(mainHandItem, beacon_s_wrath_Effect);
-                    firstLevel += item.getEffectLevel(mainHandItem, scattering_sparks_Effect);
-                    secondLevel += item.getEffectLevel(mainHandItem, surging_current_Effect);
-                    thirdLevel += item.getEffectLevel(mainHandItem, crystalline_shine_Effect);
+                    effectLevel += buffLevel * (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, dark_whispers_domination_Effect));
                 }
-                if (offhandItem.getItem() instanceof IModularItem item) {
-                    effectLevel += item.getEffectLevel(offhandItem, magicDamageUpEffect);
-                    effectLevel += item.getEffectLevel(offhandItem, dark_greatsword_Effect);
-                if(player.hasEffect(MTTEffectsRegister.DarkErosion.get())) {
-                    int buffLevel = player.getEffect(MTTEffectsRegister.DarkErosion.get()).getAmplifier()+1;
-                    effectLevel += buffLevel * item.getEffectLevel(offhandItem, dark_whispers_domination_Effect);
-                    }
-                    effectLevel2 += item.getEffectLevel(offhandItem, incantationMedicEffect);
-                    //澄闪
-                    baseLevel += item.getEffectLevel(offhandItem, beacon_s_wrath_Effect);
-                    baseLevel2 += item.getEffectEfficiency(offhandItem, beacon_s_wrath_Effect);
-                    firstLevel += item.getEffectLevel(offhandItem, scattering_sparks_Effect);
-                    secondLevel += item.getEffectLevel(offhandItem, surging_current_Effect);
-                    thirdLevel += item.getEffectLevel(offhandItem, crystalline_shine_Effect);
-                }
+                float baseLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, beacon_s_wrath_Effect));
+                float baseLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(player, beacon_s_wrath_Effect));
+                float firstLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, scattering_sparks_Effect));
+                float secondLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, surging_current_Effect));
+                float thirdLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, crystalline_shine_Effect));
                 if (event.getSource().is(AFDamageTypes.SOUND_MAGIC)) {
                     if (effectLevel > 0) {
                         float finish = event.getAmount() * (1 + effectLevel / 100);
@@ -261,7 +219,10 @@ public class AFMagicDamageUp {
                                 if (mobs != null) {
                                     //获取伤害类型
                                     mobs.invulnerableTime = 0;
-                                    mobs.setLastHurtByPlayer(player);
+
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                                     //有2技能buff
                                     if(mobs.hasEffect(MTTEffectsRegister.SurgingCurrent.get())) {
                                         int buffTime = mobs.getEffect(MTTEffectsRegister.SurgingCurrent.get()).getDuration();
@@ -270,7 +231,10 @@ public class AFMagicDamageUp {
                                     }else{
                                         mobs.hurt(DamageType, damage * number);
                                     }
-                                    mobs.setLastHurtByPlayer(player);
+
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                                 }
                             }
 

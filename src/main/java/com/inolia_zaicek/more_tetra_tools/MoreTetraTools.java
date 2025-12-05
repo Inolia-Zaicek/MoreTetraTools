@@ -3,6 +3,9 @@ package com.inolia_zaicek.more_tetra_tools;
 import com.inolia_zaicek.more_tetra_tools.Effect.*;
 import com.inolia_zaicek.more_tetra_tools.Effect.BanaddurTheMagicGreatsword.DarkErosionEvent;
 import com.inolia_zaicek.more_tetra_tools.Effect.BanaddurTheMagicGreatsword.DarkGreatsword;
+import com.inolia_zaicek.more_tetra_tools.Effect.BehemothSword.BehemothSword;
+import com.inolia_zaicek.more_tetra_tools.Effect.BehemothSword.StarSpawnOfCthulhu;
+import com.inolia_zaicek.more_tetra_tools.Effect.Cataclysm.*;
 import com.inolia_zaicek.more_tetra_tools.Effect.Clent.MTTEffectClent;
 import com.inolia_zaicek.more_tetra_tools.Effect.Iron.AFMagicDamageUp;
 import com.inolia_zaicek.more_tetra_tools.Effect.Iron.IronMagicDamageUp;
@@ -138,6 +141,11 @@ public class MoreTetraTools {
         MinecraftForge.EVENT_BUS.register(JiaQiuBattlestaff.class);
         MinecraftForge.EVENT_BUS.register(BlackAbyssFlower.class);
         MinecraftForge.EVENT_BUS.register(WhiteAbyssFlower.class);
+        MinecraftForge.EVENT_BUS.register(UltimateDragonSword.class);
+        MinecraftForge.EVENT_BUS.register(RadianceSword.class);
+        MinecraftForge.EVENT_BUS.register(BehemothSword.class);
+        MinecraftForge.EVENT_BUS.register(StarSpawnOfCthulhu.class);
+        MinecraftForge.EVENT_BUS.register(MasterOfLight.class);
         //联动
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(IronMagicDamageUp.class);
@@ -146,6 +154,9 @@ public class MoreTetraTools {
             }
             if(ModList.get().isLoaded("alshanex_familiars")) {
                 MinecraftForge.EVENT_BUS.register(AFMagicDamageUp.class);
+            }
+            if(ModList.get().isLoaded("cataclysm")) {
+                MinecraftForge.EVENT_BUS.register(Incinerator.class);
             }
         }
         // 注册 CommonSetup 事件
@@ -173,6 +184,8 @@ public class MoreTetraTools {
     @SubscribeEvent
     public void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            BehemothSword.init();
+            UltimateDragonSword.init();
             MTTEffectClent.init();
             DronesStaff.init();
             ButterflyFlurry.init();

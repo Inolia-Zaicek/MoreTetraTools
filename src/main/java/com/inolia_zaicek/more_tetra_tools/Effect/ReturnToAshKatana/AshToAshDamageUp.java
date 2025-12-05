@@ -15,7 +15,7 @@ public class AshToAshDamageUp {
     public static void hurt(LivingHurtEvent event) {
         if (event.getSource().is(IS_FIRE) || event.getSource().is(MTTTickZero.TickFireDamage)) {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, ash_to_ash_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, ash_to_ash_Effect);
                 if (effectLevel > 0) {
                     float baseDamage = event.getAmount();
                     if(event.getEntity()!=null&&event.getEntity().getRemainingFireTicks()>0){
@@ -26,7 +26,7 @@ public class AshToAshDamageUp {
                     }
                 }
             }else if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-                float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, ash_to_ash_Effect);
+                float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, ash_to_ash_Effect);
                 if (effectLevel > 0) {
                     float baseDamage = event.getAmount();
                     if(event.getEntity()!=null&&event.getEntity().getRemainingFireTicks()>0){

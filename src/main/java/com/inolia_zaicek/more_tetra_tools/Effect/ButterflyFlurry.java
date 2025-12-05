@@ -54,9 +54,9 @@ public class ButterflyFlurry {
         if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
             if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
                 var mob = event.getEntity();
-                int effectLevel1 = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, sheathed_blade_Effect);
-                float hpLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, sheathed_blade_Effect);
-                int effectLevel2 = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, resurgence_Effect);
+                int effectLevel1 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, sheathed_blade_Effect);
+                float hpLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, sheathed_blade_Effect);
+                int effectLevel2 = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, resurgence_Effect);
                 float dhp = mob.getHealth()/mob.getMaxHealth();
                 //到达阈值
                 if( dhp<=(hpLevel/100) &&effectLevel1>0){
@@ -88,7 +88,7 @@ public class ButterflyFlurry {
     @SubscribeEvent
     public static void entityKilled(LivingDeathEvent event) {
         if (event.getSource().getDirectEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, resurgence_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, resurgence_Effect);
             if(effectLevel>0){
                 if(!livingEntity.hasEffect(MTTEffectsRegister.Resurgence.get())) {
                     livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.Resurgence.get(), (int) (20 * effectLevel), 0));
@@ -102,7 +102,7 @@ public class ButterflyFlurry {
                 }
             }
         }else if (event.getSource().getEntity() instanceof LivingEntity livingEntity) {
-            float effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectEfficiency(livingEntity, resurgence_Effect);
+            float effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(livingEntity, resurgence_Effect);
             if(effectLevel>0){
                 if(!livingEntity.hasEffect(MTTEffectsRegister.Resurgence.get())) {
                     livingEntity.addEffect(new MobEffectInstance(MTTEffectsRegister.Resurgence.get(), (int) (20 * effectLevel), 0));

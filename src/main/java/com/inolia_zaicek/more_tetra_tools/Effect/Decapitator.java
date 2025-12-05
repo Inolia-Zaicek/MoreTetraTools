@@ -4,13 +4,16 @@ import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,19 +27,10 @@ public class Decapitator {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
         //挨打--满层减伤
-        if (event.getEntity() instanceof Player player) {
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, waxingMoonEffect);
-                effectLevel2 += item.getEffectLevel(mainHandItem, halfMoonEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, waxingMoonEffect);
-                effectLevel2 += item.getEffectLevel(offhandItem, halfMoonEffect);
-            }
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, waxingMoonEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, halfMoonEffect));
             if(effectLevel>0&&player.hasEffect(MTTEffectsRegister.WaxingMoon.get())){
                 int buffLevel = player.getEffect(MTTEffectsRegister.WaxingMoon.get()).getAmplifier();
                 if(buffLevel>=9){
@@ -45,21 +39,17 @@ public class Decapitator {
             }
         }
         //攻击额外附伤
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel2 += item.getEffectLevel(mainHandItem, halfMoonEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel2 += item.getEffectLevel(offhandItem, halfMoonEffect);
-            }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, waxingMoonEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, halfMoonEffect));
             if( effectLevel2>0 && player.hasEffect(MTTEffectsRegister.HalfMoon.get()) && MTTDamageSourceHelper.isMeleeAttack(event.getSource()) ){
                 float number = effectLevel2 / 100;
                 var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKAMAGE, player);
-                mob.setLastHurtByPlayer(player);
+                
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                 mob.invulnerableTime = 0;
                 mob.hurt(DamageType, event.getAmount() * number);
             }
@@ -67,23 +57,9 @@ public class Decapitator {
     }
 
     @SubscribeEvent
-    public static void tick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
-        ItemStack mainHandItem = player.getMainHandItem();
-        ItemStack offhandItem = player.getOffhandItem();
-        float effectLevel = 0;
-        if (mainHandItem.getItem() instanceof IModularItem item) {
-            float mainEffectLevel = item.getEffectLevel(mainHandItem, waxingMoonEffect);
-            if (mainEffectLevel > 0) {
-                effectLevel += mainEffectLevel;
-            }
-        }
-        if (offhandItem.getItem() instanceof IModularItem item) {
-            float offEffectLevel = item.getEffectLevel(offhandItem, waxingMoonEffect);
-            if (offEffectLevel > 0) {
-                effectLevel += offEffectLevel;
-            }
-        }
+    public static void tick(LivingEvent.LivingTickEvent event) {
+        LivingEntity player = event.getEntity();
+        float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, waxingMoonEffect));
         float hp = player.getHealth();
         float mhp = player.getMaxHealth();
         float dhp = 100*hp/mhp;

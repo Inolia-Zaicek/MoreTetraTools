@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,7 +23,7 @@ public class ThisOdeToAllLives {
     @SubscribeEvent
     public static void tick(LivingEvent.LivingTickEvent event) {
         LivingEntity livingEntity = event.getEntity();
-        int effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, this_ode_to_all_lives_Effect);
+        int effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, this_ode_to_all_lives_Effect);
         //涟漪状态
         if (effectLevel > 0 && livingEntity.hasEffect(MTTEffectsRegister.TheOdeOfAmphoreus.get())){
             var mobList = MTTUtil.mobList(13, livingEntity);

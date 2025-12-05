@@ -3,10 +3,12 @@ package com.inolia_zaicek.more_tetra_tools.Effect;
 import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,31 +20,10 @@ public class IronRider {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
         //铜，减伤
-        if (event.getEntity() instanceof Player player) {
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                float mainEffectLevel = item.getEffectLevel(mainHandItem, copperSealEffect);
-                if (mainEffectLevel > 0) {
-                    effectLevel += mainEffectLevel;
-                }
-                float mainEffectLevel2 = item.getEffectLevel(mainHandItem, ironDefenseEffect);
-                if (mainEffectLevel2 > 0) {
-                    effectLevel2 += mainEffectLevel2;
-                }
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                float offEffectLevel = item.getEffectLevel(offhandItem, copperSealEffect);
-                if (offEffectLevel > 0) {
-                    effectLevel += offEffectLevel;
-                }
-                float mainEffectLevel2 = item.getEffectLevel(offhandItem, ironDefenseEffect);
-                if (mainEffectLevel2 > 0) {
-                    effectLevel2 += mainEffectLevel2;
-                }
-            }
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, copperSealEffect));
+            float effectLevel2 = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, ironDefenseEffect));
             //减伤
             if (effectLevel > 0 && player.hasEffect(MTTEffectsRegister.CopperSeal.get())) {
                 float number = effectLevel / 100;
@@ -57,12 +38,18 @@ public class IronRider {
                     float number = effectLevel2 / 100;
                     int buffLevel = player.getEffect(MTTEffectsRegister.IronDefense.get()).getAmplifier();
                     if (event.getSource().getEntity() instanceof LivingEntity mob) {
-                        mob.setLastHurtByPlayer(player);
+                        
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                         mob.invulnerableTime = 0;
                         mob.hurt(DamageType, atk * number);
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.IronDefense.get(), 300, buffLevel+1));
                     } else if (event.getSource().getDirectEntity() instanceof LivingEntity mob) {
-                        mob.setLastHurtByPlayer(player);
+                        
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                         mob.invulnerableTime = 0;
                         mob.hurt(DamageType, atk * number);
                         player.addEffect(new MobEffectInstance(MTTEffectsRegister.IronDefense.get(), 300, buffLevel+1));
@@ -75,30 +62,18 @@ public class IronRider {
             }
         }
         //进攻
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
-            var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                float mainEffectLevel = item.getEffectLevel(mainHandItem, ironDefenseEffect);
-                if (mainEffectLevel > 0) {
-                    effectLevel += mainEffectLevel;
-                }
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                float offEffectLevel = item.getEffectLevel(offhandItem, ironDefenseEffect);
-                if (offEffectLevel > 0) {
-                    effectLevel += offEffectLevel;
-                }
-            }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, ironDefenseEffect));
             if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
                 if (effectLevel > 0&&player.hasEffect(MTTEffectsRegister.IronDefense.get())) {
                     float number = effectLevel / 100;
                     float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                     var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKAMAGE, player);
-                    mob.setLastHurtByPlayer(player);
+                    
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                     mob.invulnerableTime = 0;
                     mob.hurt(DamageType, atk * number);
                     int buffLevel = mob.getEffect(MTTEffectsRegister.IronDefense.get()).getAmplifier();

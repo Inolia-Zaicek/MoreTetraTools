@@ -1,6 +1,7 @@
 package com.inolia_zaicek.more_tetra_tools.Register;
 
 import com.inolia_zaicek.more_tetra_tools.Modular.*;
+import com.inolia_zaicek.more_tetra_tools.Modular.Cataclysm.ModularIncinerator;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -119,11 +120,22 @@ public class MTTItemRegister {
     public static final RegistryObject<Item> TetraBlackAbyssFlower = registerCommonMaterials(ZeroingITEM,"black_abyss_flower", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
     public static final RegistryObject<Item> MODULAR_WhiteAbyssFlower = ZeroingITEM.register(ModularWhiteAbyssFlower.identifier, ModularWhiteAbyssFlower::new);
     public static final RegistryObject<Item> TetraWhiteAbyssFlower = registerCommonMaterials(ZeroingITEM,"white_abyss_flower", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+    public static final RegistryObject<Item> MODULAR_UltimateDragonSword = ZeroingITEM.register(ModularUltimateDragonSword.identifier, ModularUltimateDragonSword::new);
+    public static final RegistryObject<Item> TetraUltimateDragonSword = registerCommonMaterials(ZeroingITEM,"ultimate_dragon_sword", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+    public static final RegistryObject<Item> MODULAR_RadianceSword = ZeroingITEM.register(ModularRadianceSword.identifier, ModularRadianceSword::new);
+    public static final RegistryObject<Item> TetraRadianceSword = registerCommonMaterials(ZeroingITEM,"radiance_sword", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+    public static final RegistryObject<Item> MODULAR_BehemothSword = ZeroingITEM.register(ModularBehemothSword.identifier, ModularBehemothSword::new);
+    public static final RegistryObject<Item> TetraBehemothSword = registerCommonMaterials(ZeroingITEM,"behemoth_sword", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+    public static final RegistryObject<Item> MODULAR_MasterOfLight = ZeroingITEM.register(ModularMasterOfLight.identifier, ModularMasterOfLight::new);
+    public static final RegistryObject<Item> TetraMasterOfLight = registerCommonMaterials(ZeroingITEM,"master_of_light", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
 
     public static final RegistryObject<Item> MODULAR_TravellerStick = ZeroingITEM.register(ModularTravellerStick.identifier, ModularTravellerStick::new);
     public static final RegistryObject<Item> TetraTravellerStick = registerCommonMaterials(ZeroingITEM,"traveller_stick", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
     public static final RegistryObject<Item> MODULAR_Paxel = ZeroingITEM.register(ModularPaxel.identifier, ModularPaxel::new);
     public static final RegistryObject<Item> TetraPaxel = registerCommonMaterials(ZeroingITEM,"paxel", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+
+    public static final RegistryObject<Item> MODULAR_Incinerator = CataclysmITEM.register(ModularIncinerator.identifier, ModularIncinerator::new);
+    public static final RegistryObject<Item> TetraIncinerator = registerCommonMaterials(CataclysmITEM,"incinerat_burst", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
     //原型
     public static final RegistryObject<Item> PrototypeWeapon = registerCommonMaterials(ZeroingITEM,"prototype_weapon", () -> new Item(new Item.Properties().stacksTo(64).fireResistant() ));
     public static final RegistryObject<Item> DragonTear = registerCommonMaterials(ZeroingITEM,"dragon_tear", () -> new TooltipItem(new Item.Properties().stacksTo(64).fireResistant() ));

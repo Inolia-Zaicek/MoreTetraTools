@@ -677,5 +677,29 @@ public class MTTEffectClent {
         );
         WorkbenchStatsGui.addBar(statBar85);
         HoloStatsGui.addBar(statBar85);
+        var statGetter86 = new StatGetterEffectLevel(hikari_Effect, 1);
+        GuiStatBar statBar86 = new GuiStatBar(0, 0, StatsHelper.barLength,
+                hikari_Name, 0, 100, false, false, false,
+                statGetter86, LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(hikari_Tooltip, statGetter86)
+        );
+        WorkbenchStatsGui.addBar(statBar86);
+        HoloStatsGui.addBar(statBar86);
+        var statGetter87 = new StatGetterEffectLevel(radiance_Effect, 1);
+        GuiStatBar statBar87 = new GuiStatBar(0, 0, StatsHelper.barLength,
+                radiance_Name, 0, 100, false, false, false,
+                statGetter87, LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(radiance_Tooltip, statGetter87)
+        );
+        WorkbenchStatsGui.addBar(statBar87);
+        HoloStatsGui.addBar(statBar87);
+        var statGetter88 = new StatGetterEffectLevel(boost_Effect, 1);
+        GuiStatBar statBar88 = new GuiStatBar(0, 0, StatsHelper.barLength,
+                boost_Name, 0, 1, false, false, false,
+                statGetter88, LabelGetterBasic.integerLabel,
+                new TooltipGetterInteger(boost_Tooltip, statGetter88)
+        );
+        WorkbenchStatsGui.addBar(statBar88);
+        HoloStatsGui.addBar(statBar88);
     }
 }

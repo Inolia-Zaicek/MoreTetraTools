@@ -4,10 +4,12 @@ import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -25,7 +27,7 @@ import static com.inolia_zaicek.more_tetra_tools.Effect.Clent.MTTEffectGuiStats.
 public class Laevatain {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             ItemStack mainHandItem = player.getMainHandItem();
             ItemStack offhandItem = player.getOffhandItem();
@@ -39,10 +41,16 @@ public class Laevatain {
             if (MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
                 if (effectLevel2 > 0) {
                     var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TICKMAMAGE, player);
-                    mob.setLastHurtByPlayer(player);
+                    
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                     mob.invulnerableTime = 0;
                     mob.hurt(DamageType, event.getAmount() * (1 + effectLevel2 / 100 ) );
-                    mob.setLastHurtByPlayer(player);
+                    
+                    if(player instanceof Player player1) {
+                        mob.setLastHurtByPlayer(player1);
+                    }
                     event.setAmount(0);
                 }
             }
@@ -186,16 +194,9 @@ public class Laevatain {
     //余烬禁止回血
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void heal(LivingHealEvent event) {
-        if(event.getEntity() instanceof Player player){
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, remnant_ash_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, remnant_ash_Effect);
-            }
+        if(event.getEntity()!=null){
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, remnant_ash_Effect));
             //余烬禁疗
             if(effectLevel>0&&player.hasEffect(MTTEffectsRegister.RemnantAsh.get())){
                 event.setAmount(0);

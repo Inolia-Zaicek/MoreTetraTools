@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -29,7 +30,8 @@ public class FateDivineVessel {
         MobEffectInstance expiredInstance = event.getEffectInstance();
         if (expiredInstance != null) {
             MobEffect expiredEffect = expiredInstance.getEffect();
-            if (event.getEntity() instanceof Player player && expiredEffect == MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get()) {
+            if (event.getEntity()!=null&& expiredEffect == MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get()) {
+                LivingEntity player = event.getEntity();
                 ItemStack mainHandItem = player.getMainHandItem();
                 if (mainHandItem.getItem() instanceof IModularItem item) {
                     float effectLevel = (float) item.getEffectLevel(player.getMainHandItem(), fateDivineVesselEffect);
@@ -41,11 +43,17 @@ public class FateDivineVessel {
                             if (mobs != null) {
                                 //获取伤害类型
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                                 float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                                 var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TRUEDAMAGE, player);
                                 mobs.hurt(DamageType, atk * number);
-                                mobs.setLastHurtByPlayer(player);
+                                
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                             }
                         }
                         player.removeEffect(MTTEffectsRegister.Scourge.get());
@@ -67,7 +75,8 @@ public class FateDivineVessel {
     //免死
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void LivingDeathVampire(LivingDeathEvent event) {
-        if (event.getEntity() instanceof Player player) {
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
             ItemStack mainHandItem = player.getMainHandItem();
             if (mainHandItem.getItem() instanceof IModularItem item) {
                 float effectLevel = (float) item.getEffectLevel(player.getMainHandItem(), fateDivineVesselEffect);
@@ -86,11 +95,17 @@ public class FateDivineVessel {
                         if (mobs != null) {
                             //获取伤害类型
                             mobs.invulnerableTime = 0;
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                             float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                             var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TRUEDAMAGE, player);
                             mobs.hurt(DamageType, atk * number);
-                            mobs.setLastHurtByPlayer(player);
+                            
+                    if(player instanceof Player player1) {
+                        mobs.setLastHurtByPlayer(player1);
+                    }
                         }
                     }
                     player.removeEffect(MTTEffectsRegister.Scourge.get());
@@ -110,7 +125,8 @@ public class FateDivineVessel {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hurt(LivingHurtEvent event) {
         //挨打
-        if (event.getEntity() instanceof Player player) {
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
             if (!player.hasEffect(MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get())) {
                 ItemStack mainHandItem = player.getMainHandItem();
                 if (mainHandItem.getItem() instanceof IModularItem item) {
@@ -191,8 +207,9 @@ public class FateDivineVessel {
             }
         }
         //进攻
-        if (event.getSource().getEntity() instanceof Player player) {
-            if (!player.hasEffect(MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get())&&player.getAttackStrengthScale(0.5f) > 0.9f && MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
+            if(player instanceof Player player1&&player1.getAttackStrengthScale(0.5f) <= 0.9f)return;
+            if (!player.hasEffect(MTTEffectsRegister.HeWhoBearsTheWorldMustBurn.get()) && MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
                 ItemStack mainHandItem = player.getMainHandItem();
                 if (mainHandItem.getItem() instanceof IModularItem item && MTTDamageSourceHelper.isMeleeAttack(event.getSource())) {
                     //火种

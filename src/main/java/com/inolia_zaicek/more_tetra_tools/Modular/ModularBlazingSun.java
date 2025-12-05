@@ -15,6 +15,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -168,11 +169,13 @@ public class ModularBlazingSun extends ItemModularHandheld { // 声明一个名�
                         if (mobs != null) {
                             //获取伤害类型
                             mobs.invulnerableTime = 0;
-                            mobs.setLastHurtByPlayer(player);
+                            
+                                            mobs.setLastHurtByPlayer(player);
                             float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                             var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TRUEDAMAGE,player);
                             mobs.hurt(DamageType, atk*effectLevel/100);
-                            mobs.setLastHurtByPlayer(player);
+                            
+                                            mobs.setLastHurtByPlayer(player);
                             mobs.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,20,3));
                             mobs.addEffect(new MobEffectInstance(MobEffects.WEAKNESS,20,3));
                             var map = mobs.getActiveEffectsMap();
@@ -198,11 +201,13 @@ public class ModularBlazingSun extends ItemModularHandheld { // 声明一个名�
                         if (mobs != null) {
                             //获取伤害类型
                             mobs.invulnerableTime = 0;
-                            mobs.setLastHurtByPlayer(player);
+                            
+                                            mobs.setLastHurtByPlayer(player);
                             float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                             var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TRUEDAMAGE,player);
                             mobs.hurt(DamageType, atk*effectLevel/100);
-                            mobs.setLastHurtByPlayer(player);
+                            
+                                            mobs.setLastHurtByPlayer(player);
                             mobs.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,20,3));
                             mobs.addEffect(new MobEffectInstance(MobEffects.WEAKNESS,20,3));
                             var map = mobs.getActiveEffectsMap();

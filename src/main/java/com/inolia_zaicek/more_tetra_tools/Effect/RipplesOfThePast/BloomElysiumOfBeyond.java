@@ -14,6 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -29,7 +30,7 @@ public class BloomElysiumOfBeyond {
     @SubscribeEvent
     public static void tick(LivingEvent.LivingTickEvent event) {
         LivingEntity livingEntity = event.getEntity();
-        int effectLevel = MTTEffectHelper.getInstance().getMainOffHandSumEffectLevel(livingEntity, bloom_elysium_of_beyond_Effect);
+        int effectLevel = MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(livingEntity, bloom_elysium_of_beyond_Effect);
         if (effectLevel > 0) {
             var mobList = MTTUtil.mobList(13, livingEntity);
             var playerList = MTTUtil.PlayerList(13, livingEntity);

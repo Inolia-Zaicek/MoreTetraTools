@@ -17,7 +17,7 @@
                     "counterweight": 2
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:slashed_dream_cries_in_red": [10,1]
+                    "more_tetra_tools:slashed_dream_cries_in_red": [7.5,0.5]
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

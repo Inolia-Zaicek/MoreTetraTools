@@ -14,6 +14,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
@@ -189,7 +190,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤1
                             if (player.hasEffect(MTTEffectsRegister.Scourge1.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number);
                                 player.removeEffect(MTTEffectsRegister.Scourge1.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -198,7 +200,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤2
                             else if (player.hasEffect(MTTEffectsRegister.Scourge2.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*2);
                                 player.removeEffect(MTTEffectsRegister.Scourge2.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -206,7 +209,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤3
                             else if (player.hasEffect(MTTEffectsRegister.Scourge3.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*3);
                                 player.removeEffect(MTTEffectsRegister.Scourge3.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -214,7 +218,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤4
                             else if (player.hasEffect(MTTEffectsRegister.Scourge4.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*4);
                                 mobs.hurt(trueDamageType, atk * number*4*0.36f);
                                 player.removeEffect(MTTEffectsRegister.Scourge4.get());
@@ -224,7 +229,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             else if (player.hasEffect(MTTEffectsRegister.Scourge.get())) {
                                 int buffLevel = player.getEffect(MTTEffectsRegister.Scourge.get()).getAmplifier() + 1;
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*4);
                                 mobs.hurt(trueDamageType, atk * number*4*0.36f);
                                 //返还毁伤
@@ -282,7 +288,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤1
                             if (player.hasEffect(MTTEffectsRegister.Scourge1.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number);
                                 player.removeEffect(MTTEffectsRegister.Scourge1.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -291,7 +298,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤2
                             else if (player.hasEffect(MTTEffectsRegister.Scourge2.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*2);
                                 player.removeEffect(MTTEffectsRegister.Scourge2.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -299,7 +307,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤3
                             else if (player.hasEffect(MTTEffectsRegister.Scourge3.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*3);
                                 player.removeEffect(MTTEffectsRegister.Scourge3.get());
                                 player.getCooldowns().addCooldown(this, 10);//设置冷却时间
@@ -307,7 +316,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             //毁伤4
                             else if (player.hasEffect(MTTEffectsRegister.Scourge4.get())) {
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*4);
                                 mobs.hurt(trueDamageType, atk * number*4*0.36f);
                                 player.removeEffect(MTTEffectsRegister.Scourge4.get());
@@ -317,7 +327,8 @@ public class ModularFinalWorldbearingGreatblade extends ItemModularHandheld { //
                             else if (player.hasEffect(MTTEffectsRegister.Scourge.get())) {
                                 int buffLevel = player.getEffect(MTTEffectsRegister.Scourge.get()).getAmplifier() + 1;
                                 mobs.invulnerableTime = 0;
-                                mobs.setLastHurtByPlayer(player);
+                                
+                                            mobs.setLastHurtByPlayer(player);
                                 mobs.hurt(DamageType, atk * number*4);
                                 mobs.hurt(trueDamageType, atk * number*4*0.36f);
                                 //返还毁伤

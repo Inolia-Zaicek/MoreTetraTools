@@ -17,7 +17,7 @@
                     "counterweight": 2
                 },
                 "primaryEffects": {
-                    "more_tetra_tools:kami_ori": [4,0.1]
+                    "more_tetra_tools:kami_ori": [8,0.1]
                 },
                 "durability": 0.25,
                 "integrity": -0.25,

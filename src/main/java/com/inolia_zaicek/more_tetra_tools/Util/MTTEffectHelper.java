@@ -111,6 +111,92 @@ public class MTTEffectHelper {
         }
         return maxEffectEfficiency;
     }
+    //取最大值，但副手等级减半（比较副手等级减半与主手等级，取最大值）
+    public int getMainMaxOffHandHalfEffectLevel(LivingEntity livingEntity, ItemEffect effect) {
+        int maxEffectLevel = 0;
+        ItemStack mainHandItem = livingEntity.getMainHandItem();
+        ItemStack offhandItem = livingEntity.getOffhandItem();
+        if (mainHandItem.getItem() instanceof IModularItem item) {
+            float mainLevel = item.getEffectLevel(mainHandItem, effect);
+            // 只考虑大于0的等级，并更新最大值
+            if (mainLevel > 0) {
+                maxEffectLevel = Math.max(maxEffectLevel, (int) mainLevel);
+            }
+        }
+        if (offhandItem.getItem() instanceof IModularItem item) {
+            float offLevel = item.getEffectLevel(offhandItem, effect);
+            if (offLevel > 0) {
+                // 副手等级减半后与主手等级比较，取最大值
+                int offLevelAdjusted = (int) Math.ceil(offLevel / 2.0);
+                maxEffectLevel = Math.max(maxEffectLevel, offLevelAdjusted);
+            }
+        }
+        return maxEffectLevel;
+    }
+    public float getMainMaxOffHandHalfEffectEfficiency(LivingEntity livingEntity, ItemEffect effect) {
+        int maxEffectEfficiency = 0;
+        ItemStack mainHandItem = livingEntity.getMainHandItem();
+        ItemStack offhandItem = livingEntity.getOffhandItem();
+        if (mainHandItem.getItem() instanceof IModularItem item) {
+            float mainEfficiency = item.getEffectEfficiency(mainHandItem, effect);
+            // 只考虑大于0的等级，并更新最大值
+            if (mainEfficiency > 0) {
+                maxEffectEfficiency = Math.max(maxEffectEfficiency, (int) mainEfficiency);
+            }
+        }
+        if (offhandItem.getItem() instanceof IModularItem item) {
+            float offEfficiency = item.getEffectEfficiency(offhandItem, effect);
+            if (offEfficiency > 0) {
+                // 副手等级减半后与主手等级比较，取最大值
+                int offEfficiencyAdjusted = (int) Math.ceil(offEfficiency / 2.0);
+                maxEffectEfficiency = Math.max(maxEffectEfficiency, offEfficiencyAdjusted);
+            }
+        }
+        return maxEffectEfficiency;
+    }
+    //副手等级提升
+    public int getMainMaxOffHandUPEffectLevel(LivingEntity livingEntity, ItemEffect effect) {
+        int maxEffectLevel = 0;
+        ItemStack mainHandItem = livingEntity.getMainHandItem();
+        ItemStack offhandItem = livingEntity.getOffhandItem();
+        if (mainHandItem.getItem() instanceof IModularItem item) {
+            float mainLevel = item.getEffectLevel(mainHandItem, effect);
+            // 只考虑大于0的等级，并更新最大值
+            if (mainLevel > 0) {
+                maxEffectLevel = Math.max(maxEffectLevel, (int) mainLevel);
+            }
+        }
+        if (offhandItem.getItem() instanceof IModularItem item) {
+            float offLevel = item.getEffectLevel(offhandItem, effect);
+            if (offLevel > 0) {
+                // 副手等级增大后与主手等级比较，取最大值
+                int offLevelAdjusted = (int) Math.ceil(offLevel * 2.0);
+                maxEffectLevel = Math.max(maxEffectLevel, offLevelAdjusted);
+            }
+        }
+        return maxEffectLevel;
+    }
+    public float getMainMaxOffHandUPEffectEfficiency(LivingEntity livingEntity, ItemEffect effect) {
+        int maxEffectEfficiency = 0;
+        ItemStack mainHandItem = livingEntity.getMainHandItem();
+        ItemStack offhandItem = livingEntity.getOffhandItem();
+        if (mainHandItem.getItem() instanceof IModularItem item) {
+            float mainEfficiency = item.getEffectEfficiency(mainHandItem, effect);
+            // 只考虑大于0的等级，并更新最大值
+            if (mainEfficiency > 0) {
+                maxEffectEfficiency = Math.max(maxEffectEfficiency, (int) mainEfficiency);
+            }
+        }
+        if (offhandItem.getItem() instanceof IModularItem item) {
+            float offEfficiency = item.getEffectEfficiency(offhandItem, effect);
+            if (offEfficiency > 0) {
+                // 副手等级增大后与主手等级比较，取最大值
+                int offEfficiencyAdjusted = (int) Math.ceil(offEfficiency * 2.0);
+                maxEffectEfficiency = Math.max(maxEffectEfficiency, offEfficiencyAdjusted);
+            }
+        }
+        return maxEffectEfficiency;
+    }
     //头部护甲
     public int getHeadArmorEffectLevel(LivingEntity livingEntity, ItemEffect effect) {
         ItemStack headArmorItem = livingEntity.getItemBySlot(EquipmentSlot.HEAD);
@@ -213,13 +299,13 @@ public class MTTEffectHelper {
                 getChestArmorEffectLevel(livingEntity, effect) +
                 getLegsArmorEffectLevel(livingEntity, effect) +
                 getFeetArmorEffectLevel(livingEntity, effect) +
-                getMainOffHandSumEffectLevel(livingEntity,effect);
+                getMainMaxOffHandHalfEffectLevel(livingEntity,effect);
     }
     public float getAllEffectEfficiency(LivingEntity livingEntity, ItemEffect effect) {
         return getHeadArmorEffectEfficiency(livingEntity, effect) +
                 getChestArmorEffectEfficiency(livingEntity, effect) +
                 getLegsArmorEffectEfficiency(livingEntity, effect) +
                 getFeetArmorEffectEfficiency(livingEntity, effect) +
-                getMainOffHandSumEffectEfficiency(livingEntity,effect);
+                getMainMaxOffHandHalfEffectEfficiency(livingEntity,effect);
     }
 }

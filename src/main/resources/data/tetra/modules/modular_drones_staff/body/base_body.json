@@ -10,7 +10,7 @@
             "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
             "key": "base_body/",
             "attributes": {
-                "generic.attack_speed": -1.5
+                "generic.attack_speed": -1.6
             },
             "aspects": {
                 "breakable": 2,

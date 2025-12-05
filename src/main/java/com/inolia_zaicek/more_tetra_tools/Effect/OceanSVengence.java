@@ -1,11 +1,13 @@
 package com.inolia_zaicek.more_tetra_tools.Effect;
 
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -40,21 +42,9 @@ public class OceanSVengence {
     public static void hurt(LivingHurtEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float waterEffectLevel = 0;
-            float armorEffectLevel = 0;
-            float armorEffectDamage = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                waterEffectLevel += item.getEffectLevel(mainHandItem, ocean_will_Effect);
-                armorEffectLevel += item.getEffectLevel(mainHandItem, weak_armor_Effect);
-                armorEffectDamage += item.getEffectEfficiency(mainHandItem, weak_armor_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                waterEffectLevel += item.getEffectLevel(offhandItem, ocean_will_Effect);
-                armorEffectLevel += item.getEffectLevel(offhandItem, weak_armor_Effect);
-                armorEffectDamage += item.getEffectEfficiency(offhandItem, weak_armor_Effect);
-            }
+            float waterEffectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, mosterHunterEffect));
+            float armorEffectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, weak_armor_Effect));
+            float armorEffectDamage = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(player, weak_armor_Effect));
             if(waterEffectLevel>0||armorEffectLevel>0) {
                 //增伤数额
                 float number = 0;
@@ -85,21 +75,9 @@ public class OceanSVengence {
             }
         }else if (event.getSource().getDirectEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float waterEffectLevel = 0;
-            float armorEffectLevel = 0;
-            float armorEffectDamage = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                waterEffectLevel += item.getEffectLevel(mainHandItem, ocean_will_Effect);
-                armorEffectLevel += item.getEffectLevel(mainHandItem, weak_armor_Effect);
-                armorEffectDamage += item.getEffectEfficiency(mainHandItem, weak_armor_Effect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                waterEffectLevel += item.getEffectLevel(offhandItem, ocean_will_Effect);
-                armorEffectLevel += item.getEffectLevel(offhandItem, weak_armor_Effect);
-                armorEffectDamage += item.getEffectEfficiency(offhandItem, weak_armor_Effect);
-            }
+            float waterEffectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, mosterHunterEffect));
+            float armorEffectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, weak_armor_Effect));
+            float armorEffectDamage = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectEfficiency(player, weak_armor_Effect));
             if(waterEffectLevel>0||armorEffectLevel>0) {
                 //增伤数额
                 float number = 0;

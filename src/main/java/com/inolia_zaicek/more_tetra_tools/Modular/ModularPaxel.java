@@ -2,14 +2,23 @@ package com.inolia_zaicek.more_tetra_tools.Modular; // 定义该类所属的包�
 
 import com.google.common.collect.Multimap;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ObjectHolder;
 import se.mickelus.mutil.network.PacketHandler;
+import se.mickelus.tetra.TetraToolActions;
+import se.mickelus.tetra.blocks.workbench.BasicWorkbenchBlock;
 import se.mickelus.tetra.data.DataManager;
 import se.mickelus.tetra.gui.GuiModuleOffsets;
 import se.mickelus.tetra.items.modular.ItemModularHandheld;
@@ -100,7 +109,14 @@ public class ModularPaxel extends ItemModularHandheld { // 声明一个名为Mod
     public void commonInit(PacketHandler packetHandler) {
         DataManager.instance.synergyData.onReload(() -> synergies = DataManager.instance.synergyData.getOrdered("modular_paxel/"));
     }
-
+    @Override
+    public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
+        Player player = context.getPlayer();
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        InteractionHand hand = context.getHand();
+        return player != null && !player.isCrouching() && world.getBlockState(pos).getBlock().equals(Blocks.CRAFTING_TABLE) && this.getToolLevel(player.getItemInHand(hand), TetraToolActions.hammer) > 0 ? BasicWorkbenchBlock.upgradeWorkbench(player, world, pos, hand, context.getClickedFace()) : super.onItemUseFirst(stack, context);
+    }
     /*** 获取该模块化物品所有已安装的模块。** @param stack 当前物品的ItemStack。* @return 包含所有已安装模块的Collection。*/
     //不用动他
     @Override // 覆盖父类ModularItem的方法。

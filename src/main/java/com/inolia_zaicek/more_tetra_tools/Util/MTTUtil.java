@@ -3,6 +3,7 @@ package com.inolia_zaicek.more_tetra_tools.Util;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.AABB;
 
 import java.util.List;

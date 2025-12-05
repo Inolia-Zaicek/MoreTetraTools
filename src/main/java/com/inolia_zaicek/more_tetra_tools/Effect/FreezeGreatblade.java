@@ -4,15 +4,19 @@ import com.inolia_zaicek.more_tetra_tools.Damage.MTTTickZero;
 import com.inolia_zaicek.more_tetra_tools.MoreTetraTools;
 import com.inolia_zaicek.more_tetra_tools.Register.MTTEffectsRegister;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTDamageSourceHelper;
+import com.inolia_zaicek.more_tetra_tools.Util.MTTEffectHelper;
 import com.inolia_zaicek.more_tetra_tools.Util.MTTUtil;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,19 +28,10 @@ import static com.inolia_zaicek.more_tetra_tools.Effect.Clent.MTTEffectGuiStats.
 public class FreezeGreatblade {
     @SubscribeEvent
     public static void hurt(LivingHurtEvent event) {
-        if (event.getSource().getEntity() instanceof Player player) {
+        if (event.getSource().getEntity() instanceof LivingEntity player) {
             var mob = event.getEntity();
             var map = mob.getActiveEffectsMap();
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            float effectLevel2 = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, freezeBladeEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, freezeBladeEffect);
-            }
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, freezeBladeEffect));
             if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                 effectLevel=effectLevel*5;
             }
@@ -61,16 +56,9 @@ public class FreezeGreatblade {
             }
         }
         //减伤
-        if (event.getEntity() instanceof Player player) {
-            ItemStack mainHandItem = player.getMainHandItem();
-            ItemStack offhandItem = player.getOffhandItem();
-            float effectLevel = 0;
-            if (mainHandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(mainHandItem, FreezeTimeEffect);
-            }
-            if (offhandItem.getItem() instanceof IModularItem item) {
-                effectLevel += item.getEffectLevel(offhandItem, FreezeTimeEffect);
-            }
+        if (event.getEntity()!=null) {
+            LivingEntity player = event.getEntity();
+            float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, FreezeTimeEffect));
             if(isUltimateBossEntity(event.getEntity().getType())&&effectLevel > 0){
                 effectLevel=effectLevel*5;
             }
@@ -81,17 +69,10 @@ public class FreezeGreatblade {
         }
     }
     @SubscribeEvent
-    public static void tick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
-        ItemStack mainHandItem = player.getMainHandItem();
-        ItemStack offhandItem = player.getOffhandItem();
-        float effectLevel = 0;
-        if (mainHandItem.getItem() instanceof IModularItem item) {
-            effectLevel += item.getEffectLevel(mainHandItem, FreezeTimeEffect);
-        }
-        if (offhandItem.getItem() instanceof IModularItem item) {
-            effectLevel += item.getEffectLevel(offhandItem, FreezeTimeEffect);
-        }
+    public static void tick(LivingEvent.LivingTickEvent event) {
+        LivingEntity player = event.getEntity();
+        float effectLevel = (MTTEffectHelper.getInstance().getMainMaxOffHandHalfEffectLevel(player, FreezeTimeEffect));
+
         if (effectLevel > 0 && player.hasEffect(MTTEffectsRegister.FreezeTime.get()) && player.level().getGameTime() % 10 == 0) {
             var mobList = MTTUtil.mobList(5, player);
             float number = effectLevel / 100;
@@ -103,11 +84,9 @@ public class FreezeGreatblade {
                     if(isUltimateBossEntity(mobs.getType())){
                         number=number*5;
                     }
-                    mobs.setLastHurtByPlayer(player);
                     float atk = (float) player.getAttributeValue(Attributes.ATTACK_DAMAGE);
                     var DamageType = MTTTickZero.hasSource(player.level(), MTTTickZero.TickFreezeDamage,player);
                     mobs.hurt(DamageType, atk * number);
-                    mobs.setLastHurtByPlayer(player);
                     mobs.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1));
                     var map = mobs.getActiveEffectsMap();
                     map.put(MobEffects.MOVEMENT_SLOWDOWN,
