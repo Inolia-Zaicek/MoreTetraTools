@@ -1,7 +1,7 @@
 package com.inolia_zaicek.more_tetra_tools.Register;
 
 import com.inolia_zaicek.more_tetra_tools.Modular.*;
-import com.inolia_zaicek.more_tetra_tools.Modular.Cataclysm.ModularIncinerator;
+import com.inolia_zaicek.more_tetra_tools.Modular.Cataclysm.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -135,7 +135,13 @@ public class MTTItemRegister {
     public static final RegistryObject<Item> TetraPaxel = registerCommonMaterials(ZeroingITEM,"paxel", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
 
     public static final RegistryObject<Item> MODULAR_Incinerator = CataclysmITEM.register(ModularIncinerator.identifier, ModularIncinerator::new);
-    public static final RegistryObject<Item> TetraIncinerator = registerCommonMaterials(CataclysmITEM,"incinerat_burst", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
+    public static final RegistryObject<Item> MODULAR_Ceraunus = CataclysmITEM.register(ModularCeraunus.identifier, ModularCeraunus::new);
+    public static final RegistryObject<Item> MODULAR_InfernalForge = CataclysmITEM.register(ModularInfernalForge.identifier, ModularInfernalForge::new);
+    public static final RegistryObject<Item> MODULAR_SoulRender = CataclysmITEM.register(ModularSoulRender.identifier, ModularSoulRender::new);
+    public static final RegistryObject<Item> MODULAR_Annihilator = CataclysmITEM.register(ModularAnnihilator.identifier, ModularAnnihilator::new);
+    public static final RegistryObject<Item> MODULAR_Astrape = CataclysmITEM.register(ModularAstrape.identifier, ModularAstrape::new);
+
+
     //原型
     public static final RegistryObject<Item> PrototypeWeapon = registerCommonMaterials(ZeroingITEM,"prototype_weapon", () -> new Item(new Item.Properties().stacksTo(64).fireResistant() ));
     public static final RegistryObject<Item> DragonTear = registerCommonMaterials(ZeroingITEM,"dragon_tear", () -> new TooltipItem(new Item.Properties().stacksTo(64).fireResistant() ));

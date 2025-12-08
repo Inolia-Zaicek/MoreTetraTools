@@ -70,7 +70,6 @@ public class MoreTetraTools {
         MTTEffectsRegister.INOEFFECT.register(bus);
         MTTModEntities.ENTITY_TYPES.register(bus); // 注册实体类型
         MinecraftForge.EVENT_BUS.register(Udumbara.class);
-        MinecraftForge.EVENT_BUS.register(DragonTearDropEvent.class);
         MinecraftForge.EVENT_BUS.register(MTTEffectClent.class);
         MinecraftForge.EVENT_BUS.register(MagicDamageUp.class);
         MinecraftForge.EVENT_BUS.register(IncantationMedic.class);
@@ -157,6 +156,7 @@ public class MoreTetraTools {
             }
             if(ModList.get().isLoaded("cataclysm")) {
                 MinecraftForge.EVENT_BUS.register(Incinerator.class);
+                MinecraftForge.EVENT_BUS.register(new Incinerator());///这是灾变写的
             }
         }
         // 注册 CommonSetup 事件
@@ -184,6 +184,7 @@ public class MoreTetraTools {
     @SubscribeEvent
     public void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            Incinerator.init();
             BehemothSword.init();
             UltimateDragonSword.init();
             MTTEffectClent.init();

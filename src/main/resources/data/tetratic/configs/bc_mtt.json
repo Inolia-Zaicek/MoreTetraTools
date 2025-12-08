@@ -21,6 +21,39 @@
                 }
             }
         },
+        "modular_annihilator/left_hammer": {
+            "modular_annihilator/left_hammer/base_left_hammer": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:hammer"
+                    }
+                }
+            }
+        },
+        "modular_apocalypse_greatblade/blade": {
+            "modular_apocalypse_greatblade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_astrape/blade": {
+            "modular_astrape/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:halberd"
+                    }
+                }
+            }
+        },
         "modular_banaddur_the_magic_greatsword/blade": {
             "modular_banaddur_the_magic_greatsword/blade/base_blade": {
                 "config": {
@@ -87,6 +120,17 @@
                 }
             }
         },
+        "modular_blood_sacrifice_blade/blade": {
+            "modular_blood_sacrifice_blade/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:coral_blade"
+                    }
+                }
+            }
+        },
         "modular_butterfly_flurry/blade": {
             "modular_butterfly_flurry/blade/base_blade": {
                 "config": {
@@ -98,13 +142,13 @@
                 }
             }
         },
-        "modular_blood_sacrifice_blade/blade": {
-            "modular_blood_sacrifice_blade/blade/base_blade": {
+        "modular_ceraunus/blade": {
+            "modular_ceraunus/blade/base_blade": {
                 "config": {
                     "scaleY": 1.2,
                     "scaleZ": 1.1,
                     "attributes": {
-                        "parent": "bettercombat:coral_blade"
+                        "parent": "bettercombat:anchor"
                     }
                 }
             }
@@ -215,6 +259,17 @@
                     "scaleZ": 1.1,
                     "attributes": {
                         "parent": "bettercombat:claymore"
+                    }
+                }
+            }
+        },
+        "modular_infernal_forge/blade": {
+            "modular_infernal_forge/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:mace"
                     }
                 }
             }
@@ -468,6 +523,17 @@
                     "scaleZ": 1.1,
                     "attributes": {
                         "parent": "bettercombat:katana"
+                    }
+                }
+            }
+        },
+        "modular_soul_render/blade": {
+            "modular_soul_render/blade/base_blade": {
+                "config": {
+                    "scaleY": 1.2,
+                    "scaleZ": 1.1,
+                    "attributes": {
+                        "parent": "bettercombat:halberd"
                     }
                 }
             }

@@ -457,6 +457,48 @@ public class MTTEffectGuiStats {
     public static final String incinerat_break_Name = MoreTetraTools.MODID + ".effect.incinerat_break.name";
     public static final String incinerat_break_Tooltip = MoreTetraTools.MODID + ".effect.incinerat_break.tooltip";
 
+    public static final ItemEffect break_waves_Effect = ItemEffect.get(MoreTetraTools.MODID + ":break_waves");
+    public static final String break_waves_Name = MoreTetraTools.MODID + ".effect.break_waves.name";
+    public static final String break_waves_Tooltip = MoreTetraTools.MODID + ".effect.break_waves.tooltip";
+
+    public static final ItemEffect tempestuous_waves_Effect = ItemEffect.get(MoreTetraTools.MODID + ":tempestuous_waves");
+    public static final String tempestuous_waves_Name = MoreTetraTools.MODID + ".effect.tempestuous_waves.name";
+    public static final String tempestuous_waves_Tooltip = MoreTetraTools.MODID + ".effect.tempestuous_waves.tooltip";
+
+    public static final ItemEffect netherite_base_Effect = ItemEffect.get(MoreTetraTools.MODID + ":netherite_base");
+    public static final String netherite_base_Name = MoreTetraTools.MODID + ".effect.netherite_base.name";
+    public static final String netherite_base_Tooltip = MoreTetraTools.MODID + ".effect.netherite_base.tooltip";
+
+    public static final ItemEffect earthquake_strike_Effect = ItemEffect.get(MoreTetraTools.MODID + ":earthquake_strike");
+    public static final String earthquake_strike_Name = MoreTetraTools.MODID + ".effect.earthquake_strike.name";
+    public static final String earthquake_strike_Tooltip = MoreTetraTools.MODID + ".effect.earthquake_strike.tooltip";
+
+    public static final ItemEffect cursium_assault_Effect = ItemEffect.get(MoreTetraTools.MODID + ":cursium_assault");
+    public static final String cursium_assault_Name = MoreTetraTools.MODID + ".effect.cursium_assault.name";
+    public static final String cursium_assault_Tooltip = MoreTetraTools.MODID + ".effect.cursium_assault.tooltip";
+
+    public static final ItemEffect cursium_field_Effect = ItemEffect.get(MoreTetraTools.MODID + ":cursium_field");
+    public static final String cursium_field_Name = MoreTetraTools.MODID + ".effect.cursium_field.name";
+    public static final String cursium_field_Tooltip = MoreTetraTools.MODID + ".effect.cursium_field.tooltip";
+
+    public static final ItemEffect soul_annihilator_Effect = ItemEffect.get(MoreTetraTools.MODID + ":soul_annihilator");
+    public static final String soul_annihilator_Name = MoreTetraTools.MODID + ".effect.soul_annihilator.name";
+    public static final String soul_annihilator_Tooltip = MoreTetraTools.MODID + ".effect.soul_annihilator.tooltip";
+
+    public static final ItemEffect cursium_annihilator_Effect = ItemEffect.get(MoreTetraTools.MODID + ":cursium_annihilator");
+    public static final String cursium_annihilator_Name = MoreTetraTools.MODID + ".effect.cursium_annihilator.name";
+    public static final String cursium_annihilator_Tooltip = MoreTetraTools.MODID + ".effect.cursium_annihilator.tooltip";
+
+    public static final ItemEffect thunder_field_Effect = ItemEffect.get(MoreTetraTools.MODID + ":thunder_field");
+    public static final String thunder_field_Name = MoreTetraTools.MODID + ".effect.thunder_field.name";
+    public static final String thunder_field_Tooltip = MoreTetraTools.MODID + ".effect.thunder_field.tooltip";
+
+    public static final ItemEffect thunder_astrape_Effect = ItemEffect.get(MoreTetraTools.MODID + ":thunder_astrape");
+    public static final String thunder_astrape_Name = MoreTetraTools.MODID + ".effect.thunder_astrape.name";
+    public static final String thunder_astrape_Tooltip = MoreTetraTools.MODID + ".effect.thunder_astrape.tooltip";
+
+
+
     //横扫
     public static final ItemEffect sweepingLevel = ItemEffect.get("sweeping");
     //速度

@@ -164,6 +164,7 @@ dependencies {
     implementation fg.deobf("blank:moonstone-1.20.1:1")
     implementation fg.deobf("blank:more_mod_tetra-1.20.1:1.9.6")
     implementation fg.deobf("blank:packetfixer-1.20.1:1")
+    implementation fg.deobf("blank:iceandfire-1.20.1:1")
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")

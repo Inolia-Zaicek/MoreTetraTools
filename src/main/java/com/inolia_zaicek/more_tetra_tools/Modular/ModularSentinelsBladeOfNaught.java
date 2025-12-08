@@ -42,7 +42,7 @@ public class ModularSentinelsBladeOfNaught extends ItemModularHandheld { // å£°æ
     private static final GuiModuleOffsets majorOffsets = new GuiModuleOffsets(
             2, -3,
             2, 22,
-            2, -4,
+            -12, -3,
             12, 9,
             2, 23,
             -12, -3);
