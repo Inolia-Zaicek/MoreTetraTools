@@ -1,0 +1,24 @@
+{
+    "slots": [ "modular_annihilator/socket" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_annihilator/base_socket"
+                    }
+                ]
+            }
+        }
+    ]
+}

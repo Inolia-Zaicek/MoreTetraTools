@@ -1,0 +1,30 @@
+{
+    "slots": [ "modular_return_to_ash_katana/blade" ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "iceandfire"
+        }
+    ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "material": {
+                "items": [ "iceandfire:dragonsteel_fire_ingot" ],
+                "count": 2
+            },
+            "moduleKey": "modular_return_to_ash_katana/blade/fire_dragon_blade",
+            "moduleVariant": "fire_dragon_blade"
+        }
+    ]
+}

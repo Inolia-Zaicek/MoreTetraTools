@@ -1,0 +1,37 @@
+{
+    "slots": [ "modular_infernal_forge/counterweight" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_counterweight/",
+            "effects": {
+                "more_tetra_tools:earthquake_strike": [65,5.05]
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.attack_speed": 0.005
+                },
+                "secondaryEffects": {
+                    "counterweight": 2
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:earthquake_strike": [5,0.15]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_infernal_forge/base_counterweight"
+                    }
+                ]
+            }
+        }
+    ]
+}

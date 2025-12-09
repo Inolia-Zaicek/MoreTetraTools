@@ -1,0 +1,46 @@
+{
+    "slots": [ "modular_return_to_ash_katana/blade" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "key": "fire_dragon_blade",
+            "attributes": {
+                "generic.attack_damage": 14.4,
+                "generic.attack_speed": -1.5
+            },
+            "effects": {
+                "more_tetra_tools:dusk_to_dusk": [48, 180],
+                "more_tetra_tools:ash_to_ash": 120,
+                "sweeping": 1.75,
+                "more_mod_tetra:fire_dragonsteel_material": 20
+            },
+            "tools": {
+                "cut": [ 1, 2 ]
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": 8000,
+            "integrity": -1,
+            "magicCapacity": 300,
+            "tags": [ "forge:swords" ],
+            "glyph": {
+                "textureX": 176,
+                "textureY": 48
+            },
+            "availableTextures": [ ""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/return_to_ash_katana",
+                    "renderLayer": "lower"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "slots": [ "modular_soul_render/socket" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_soul_render/base_socket",
+                        "renderLayer": "high"
+                    }
+                ]
+            }
+        }
+    ]
+}

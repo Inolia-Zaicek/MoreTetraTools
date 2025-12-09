@@ -1,0 +1,45 @@
+{
+    "slots": [ "modular_soul_render/head" ],
+    "type": "tetra:basic_module",
+    "improvements": [],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_head/",
+            "attributes": {
+                "generic.armor": 0.05,
+                "generic.attack_speed": -0.1
+            },
+            "effects": {
+                "more_tetra_tools:cursium_assault": [40,32]
+            },
+            "durability": 64,
+            "extract": {
+                "primaryAttributes": {
+                    "generic.armor": 0.01
+                },
+                "tertiaryAttributes": {
+                    "generic.armor": 0.01
+                },
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.06
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:cursium_assault": [5,4]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_soul_render/base_head"
+                    }
+                ]
+            }
+        }
+    ]
+}

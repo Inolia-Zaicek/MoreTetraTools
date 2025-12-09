@@ -1,0 +1,30 @@
+{
+    "slots": [ "modular_kaminari_katana/blade" ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "iceandfire"
+        }
+    ],
+    "materialSlotCount": 1,
+    "displayType": "major",
+    "glyph": {
+        "textureX": 176,
+        "textureY": 48
+    },
+    "translation": {
+        "durability": 1,
+        "integrity": 1,
+        "magicCapacity": 1
+    },
+    "outcomes": [
+        {
+            "material": {
+                "items": [ "iceandfire:dragonsteel_lightning_ingot" ],
+                "count": 2
+            },
+            "moduleKey": "modular_kaminari_katana/blade/lightning_dragon_blade",
+            "moduleVariant": "lightning_dragon_blade"
+        }
+    ]
+}

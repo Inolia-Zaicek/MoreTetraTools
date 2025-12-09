@@ -1,0 +1,21 @@
+[
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cataclysm"
+        }
+      ],
+            "predicate": {
+            "items": [ "cataclysm:ceraunus" ]
+        },
+        "item": "more_tetra_tools:modular_ceraunus",
+        "modules": {
+          "staff/a": [ "modular_ceraunus/blade/base_blade", "base_blade/storm_ingot"],
+          "staff/b": [ "modular_ceraunus/handle/base_handle", "base_handle/lacrima"],
+          "staff/c": [ "modular_ceraunus/body/base_body", "base_body/storm_ingot"],
+          "staff/d": [ "modular_ceraunus/counterweight/base_counterweight", "base_counterweight/storm_ingot"]
+        },
+        "improvements": {}
+    }
+]

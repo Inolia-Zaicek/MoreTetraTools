@@ -1,0 +1,21 @@
+[
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cataclysm"
+        }
+      ],
+            "predicate": {
+            "items": [ "cataclysm:infernal_forge" ]
+        },
+        "item": "more_tetra_tools:modular_infernal_forge",
+        "modules": {
+          "staff/a": [ "modular_infernal_forge/hammer/base_hammer", "base_hammer/netherite"],
+          "staff/b": [ "modular_infernal_forge/handle/base_handle", "base_handle/gold"],
+          "staff/c": [ "modular_infernal_forge/pickaxe/base_pickaxe", "base_pickaxe/gold"],
+          "staff/d": [ "modular_infernal_forge/counterweight/base_counterweight", "base_counterweight/gold"]
+        },
+        "improvements": {}
+    }
+]

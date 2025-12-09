@@ -1,0 +1,46 @@
+{
+    "slots": [ "modular_setsugetsu_katana/blade" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "key": "ice_dragon_blade",
+            "attributes": {
+                "generic.attack_damage": 14.4,
+                "generic.attack_speed": -1.5
+            },
+            "effects": {
+                "more_tetra_tools:yukimau": [120, 6],
+                "more_tetra_tools:gekka": 3.6,
+                "sweeping": 1.75,
+                "more_mod_tetra:ice_dragonsteel_material": 20
+            },
+            "tools": {
+                "cut": [ 1, 2 ]
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "durability": 8000,
+            "integrity": -1,
+            "magicCapacity": 300,
+            "tags": [ "forge:swords" ],
+            "glyph": {
+                "textureX": 176,
+                "textureY": 48
+            },
+            "availableTextures": [ ""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/setsugetsu_katana",
+                    "renderLayer": "lower"
+                }
+            ]
+        }
+    ]
+}

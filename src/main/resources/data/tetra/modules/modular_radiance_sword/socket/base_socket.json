@@ -1,0 +1,18 @@
+{
+    "slots": [ "modular_radiance_sword/socket" ],
+    "type": "tetra:basic_module",
+    "variants": [
+        {
+            "materials": [ "tetra:socket/" ],
+            "key": "base_socket/",
+            "extract": {
+                "durability": 1,
+                "integrity": -1,
+                "glyph": {
+                    "textureX": 181,
+                    "textureY": 52
+                }
+            }
+        }
+    ]
+}

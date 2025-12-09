@@ -1,0 +1,21 @@
+[
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cataclysm"
+        }
+      ],
+            "predicate": {
+            "items": [ "cataclysm:soul_render" ]
+        },
+        "item": "more_tetra_tools:modular_soul_render",
+        "modules": {
+          "staff/a": [ "modular_soul_render/blade/base_blade", "base_blade/cursium_ingot"],
+          "staff/b": [ "modular_soul_render/handle/base_handle", "base_handle/black_steel_ingot"],
+          "staff/c": [ "modular_soul_render/head/base_head", "base_head/cursium_ingot"],
+          "staff/d": [ "modular_soul_render/counterweight/base_counterweight", "base_counterweight/black_steel_ingot"]
+        },
+        "improvements": {}
+    }
+]

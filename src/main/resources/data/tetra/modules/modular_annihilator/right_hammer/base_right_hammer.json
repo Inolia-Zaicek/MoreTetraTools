@@ -1,0 +1,58 @@
+{
+    "slots": [ "modular_annihilator/right_hammer" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:sword/shared_right_hammer/",
+        "tetra:sword/shared_blade/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_right_hammer/",
+            "attributes": {
+                "generic.attack_speed": -0.96
+            },
+            "tools": {
+                "hammer_dig": [ 1, 0 ]
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "breakable": 2
+            },
+            "effects": {
+                "more_tetra_tools:soul_annihilator": [20,0],
+                "more_tetra_tools:cursium_annihilator": [70,4]
+            },
+            "durability": -20,
+            "tags": [ "forge:swords" ],
+            "extract": {
+                "primaryEffects": {
+                    "more_tetra_tools:soul_annihilator": [1.5,1.25],
+                    "more_tetra_tools:cursium_annihilator": [2.5,-0.125]
+                },
+                "primaryAttributes": {
+                    "generic.attack_damage": 0.3
+                },
+                "durability": 1,
+                "integrity": -0.5,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_annihilator/base_right_hammer",
+                        "transform": {
+                            "rotation":
+                            [ 0, 0, 0, 1 ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

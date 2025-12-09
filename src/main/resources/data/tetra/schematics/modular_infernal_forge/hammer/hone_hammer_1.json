@@ -1,0 +1,39 @@
+{
+    "slots": [ "modular_infernal_forge/hammer" ],
+    "materialSlotCount": 0,
+    "hone": true,
+    "rarity": "hone",
+    "displayType": "improvement",
+    "glyph": {
+        "textureX": 64
+    },
+    "requirement": {
+        "type": "tetra:and",
+        "requirements": [
+            {
+                "type": "tetra:not",
+                "requirement": {
+                    "type": "tetra:improvement",
+                    "improvement": "head_hone/hammer_tier"
+                }
+            },
+            {
+                "type": "tetra:aspect",
+                "aspect": "honed",
+                "level": {
+                    "min": 5
+                }
+            }
+        ]
+    },
+    "outcomes": [
+        {
+            "requiredTools": {
+                "hammer_dig": "minecraft:stone"
+            },
+            "improvements": {
+                "head_hone/hammer_tier": 0
+            }
+        }
+    ]
+}

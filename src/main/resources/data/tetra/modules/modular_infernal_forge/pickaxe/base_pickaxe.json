@@ -1,0 +1,50 @@
+{
+    "slots": [ "modular_infernal_forge/pickaxe" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:double/pickaxe/",
+        "tetra:double/shared_head/",
+        "tetra:double/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_pickaxe/",
+            "attributes": {
+                "generic.attack_speed": -0.1
+            },
+            "aspects": {
+                "block_breaker": 2,
+                "breakable": 2
+            },
+            "effects": {
+                "more_tetra_tools:netherite_base": [0,2]
+            },
+            "durability": 64,
+            "extract": {
+                "secondaryAttributes": {
+                    "generic.attack_speed": -0.06
+                },
+                "primaryEffects": {
+                    "more_tetra_tools:netherite_base": [10,4]
+                },
+                "tools": {
+                    "pickaxe_dig": [ 1, 0.91 ]
+                },
+                "durability": 0.25,
+                "integrity": -0.25,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_infernal_forge/base_pickaxe"
+                    }
+                ]
+            }
+        }
+    ]
+}

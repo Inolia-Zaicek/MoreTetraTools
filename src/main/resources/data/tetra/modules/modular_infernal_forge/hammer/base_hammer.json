@@ -1,0 +1,69 @@
+{
+    "slots": [ "modular_infernal_forge/hammer" ],
+    "type": "tetra:basic_major_module",
+    "improvements": [
+        "tetra:double/hammer/",
+        "tetra:double/shared_head/",
+        "tetra:double/shared/",
+        "tetra:sword/shared_hammer/",
+        "tetra:sword/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": ["tetra:bone/", "tetra:metal/", "tetra:stone/", "tetra:wood/", "tetra:gem/" ],
+            "key": "base_hammer/",
+            "attributes": {
+                "generic.attack_speed": -1.85,
+                "generic.attack_damage": 3.5
+            },
+            "effects": {
+                "sweeping": 1
+            },
+            "aspects": {
+                "edged_weapon": 2,
+                "block_breaker": 2,
+                "breakable": 2,
+                "blunt_weapon": 1
+            },
+            "tools": {
+                "hammer_dig": [ 1, 0 ]
+            },
+            "durability": -20,
+            "tags": [ "forge:swords" ],
+            "extract": {
+                "tools": {
+                    "hammer_dig": [ 1, 1.8333 ]
+                },
+                "primaryAttributes": {
+                    "generic.attack_damage": 1.1
+                },
+                "secondaryAttributes": {
+                    "generic.attack_damage": 0.12,
+                    "generic.attack_speed": -0.01
+                },
+                "durability": 1,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 176,
+                    "textureY": 48
+                },
+                "availableTextures": [ ""],
+                "models": [
+                    {
+                        "location": "more_tetra_tools:item/module/modular_infernal_forge/base_hammer",
+                        "renderLayer": "lower"
+                    }
+                ]
+            },
+            "availableTextures": [ ""],
+            "models": [
+                {
+                    "location": "more_tetra_tools:item/module/modular_infernal_forge/base",
+                    "renderLayer": "lower"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+[
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cataclysm"
+        }
+      ],
+            "predicate": {
+            "items": [ "cataclysm:the_incinerator" ]
+        },
+        "item": "more_tetra_tools:modular_incinerator",
+        "modules": {
+          "staff/a": [ "modular_incinerator/blade/base_blade", "base_blade/ignitium_ingot"],
+          "staff/b": [ "modular_incinerator/handle/base_handle", "base_handle/netherite"],
+          "staff/c": [ "modular_incinerator/guard/base_guard", "base_guard/ignitium_ingot"],
+          "staff/d": [ "modular_incinerator/counterweight/base_counterweight", "base_counterweight/ignitium_ingot"]
+        },
+        "improvements": {}
+    }
+]

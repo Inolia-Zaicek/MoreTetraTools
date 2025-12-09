@@ -1,0 +1,21 @@
+[
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "cataclysm"
+        }
+      ],
+            "predicate": {
+            "items": [ "cataclysm:the_annihilator" ]
+        },
+        "item": "more_tetra_tools:modular_annihilator",
+        "modules": {
+          "staff/a": [ "modular_annihilator/left_hammer/base_left_hammer", "base_left_hammer/cursium_ingot"],
+          "staff/b": [ "modular_annihilator/handle/base_handle", "base_handle/black_steel_ingot"],
+          "staff/c": [ "modular_annihilator/right_hammer/base_right_hammer", "base_right_hammer/cursium_ingot"],
+          "staff/d": [ "modular_annihilator/binding/base_binding", "base_binding/black_steel_ingot"]
+        },
+        "improvements": {}
+    }
+]
