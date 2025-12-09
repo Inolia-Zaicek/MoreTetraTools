@@ -134,12 +134,12 @@ public class MTTItemRegister {
     public static final RegistryObject<Item> MODULAR_Paxel = ZeroingITEM.register(ModularPaxel.identifier, ModularPaxel::new);
     public static final RegistryObject<Item> TetraPaxel = registerCommonMaterials(ZeroingITEM,"paxel", () -> new TooltipItem(new Item.Properties().stacksTo(1).fireResistant() ));
 
-    public static final RegistryObject<Item> MODULAR_Incinerator = CataclysmITEM.register(ModularIncinerator.identifier, ModularIncinerator::new);
-    public static final RegistryObject<Item> MODULAR_Ceraunus = CataclysmITEM.register(ModularCeraunus.identifier, ModularCeraunus::new);
-    public static final RegistryObject<Item> MODULAR_InfernalForge = CataclysmITEM.register(ModularInfernalForge.identifier, ModularInfernalForge::new);
-    public static final RegistryObject<Item> MODULAR_SoulRender = CataclysmITEM.register(ModularSoulRender.identifier, ModularSoulRender::new);
-    public static final RegistryObject<Item> MODULAR_Annihilator = CataclysmITEM.register(ModularAnnihilator.identifier, ModularAnnihilator::new);
-    public static final RegistryObject<Item> MODULAR_Astrape = CataclysmITEM.register(ModularAstrape.identifier, ModularAstrape::new);
+    public static RegistryObject<Item> MODULAR_Incinerator;
+    public static RegistryObject<Item> MODULAR_Ceraunus;
+    public static RegistryObject<Item> MODULAR_InfernalForge;
+    public static RegistryObject<Item> MODULAR_SoulRender;
+    public static RegistryObject<Item> MODULAR_Annihilator;
+    public static RegistryObject<Item> MODULAR_Astrape;
 
 
     //原型
@@ -157,6 +157,12 @@ public class MTTItemRegister {
     public static void register(IEventBus bus){
         ZeroingITEM.register(bus);
         if (ModList.get().isLoaded("cataclysm")) {
+            MODULAR_Incinerator = CataclysmITEM.register(ModularIncinerator.identifier, ModularIncinerator::new);
+            MODULAR_Ceraunus = CataclysmITEM.register(ModularCeraunus.identifier, ModularCeraunus::new);
+            MODULAR_InfernalForge = CataclysmITEM.register(ModularInfernalForge.identifier, ModularInfernalForge::new);
+            MODULAR_SoulRender = CataclysmITEM.register(ModularSoulRender.identifier, ModularSoulRender::new);
+            MODULAR_Annihilator = CataclysmITEM.register(ModularAnnihilator.identifier, ModularAnnihilator::new);
+            MODULAR_Astrape = CataclysmITEM.register(ModularAstrape.identifier, ModularAstrape::new);
             CataclysmITEM.register(bus);
         }
     }
